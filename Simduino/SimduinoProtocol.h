@@ -12,7 +12,10 @@
 @protocol SimduinoProtocol
 
 // Replace the API of this protocol with an API appropriate to the service you are vending.
-- (void)upperCaseString:(NSString *)aString withReply:(void (^)(NSString *))reply;
+//- (void)upperCaseString:(NSString * _Nonnull)aString withReply:(void (^ _Nonnull)(NSString * _Nonnull))reply;
+- (void)startupSimduinoWithReply:(void (^ _Nonnull)(NSString * _Nullable))ptyNameCallbackIn;
+- (void)shutdownSimduino:(void (^ _Nonnull)(void))ptyClosedCallbackIn;
+- (void)restartSimduino:(void (^ _Nonnull)(void))restartedCallbackIn;
     
 @end
 

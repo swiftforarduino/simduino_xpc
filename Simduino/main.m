@@ -9,10 +9,22 @@
 #import <Foundation/Foundation.h>
 #import "Simduino.h"
 
-@interface ServiceDelegate : NSObject <NSXPCListenerDelegate>
+@interface ServiceDelegate : NSObject <NSXPCListenerDelegate> {
+    NSOperationQueue * simduinoQueue; // will only run one simduino at a time, each is long running
+}
 @end
 
 @implementation ServiceDelegate
+
+- (instancetype)init {
+    self = [super init];
+    if (self) {
+        simduinoQueue = [NSOperationQueue new];
+        simduinoQueue.name = @"Simduino Queue";
+        simduinoQueue.maxConcurrentOperationCount = 1; // single thread/simduino at a time
+    }
+    return self;
+}
 
 - (BOOL)listener:(NSXPCListener *)listener shouldAcceptNewConnection:(NSXPCConnection *)newConnection {
     // This method is where the NSXPCListener configures, accepts, and resumes a new incoming NSXPCConnection.
@@ -22,7 +34,7 @@
     newConnection.exportedInterface = [NSXPCInterface interfaceWithProtocol:@protocol(SimduinoProtocol)];
     
     // Next, set the object that the connection exports. All messages sent on the connection to this service will be sent to the exported object to handle. The connection retains the exported object.
-    Simduino *exportedObject = [Simduino new];
+    Simduino *exportedObject = [[Simduino alloc] initWithOperationQueue:simduinoQueue];
     newConnection.exportedObject = exportedObject;
     
     // Resuming the connection allows the system to deliver more incoming messages.

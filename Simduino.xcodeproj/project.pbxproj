@@ -9,6 +9,50 @@
 /* Begin PBXBuildFile section */
 		8F439AB823E44F5500697553 /* Simduino.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F439AB723E44F5500697553 /* Simduino.m */; };
 		8F439ABA23E44F5500697553 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F439AB923E44F5500697553 /* main.m */; };
+		8F6BDC7023E79DCC008DEE6E /* libelf.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F6BDC6F23E79C5C008DEE6E /* libelf.a */; };
+		8F6BDC7123E79ECF008DEE6E /* sim_mega32u4.c in Sources */ = {isa = PBXBuildFile; fileRef = 8F439C1223E498E200697553 /* sim_mega32u4.c */; };
+		8F6BDC7223E79F87008DEE6E /* sim_megax8.c in Sources */ = {isa = PBXBuildFile; fileRef = 8F439C2823E498E200697553 /* sim_megax8.c */; };
+		8F6BDC9823E88C4F008DEE6E /* uart_udp.c in Sources */ = {isa = PBXBuildFile; fileRef = 8F6BDC7423E88C4F008DEE6E /* uart_udp.c */; };
+		8F6BDC9923E88C4F008DEE6E /* hd44780.c in Sources */ = {isa = PBXBuildFile; fileRef = 8F6BDC7523E88C4F008DEE6E /* hd44780.c */; };
+		8F6BDC9B23E88C4F008DEE6E /* button.c in Sources */ = {isa = PBXBuildFile; fileRef = 8F6BDC7723E88C4F008DEE6E /* button.c */; };
+		8F6BDC9C23E88C4F008DEE6E /* hd44780_glut.c in Sources */ = {isa = PBXBuildFile; fileRef = 8F6BDC7923E88C4F008DEE6E /* hd44780_glut.c */; };
+		8F6BDC9D23E88C4F008DEE6E /* rotenc.c in Sources */ = {isa = PBXBuildFile; fileRef = 8F6BDC7A23E88C4F008DEE6E /* rotenc.c */; };
+		8F6BDC9F23E88C4F008DEE6E /* ac_input.c in Sources */ = {isa = PBXBuildFile; fileRef = 8F6BDC7D23E88C4F008DEE6E /* ac_input.c */; };
+		8F6BDCA023E88C4F008DEE6E /* hc595.c in Sources */ = {isa = PBXBuildFile; fileRef = 8F6BDC8123E88C4F008DEE6E /* hc595.c */; };
+		8F6BDCA123E88C4F008DEE6E /* ds1338_virt.c in Sources */ = {isa = PBXBuildFile; fileRef = 8F6BDC8223E88C4F008DEE6E /* ds1338_virt.c */; };
+		8F6BDCA323E88C4F008DEE6E /* ssd1306_virt.c in Sources */ = {isa = PBXBuildFile; fileRef = 8F6BDC8623E88C4F008DEE6E /* ssd1306_virt.c */; };
+		8F6BDCA423E88C4F008DEE6E /* ssd1306_glut.c in Sources */ = {isa = PBXBuildFile; fileRef = 8F6BDC8D23E88C4F008DEE6E /* ssd1306_glut.c */; };
+		8F6BDCA523E88C4F008DEE6E /* uart_pty.c in Sources */ = {isa = PBXBuildFile; fileRef = 8F6BDC8E23E88C4F008DEE6E /* uart_pty.c */; };
+		8F6BDCA623E88C4F008DEE6E /* i2c_eeprom.c in Sources */ = {isa = PBXBuildFile; fileRef = 8F6BDC8F23E88C4F008DEE6E /* i2c_eeprom.c */; };
+		8F6BDCA823E88C4F008DEE6E /* arduidiot_pins.c in Sources */ = {isa = PBXBuildFile; fileRef = 8F6BDC9323E88C4F008DEE6E /* arduidiot_pins.c */; };
+		8FBA32A423E5E35000DBD58C /* sim_mega328.c in Sources */ = {isa = PBXBuildFile; fileRef = 8F439C1323E498E200697553 /* sim_mega328.c */; };
+		8FBA32A523E5E3A800DBD58C /* avr_adc.c in Sources */ = {isa = PBXBuildFile; fileRef = 8F439ACF23E498E200697553 /* avr_adc.c */; };
+		8FBA32A623E5E3A800DBD58C /* avr_bitbang.c in Sources */ = {isa = PBXBuildFile; fileRef = 8F439AD223E498E200697553 /* avr_bitbang.c */; };
+		8FBA32A723E5E3A800DBD58C /* avr_lin.c in Sources */ = {isa = PBXBuildFile; fileRef = 8F439AD423E498E200697553 /* avr_lin.c */; };
+		8FBA32A823E5E3A800DBD58C /* sim_elf.c in Sources */ = {isa = PBXBuildFile; fileRef = 8F439AD523E498E200697553 /* sim_elf.c */; };
+		8FBA32A923E5E3A800DBD58C /* sim_interrupts.c in Sources */ = {isa = PBXBuildFile; fileRef = 8F439AD623E498E200697553 /* sim_interrupts.c */; };
+		8FBA32AA23E5E3A800DBD58C /* sim_vcd_file.c in Sources */ = {isa = PBXBuildFile; fileRef = 8F439AD823E498E200697553 /* sim_vcd_file.c */; };
+		8FBA32AB23E5E3A800DBD58C /* sim_io.c in Sources */ = {isa = PBXBuildFile; fileRef = 8F439ADC23E498E200697553 /* sim_io.c */; };
+		8FBA32AC23E5E3A800DBD58C /* avr_uart.c in Sources */ = {isa = PBXBuildFile; fileRef = 8F439ADE23E498E200697553 /* avr_uart.c */; };
+		8FBA32AD23E5E3A800DBD58C /* avr_eeprom.c in Sources */ = {isa = PBXBuildFile; fileRef = 8F439ADF23E498E200697553 /* avr_eeprom.c */; };
+		8FBA32AE23E5E3A800DBD58C /* sim_avr.c in Sources */ = {isa = PBXBuildFile; fileRef = 8F439AE223E498E200697553 /* sim_avr.c */; };
+		8FBA32AF23E5E3A800DBD58C /* avr_timer.c in Sources */ = {isa = PBXBuildFile; fileRef = 8F439AE523E498E200697553 /* avr_timer.c */; };
+		8FBA32B123E5E3A800DBD58C /* avr_twi.c in Sources */ = {isa = PBXBuildFile; fileRef = 8F439AEA23E498E200697553 /* avr_twi.c */; };
+		8FBA32B223E5E3A800DBD58C /* avr_flash.c in Sources */ = {isa = PBXBuildFile; fileRef = 8F439AEC23E498E200697553 /* avr_flash.c */; };
+		8FBA32B323E5E3A800DBD58C /* sim_core.c in Sources */ = {isa = PBXBuildFile; fileRef = 8F439AF123E498E200697553 /* sim_core.c */; };
+		8FBA32B423E5E3A800DBD58C /* sim_gdb.c in Sources */ = {isa = PBXBuildFile; fileRef = 8F439AF523E498E200697553 /* sim_gdb.c */; };
+		8FBA32B523E5E3A800DBD58C /* avr_extint.c in Sources */ = {isa = PBXBuildFile; fileRef = 8F439AF823E498E200697553 /* avr_extint.c */; };
+		8FBA32B623E5E3A800DBD58C /* avr_spi.c in Sources */ = {isa = PBXBuildFile; fileRef = 8F439AFB23E498E200697553 /* avr_spi.c */; };
+		8FBA32B723E5E3A800DBD58C /* avr_usb.c in Sources */ = {isa = PBXBuildFile; fileRef = 8F439AFD23E498E200697553 /* avr_usb.c */; };
+		8FBA32B823E5E3A800DBD58C /* sim_cycle_timers.c in Sources */ = {isa = PBXBuildFile; fileRef = 8F439AFF23E498E200697553 /* sim_cycle_timers.c */; };
+		8FBA32B923E5E3A800DBD58C /* sim_utils.c in Sources */ = {isa = PBXBuildFile; fileRef = 8F439B0023E498E200697553 /* sim_utils.c */; };
+		8FBA32BA23E5E3A800DBD58C /* sim_irq.c in Sources */ = {isa = PBXBuildFile; fileRef = 8F439B0123E498E200697553 /* sim_irq.c */; };
+		8FBA32BB23E5E3A800DBD58C /* avr_watchdog.c in Sources */ = {isa = PBXBuildFile; fileRef = 8F439B0423E498E200697553 /* avr_watchdog.c */; };
+		8FBA32BC23E5E3A800DBD58C /* sim_cmds.c in Sources */ = {isa = PBXBuildFile; fileRef = 8F439B0523E498E200697553 /* sim_cmds.c */; };
+		8FBA32BD23E5E3A800DBD58C /* sim_hex.c in Sources */ = {isa = PBXBuildFile; fileRef = 8F439B0723E498E200697553 /* sim_hex.c */; };
+		8FBA32BE23E5E3A800DBD58C /* avr_ioport.c in Sources */ = {isa = PBXBuildFile; fileRef = 8F439B0923E498E200697553 /* avr_ioport.c */; };
+		8FBA32BF23E5E3A800DBD58C /* avr_acomp.c in Sources */ = {isa = PBXBuildFile; fileRef = 8F439B0A23E498E200697553 /* avr_acomp.c */; };
+		8FC37FE623E9BA610083678E /* ATmegaBOOT_168_atmega328.ihex in Resources */ = {isa = PBXBuildFile; fileRef = 8FC37FE523E9BA610083678E /* ATmegaBOOT_168_atmega328.ihex */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -18,6 +62,398 @@
 		8F439AB723E44F5500697553 /* Simduino.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Simduino.m; sourceTree = "<group>"; };
 		8F439AB923E44F5500697553 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8F439ABB23E44F5500697553 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8F439ACA23E498E200697553 /* simavr-avr.pc */ = {isa = PBXFileReference; lastKnownFileType = text; path = "simavr-avr.pc"; sourceTree = "<group>"; };
+		8F439ACB23E498E200697553 /* Makefile */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
+		8F439ACC23E498E200697553 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		8F439ACD23E498E200697553 /* simavr.pc */ = {isa = PBXFileReference; lastKnownFileType = text; path = simavr.pc; sourceTree = "<group>"; };
+		8F439ACF23E498E200697553 /* avr_adc.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = avr_adc.c; sourceTree = "<group>"; };
+		8F439AD023E498E200697553 /* sim_time.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = sim_time.h; sourceTree = "<group>"; };
+		8F439AD123E498E200697553 /* sim_avr_types.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = sim_avr_types.h; sourceTree = "<group>"; };
+		8F439AD223E498E200697553 /* avr_bitbang.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = avr_bitbang.c; sourceTree = "<group>"; };
+		8F439AD323E498E200697553 /* sim_gdb.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = sim_gdb.h; sourceTree = "<group>"; };
+		8F439AD423E498E200697553 /* avr_lin.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = avr_lin.c; sourceTree = "<group>"; };
+		8F439AD523E498E200697553 /* sim_elf.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = sim_elf.c; sourceTree = "<group>"; };
+		8F439AD623E498E200697553 /* sim_interrupts.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = sim_interrupts.c; sourceTree = "<group>"; };
+		8F439AD723E498E200697553 /* sim_core.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = sim_core.h; sourceTree = "<group>"; };
+		8F439AD823E498E200697553 /* sim_vcd_file.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = sim_vcd_file.c; sourceTree = "<group>"; };
+		8F439AD923E498E200697553 /* avr_usb.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = avr_usb.h; sourceTree = "<group>"; };
+		8F439ADB23E498E200697553 /* avr_mcu_section.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = avr_mcu_section.h; sourceTree = "<group>"; };
+		8F439ADC23E498E200697553 /* sim_io.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = sim_io.c; sourceTree = "<group>"; };
+		8F439ADD23E498E200697553 /* avr_spi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = avr_spi.h; sourceTree = "<group>"; };
+		8F439ADE23E498E200697553 /* avr_uart.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = avr_uart.c; sourceTree = "<group>"; };
+		8F439ADF23E498E200697553 /* avr_eeprom.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = avr_eeprom.c; sourceTree = "<group>"; };
+		8F439AE023E498E200697553 /* avr_extint.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = avr_extint.h; sourceTree = "<group>"; };
+		8F439AE123E498E200697553 /* sim_regbit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = sim_regbit.h; sourceTree = "<group>"; };
+		8F439AE223E498E200697553 /* sim_avr.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = sim_avr.c; sourceTree = "<group>"; };
+		8F439AE323E498E200697553 /* sim_irq.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = sim_irq.h; sourceTree = "<group>"; };
+		8F439AE423E498E200697553 /* sim_utils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = sim_utils.h; sourceTree = "<group>"; };
+		8F439AE523E498E200697553 /* avr_timer.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = avr_timer.c; sourceTree = "<group>"; };
+		8F439AE623E498E200697553 /* sim_network.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = sim_network.h; sourceTree = "<group>"; };
+		8F439AE723E498E200697553 /* sim_cycle_timers.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = sim_cycle_timers.h; sourceTree = "<group>"; };
+		8F439AE823E498E200697553 /* run_avr.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = run_avr.c; sourceTree = "<group>"; };
+		8F439AE923E498E200697553 /* avr_ioport.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = avr_ioport.h; sourceTree = "<group>"; };
+		8F439AEA23E498E200697553 /* avr_twi.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = avr_twi.c; sourceTree = "<group>"; };
+		8F439AEB23E498E200697553 /* sim_hex.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = sim_hex.h; sourceTree = "<group>"; };
+		8F439AEC23E498E200697553 /* avr_flash.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = avr_flash.c; sourceTree = "<group>"; };
+		8F439AED23E498E200697553 /* avr_acomp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = avr_acomp.h; sourceTree = "<group>"; };
+		8F439AEE23E498E200697553 /* avr_watchdog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = avr_watchdog.h; sourceTree = "<group>"; };
+		8F439AEF23E498E200697553 /* sim_cmds.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = sim_cmds.h; sourceTree = "<group>"; };
+		8F439AF023E498E200697553 /* avr_lin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = avr_lin.h; sourceTree = "<group>"; };
+		8F439AF123E498E200697553 /* sim_core.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = sim_core.c; sourceTree = "<group>"; };
+		8F439AF223E498E200697553 /* sim_vcd_file.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = sim_vcd_file.h; sourceTree = "<group>"; };
+		8F439AF323E498E200697553 /* sim_interrupts.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = sim_interrupts.h; sourceTree = "<group>"; };
+		8F439AF423E498E200697553 /* sim_elf.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = sim_elf.h; sourceTree = "<group>"; };
+		8F439AF523E498E200697553 /* sim_gdb.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = sim_gdb.c; sourceTree = "<group>"; };
+		8F439AF623E498E200697553 /* avr_bitbang.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = avr_bitbang.h; sourceTree = "<group>"; };
+		8F439AF723E498E200697553 /* avr_adc.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = avr_adc.h; sourceTree = "<group>"; };
+		8F439AF823E498E200697553 /* avr_extint.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = avr_extint.c; sourceTree = "<group>"; };
+		8F439AF923E498E200697553 /* avr_eeprom.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = avr_eeprom.h; sourceTree = "<group>"; };
+		8F439AFA23E498E200697553 /* avr_uart.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = avr_uart.h; sourceTree = "<group>"; };
+		8F439AFB23E498E200697553 /* avr_spi.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = avr_spi.c; sourceTree = "<group>"; };
+		8F439AFC23E498E200697553 /* sim_io.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = sim_io.h; sourceTree = "<group>"; };
+		8F439AFD23E498E200697553 /* avr_usb.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = avr_usb.c; sourceTree = "<group>"; };
+		8F439AFE23E498E200697553 /* avr_timer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = avr_timer.h; sourceTree = "<group>"; };
+		8F439AFF23E498E200697553 /* sim_cycle_timers.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = sim_cycle_timers.c; sourceTree = "<group>"; };
+		8F439B0023E498E200697553 /* sim_utils.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = sim_utils.c; sourceTree = "<group>"; };
+		8F439B0123E498E200697553 /* sim_irq.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = sim_irq.c; sourceTree = "<group>"; };
+		8F439B0223E498E200697553 /* fifo_declare.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = fifo_declare.h; sourceTree = "<group>"; };
+		8F439B0323E498E200697553 /* sim_avr.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = sim_avr.h; sourceTree = "<group>"; };
+		8F439B0423E498E200697553 /* avr_watchdog.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = avr_watchdog.c; sourceTree = "<group>"; };
+		8F439B0523E498E200697553 /* sim_cmds.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = sim_cmds.c; sourceTree = "<group>"; };
+		8F439B0623E498E200697553 /* avr_flash.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = avr_flash.h; sourceTree = "<group>"; };
+		8F439B0723E498E200697553 /* sim_hex.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = sim_hex.c; sourceTree = "<group>"; };
+		8F439B0823E498E200697553 /* avr_twi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = avr_twi.h; sourceTree = "<group>"; };
+		8F439B0923E498E200697553 /* avr_ioport.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = avr_ioport.c; sourceTree = "<group>"; };
+		8F439B0A23E498E200697553 /* avr_acomp.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = avr_acomp.c; sourceTree = "<group>"; };
+		8F439B0C23E498E200697553 /* sim_tiny2313a.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = sim_tiny2313a.c; sourceTree = "<group>"; };
+		8F439B0D23E498E200697553 /* sim_mega16.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = sim_mega16.c; sourceTree = "<group>"; };
+		8F439B0E23E498E200697553 /* sim_mega644.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = sim_mega644.c; sourceTree = "<group>"; };
+		8F439B0F23E498E200697553 /* sim_megax.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = sim_megax.h; sourceTree = "<group>"; };
+		8F439B1023E498E200697553 /* sim_tiny84.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = sim_tiny84.c; sourceTree = "<group>"; };
+		8F439B1123E498E200697553 /* sim_mega8.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = sim_mega8.c; sourceTree = "<group>"; };
+		8F439B1323E498E200697553 /* iotn13.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iotn13.h; sourceTree = "<group>"; };
+		8F439B1423E498E200697553 /* iotnx61.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iotnx61.h; sourceTree = "<group>"; };
+		8F439B1523E498E200697553 /* iom406.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iom406.h; sourceTree = "<group>"; };
+		8F439B1623E498E200697553 /* iox64d4.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iox64d4.h; sourceTree = "<group>"; };
+		8F439B1723E498E200697553 /* iom1284p.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iom1284p.h; sourceTree = "<group>"; };
+		8F439B1823E498E200697553 /* iom168a.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iom168a.h; sourceTree = "<group>"; };
+		8F439B1923E498E200697553 /* iotn861.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iotn861.h; sourceTree = "<group>"; };
+		8F439B1A23E498E200697553 /* iom1281.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iom1281.h; sourceTree = "<group>"; };
+		8F439B1B23E498E200697553 /* ioa6612c.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ioa6612c.h; sourceTree = "<group>"; };
+		8F439B1C23E498E200697553 /* iom88a.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iom88a.h; sourceTree = "<group>"; };
+		8F439B1D23E498E200697553 /* io43u35x.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = io43u35x.h; sourceTree = "<group>"; };
+		8F439B1E23E498E200697553 /* iotn44a.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iotn44a.h; sourceTree = "<group>"; };
+		8F439B1F23E498E200697553 /* ioa6289.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ioa6289.h; sourceTree = "<group>"; };
+		8F439B2023E498E200697553 /* ioa5782.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ioa5782.h; sourceTree = "<group>"; };
+		8F439B2123E498E200697553 /* iox192d3.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iox192d3.h; sourceTree = "<group>"; };
+		8F439B2223E498E200697553 /* iox128a1.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iox128a1.h; sourceTree = "<group>"; };
+		8F439B2323E498E200697553 /* iousb1287.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iousb1287.h; sourceTree = "<group>"; };
+		8F439B2423E498E200697553 /* iox384d3.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iox384d3.h; sourceTree = "<group>"; };
+		8F439B2523E498E200697553 /* iom32m1.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iom32m1.h; sourceTree = "<group>"; };
+		8F439B2623E498E200697553 /* iox128a4u.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iox128a4u.h; sourceTree = "<group>"; };
+		8F439B2723E498E200697553 /* iox256a3b.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iox256a3b.h; sourceTree = "<group>"; };
+		8F439B2823E498E200697553 /* ioa6616c.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ioa6616c.h; sourceTree = "<group>"; };
+		8F439B2923E498E200697553 /* iox64b1.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iox64b1.h; sourceTree = "<group>"; };
+		8F439B2A23E498E200697553 /* iox32c3.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iox32c3.h; sourceTree = "<group>"; };
+		8F439B2B23E498E200697553 /* iom323.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iom323.h; sourceTree = "<group>"; };
+		8F439B2C23E498E200697553 /* iox192a3u.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iox192a3u.h; sourceTree = "<group>"; };
+		8F439B2D23E498E200697553 /* iotn28.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iotn28.h; sourceTree = "<group>"; };
+		8F439B2E23E498E200697553 /* iotn22.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iotn22.h; sourceTree = "<group>"; };
+		8F439B2F23E498E200697553 /* iom329.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iom329.h; sourceTree = "<group>"; };
+		8F439B3023E498E200697553 /* iom88.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iom88.h; sourceTree = "<group>"; };
+		8F439B3123E498E200697553 /* iom649p.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iom649p.h; sourceTree = "<group>"; };
+		8F439B3223E498E200697553 /* iotn441.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iotn441.h; sourceTree = "<group>"; };
+		8F439B3323E498E200697553 /* iom169.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iom169.h; sourceTree = "<group>"; };
+		8F439B3423E498E200697553 /* iom64rfr2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iom64rfr2.h; sourceTree = "<group>"; };
+		8F439B3523E498E200697553 /* iom8515.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iom8515.h; sourceTree = "<group>"; };
+		8F439B3623E498E200697553 /* iom16hvb.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iom16hvb.h; sourceTree = "<group>"; };
+		8F439B3723E498E200697553 /* iom163.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iom163.h; sourceTree = "<group>"; };
+		8F439B3823E498E200697553 /* ioa6617c.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ioa6617c.h; sourceTree = "<group>"; };
+		8F439B3923E498E200697553 /* iotn24a.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iotn24a.h; sourceTree = "<group>"; };
+		8F439B3A23E498E200697553 /* iousb82.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iousb82.h; sourceTree = "<group>"; };
+		8F439B3B23E498E200697553 /* iom6450.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iom6450.h; sourceTree = "<group>"; };
+		8F439B3C23E498E200697553 /* iom3290.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iom3290.h; sourceTree = "<group>"; };
+		8F439B3D23E498E200697553 /* iotn261a.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iotn261a.h; sourceTree = "<group>"; };
+		8F439B3E23E498E200697553 /* iom128a.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iom128a.h; sourceTree = "<group>"; };
+		8F439B3F23E498E200697553 /* iotn9.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iotn9.h; sourceTree = "<group>"; };
+		8F439B4023E498E200697553 /* ioa5790n.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ioa5790n.h; sourceTree = "<group>"; };
+		8F439B4123E498E200697553 /* iotn85.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iotn85.h; sourceTree = "<group>"; };
+		8F439B4223E498E200697553 /* io90pwm161.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = io90pwm161.h; sourceTree = "<group>"; };
+		8F439B4323E498E200697553 /* io90pwmx.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = io90pwmx.h; sourceTree = "<group>"; };
+		8F439B4423E498E200697553 /* iox192a3.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iox192a3.h; sourceTree = "<group>"; };
+		8F439B4523E498E200697553 /* iotn26.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iotn26.h; sourceTree = "<group>"; };
+		8F439B4623E498E200697553 /* ioa6613c.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ioa6613c.h; sourceTree = "<group>"; };
+		8F439B4723E498E200697553 /* iom16u4.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iom16u4.h; sourceTree = "<group>"; };
+		8F439B4823E498E200697553 /* iox16a4u.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iox16a4u.h; sourceTree = "<group>"; };
+		8F439B4923E498E200697553 /* iox128a1u.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iox128a1u.h; sourceTree = "<group>"; };
+		8F439B4A23E498E200697553 /* ioa5272.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ioa5272.h; sourceTree = "<group>"; };
+		8F439B4B23E498E200697553 /* iom8hva.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iom8hva.h; sourceTree = "<group>"; };
+		8F439B4C23E498E200697553 /* iom32u6.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iom32u6.h; sourceTree = "<group>"; };
+		8F439B4D23E498E200697553 /* iom645.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iom645.h; sourceTree = "<group>"; };
+		8F439B4E23E498E200697553 /* iom2560.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iom2560.h; sourceTree = "<group>"; };
+		8F439B4F23E498E200697553 /* iox128c3.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iox128c3.h; sourceTree = "<group>"; };
+		8F439B5023E498E200697553 /* iomx8.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iomx8.h; sourceTree = "<group>"; };
+		8F439B5123E498E200697553 /* iotn10.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iotn10.h; sourceTree = "<group>"; };
+		8F439B5223E498E200697553 /* iom32c1.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iom32c1.h; sourceTree = "<group>"; };
+		8F439B5323E498E200697553 /* iom16hva2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iom16hva2.h; sourceTree = "<group>"; };
+		8F439B5423E498E200697553 /* iom8a.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iom8a.h; sourceTree = "<group>"; };
+		8F439B5523E498E200697553 /* iox64d3.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iox64d3.h; sourceTree = "<group>"; };
+		8F439B5623E498E200697553 /* iotn828.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iotn828.h; sourceTree = "<group>"; };
+		8F439B5723E498E200697553 /* iotnx5.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iotnx5.h; sourceTree = "<group>"; };
+		8F439B5823E498E200697553 /* iox16a4.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iox16a4.h; sourceTree = "<group>"; };
+		8F439B5923E498E200697553 /* iom32.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iom32.h; sourceTree = "<group>"; };
+		8F439B5A23E498E200697553 /* iotn167.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iotn167.h; sourceTree = "<group>"; };
+		8F439B5B23E498E200697553 /* iom169p.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iom169p.h; sourceTree = "<group>"; };
+		8F439B5C23E498E200697553 /* iotn43u.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iotn43u.h; sourceTree = "<group>"; };
+		8F439B5D23E498E200697553 /* iousb162.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iousb162.h; sourceTree = "<group>"; };
+		8F439B5E23E498E200697553 /* io2313.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = io2313.h; sourceTree = "<group>"; };
+		8F439B5F23E498E200697553 /* iom32u2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iom32u2.h; sourceTree = "<group>"; };
+		8F439B6023E498E200697553 /* iox256a3.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iox256a3.h; sourceTree = "<group>"; };
+		8F439B6123E498E200697553 /* iotn2313a.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iotn2313a.h; sourceTree = "<group>"; };
+		8F439B6223E498E200697553 /* ioa5702m322.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ioa5702m322.h; sourceTree = "<group>"; };
+		8F439B6323E498E200697553 /* iom16hva.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iom16hva.h; sourceTree = "<group>"; };
+		8F439B6423E498E200697553 /* iom64a.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iom64a.h; sourceTree = "<group>"; };
+		8F439B6523E498E200697553 /* iotn461a.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iotn461a.h; sourceTree = "<group>"; };
+		8F439B6623E498E200697553 /* iotn88.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iotn88.h; sourceTree = "<group>"; };
+		8F439B6723E498E200697553 /* iotn4.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iotn4.h; sourceTree = "<group>"; };
+		8F439B6823E498E200697553 /* io90scr100.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = io90scr100.h; sourceTree = "<group>"; };
+		8F439B6923E498E200697553 /* iom168p.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iom168p.h; sourceTree = "<group>"; };
+		8F439B6A23E498E200697553 /* sfr_defs.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = sfr_defs.h; sourceTree = "<group>"; };
+		8F439B6B23E498E200697553 /* iox8e5.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iox8e5.h; sourceTree = "<group>"; };
+		8F439B6C23E498E200697553 /* iotn40.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iotn40.h; sourceTree = "<group>"; };
+		8F439B6D23E498E200697553 /* iom1284rfr2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iom1284rfr2.h; sourceTree = "<group>"; };
+		8F439B6E23E498E200697553 /* iom88p.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iom88p.h; sourceTree = "<group>"; };
+		8F439B6F23E498E200697553 /* iousbxx6_7.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iousbxx6_7.h; sourceTree = "<group>"; };
+		8F439B7023E498E200697553 /* iox32e5.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iox32e5.h; sourceTree = "<group>"; };
+		8F439B7123E498E200697553 /* iox64a3u.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iox64a3u.h; sourceTree = "<group>"; };
+		8F439B7223E498E200697553 /* iox64a3.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iox64a3.h; sourceTree = "<group>"; };
+		8F439B7323E498E200697553 /* iom2564rfr2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iom2564rfr2.h; sourceTree = "<group>"; };
+		8F439B7423E498E200697553 /* ioa5795.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ioa5795.h; sourceTree = "<group>"; };
+		8F439B7523E498E200697553 /* iotn25.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iotn25.h; sourceTree = "<group>"; };
+		8F439B7623E498E200697553 /* iox32c4.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iox32c4.h; sourceTree = "<group>"; };
+		8F439B7723E498E200697553 /* iotn861a.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iotn861a.h; sourceTree = "<group>"; };
+		8F439B7823E498E200697553 /* iox128b3.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iox128b3.h; sourceTree = "<group>"; };
+		8F439B7923E498E200697553 /* iotn44.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iotn44.h; sourceTree = "<group>"; };
+		8F439B7A23E498E200697553 /* iox16d4.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iox16d4.h; sourceTree = "<group>"; };
+		8F439B7B23E498E200697553 /* io4414.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = io4414.h; sourceTree = "<group>"; };
+		8F439B7C23E498E200697553 /* iom164pa.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iom164pa.h; sourceTree = "<group>"; };
+		8F439B7D23E498E200697553 /* iom324.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iom324.h; sourceTree = "<group>"; };
+		8F439B7E23E498E200697553 /* iom165pa.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iom165pa.h; sourceTree = "<group>"; };
+		8F439B7F23E498E200697553 /* iom164.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iom164.h; sourceTree = "<group>"; };
+		8F439B8023E498E200697553 /* iox256d3.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iox256d3.h; sourceTree = "<group>"; };
+		8F439B8123E498E200697553 /* io2343.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = io2343.h; sourceTree = "<group>"; };
+		8F439B8223E498E200697553 /* iocan32.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iocan32.h; sourceTree = "<group>"; };
+		8F439B8323E498E200697553 /* io8535.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = io8535.h; sourceTree = "<group>"; };
+		8F439B8423E498E200697553 /* iousb647.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iousb647.h; sourceTree = "<group>"; };
+		8F439B8523E498E200697553 /* io90pwm316.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = io90pwm316.h; sourceTree = "<group>"; };
+		8F439B8623E498E200697553 /* iomxx4.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iomxx4.h; sourceTree = "<group>"; };
+		8F439B8723E498E200697553 /* iox64a4u.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iox64a4u.h; sourceTree = "<group>"; };
+		8F439B8823E498E200697553 /* ioa6285.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ioa6285.h; sourceTree = "<group>"; };
+		8F439B8923E498E200697553 /* iom64hve2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iom64hve2.h; sourceTree = "<group>"; };
+		8F439B8A23E498E200697553 /* iox16c4.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iox16c4.h; sourceTree = "<group>"; };
+		8F439B8B23E498E200697553 /* iom644.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iom644.h; sourceTree = "<group>"; };
+		8F439B8C23E498E200697553 /* iom2561.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iom2561.h; sourceTree = "<group>"; };
+		8F439B8D23E498E200697553 /* iomxx0_1.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iomxx0_1.h; sourceTree = "<group>"; };
+		8F439B8E23E498E200697553 /* iox32d4.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iox32d4.h; sourceTree = "<group>"; };
+		8F439B8F23E498E200697553 /* iom168pa.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iom168pa.h; sourceTree = "<group>"; };
+		8F439B9023E498E200697553 /* iom169pa.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iom169pa.h; sourceTree = "<group>"; };
+		8F439B9123E498E200697553 /* io2333.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = io2333.h; sourceTree = "<group>"; };
+		8F439B9223E498E200697553 /* iom128rfr2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iom128rfr2.h; sourceTree = "<group>"; };
+		8F439B9323E498E200697553 /* iotn11.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iotn11.h; sourceTree = "<group>"; };
+		8F439B9423E498E200697553 /* iox256c3.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iox256c3.h; sourceTree = "<group>"; };
+		8F439B9523E498E200697553 /* iom3000.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iom3000.h; sourceTree = "<group>"; };
+		8F439B9623E498E200697553 /* io90pwm216.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = io90pwm216.h; sourceTree = "<group>"; };
+		8F439B9723E498E200697553 /* iox64b3.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iox64b3.h; sourceTree = "<group>"; };
+		8F439B9823E498E200697553 /* iotnx4.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iotnx4.h; sourceTree = "<group>"; };
+		8F439B9923E498E200697553 /* iotn15.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iotn15.h; sourceTree = "<group>"; };
+		8F439B9A23E498E200697553 /* iox128a3.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iox128a3.h; sourceTree = "<group>"; };
+		8F439B9B23E498E200697553 /* iom32a.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iom32a.h; sourceTree = "<group>"; };
+		8F439B9C23E498E200697553 /* io90pwm2b.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = io90pwm2b.h; sourceTree = "<group>"; };
+		8F439B9D23E498E200697553 /* iom640.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iom640.h; sourceTree = "<group>"; };
+		8F439B9E23E498E200697553 /* iom328p.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iom328p.h; sourceTree = "<group>"; };
+		8F439B9F23E498E200697553 /* iom16a.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iom16a.h; sourceTree = "<group>"; };
+		8F439BA023E498E200697553 /* iom16.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iom16.h; sourceTree = "<group>"; };
+		8F439BA123E498E200697553 /* iom64m1.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iom64m1.h; sourceTree = "<group>"; };
+		8F439BA223E498E200697553 /* iom48p.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iom48p.h; sourceTree = "<group>"; };
+		8F439BA323E498E200697553 /* iom644p.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iom644p.h; sourceTree = "<group>"; };
+		8F439BA423E498E200697553 /* ioa664251.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ioa664251.h; sourceTree = "<group>"; };
+		8F439BA523E498E200697553 /* iotn5.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iotn5.h; sourceTree = "<group>"; };
+		8F439BA623E498E200697553 /* iox64c3.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iox64c3.h; sourceTree = "<group>"; };
+		8F439BA723E498E200697553 /* iom161.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iom161.h; sourceTree = "<group>"; };
+		8F439BA823E498E200697553 /* iox64a1u.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iox64a1u.h; sourceTree = "<group>"; };
+		8F439BA923E498E200697553 /* iom32hvbrevb.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iom32hvbrevb.h; sourceTree = "<group>"; };
+		8F439BAA23E498E200697553 /* iom48.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iom48.h; sourceTree = "<group>"; };
+		8F439BAB23E498E200697553 /* iousbxx2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iousbxx2.h; sourceTree = "<group>"; };
+		8F439BAC23E498E200697553 /* io90pwm81.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = io90pwm81.h; sourceTree = "<group>"; };
+		8F439BAD23E498E200697553 /* iom88pa.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iom88pa.h; sourceTree = "<group>"; };
+		8F439BAE23E498E200697553 /* io.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = io.h; sourceTree = "<group>"; };
+		8F439BAF23E498E200697553 /* iox32a4.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iox32a4.h; sourceTree = "<group>"; };
+		8F439BB023E498E200697553 /* io4434.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = io4434.h; sourceTree = "<group>"; };
+		8F439BB123E498E200697553 /* io90pwm3b.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = io90pwm3b.h; sourceTree = "<group>"; };
+		8F439BB223E498E200697553 /* ioa5790.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ioa5790.h; sourceTree = "<group>"; };
+		8F439BB323E498E200697553 /* iotn20.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iotn20.h; sourceTree = "<group>"; };
+		8F439BB423E498E200697553 /* iom8u2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iom8u2.h; sourceTree = "<group>"; };
+		8F439BB523E498E200697553 /* iom16u2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iom16u2.h; sourceTree = "<group>"; };
+		8F439BB623E498E200697553 /* io8515.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = io8515.h; sourceTree = "<group>"; };
+		8F439BB723E498E200697553 /* iom32hvb.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iom32hvb.h; sourceTree = "<group>"; };
+		8F439BB823E498E200697553 /* iom48pa.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iom48pa.h; sourceTree = "<group>"; };
+		8F439BB923E498E200697553 /* iom325.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iom325.h; sourceTree = "<group>"; };
+		8F439BBA23E498E200697553 /* iotn2313.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iotn2313.h; sourceTree = "<group>"; };
+		8F439BBB23E498E200697553 /* iotn45.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iotn45.h; sourceTree = "<group>"; };
+		8F439BBC23E498E200697553 /* iom3250.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iom3250.h; sourceTree = "<group>"; };
+		8F439BBD23E498E200697553 /* iom6490.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iom6490.h; sourceTree = "<group>"; };
+		8F439BBE23E498E200697553 /* iotn24.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iotn24.h; sourceTree = "<group>"; };
+		8F439BBF23E498E200697553 /* iox128d3.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iox128d3.h; sourceTree = "<group>"; };
+		8F439BC023E498E200697553 /* iom644rfr2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iom644rfr2.h; sourceTree = "<group>"; };
+		8F439BC123E498E200697553 /* io8534.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = io8534.h; sourceTree = "<group>"; };
+		8F439BC223E498E200697553 /* iousb646.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iousb646.h; sourceTree = "<group>"; };
+		8F439BC323E498E200697553 /* iotn87.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iotn87.h; sourceTree = "<group>"; };
+		8F439BC423E498E200697553 /* io2323.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = io2323.h; sourceTree = "<group>"; };
+		8F439BC523E498E200697553 /* iom128rfa1.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iom128rfa1.h; sourceTree = "<group>"; };
+		8F439BC623E498E200697553 /* iom165.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iom165.h; sourceTree = "<group>"; };
+		8F439BC723E498E200697553 /* iom165a.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iom165a.h; sourceTree = "<group>"; };
+		8F439BC823E498E200697553 /* iox32a4u.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iox32a4u.h; sourceTree = "<group>"; };
+		8F439BC923E498E200697553 /* iom64hve.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iom64hve.h; sourceTree = "<group>"; };
+		8F439BCA23E498E200697553 /* iomxxhva.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iomxxhva.h; sourceTree = "<group>"; };
+		8F439BCB23E498E200697553 /* iotn12.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iotn12.h; sourceTree = "<group>"; };
+		8F439BCC23E498E200697553 /* iox256a3bu.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iox256a3bu.h; sourceTree = "<group>"; };
+		8F439BCD23E498E200697553 /* io86r401.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = io86r401.h; sourceTree = "<group>"; };
+		8F439BCE23E498E200697553 /* iom8.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iom8.h; sourceTree = "<group>"; };
+		8F439BCF23E498E200697553 /* iom644pa.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iom644pa.h; sourceTree = "<group>"; };
+		8F439BD023E498E200697553 /* ioa5505.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ioa5505.h; sourceTree = "<group>"; };
+		8F439BD123E498E200697553 /* ioa5831.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ioa5831.h; sourceTree = "<group>"; };
+		8F439BD223E498E200697553 /* iom1280.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iom1280.h; sourceTree = "<group>"; };
+		8F439BD323E498E200697553 /* ioa6286.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ioa6286.h; sourceTree = "<group>"; };
+		8F439BD423E498E200697553 /* iom64c1.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iom64c1.h; sourceTree = "<group>"; };
+		8F439BD523E498E200697553 /* iom32u4.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iom32u4.h; sourceTree = "<group>"; };
+		8F439BD623E498E200697553 /* iocan64.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iocan64.h; sourceTree = "<group>"; };
+		8F439BD723E498E200697553 /* io76c711.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = io76c711.h; sourceTree = "<group>"; };
+		8F439BD823E498E200697553 /* iox32d3.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iox32d3.h; sourceTree = "<group>"; };
+		8F439BD923E498E200697553 /* iotn13a.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iotn13a.h; sourceTree = "<group>"; };
+		8F439BDA23E498E200697553 /* iom649.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iom649.h; sourceTree = "<group>"; };
+		8F439BDB23E498E200697553 /* iom1284.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iom1284.h; sourceTree = "<group>"; };
+		8F439BDC23E498E200697553 /* io1200.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = io1200.h; sourceTree = "<group>"; };
+		8F439BDD23E498E200697553 /* iotn841.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iotn841.h; sourceTree = "<group>"; };
+		8F439BDE23E498E200697553 /* iotn261.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iotn261.h; sourceTree = "<group>"; };
+		8F439BDF23E498E200697553 /* iousb1286.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iousb1286.h; sourceTree = "<group>"; };
+		8F439BE023E498E200697553 /* iom165p.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iom165p.h; sourceTree = "<group>"; };
+		8F439BE123E498E200697553 /* iotn48.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iotn48.h; sourceTree = "<group>"; };
+		8F439BE223E498E200697553 /* iotn84a.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iotn84a.h; sourceTree = "<group>"; };
+		8F439BE323E498E200697553 /* iotn4313.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iotn4313.h; sourceTree = "<group>"; };
+		8F439BE423E498E200697553 /* iox128d4.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iox128d4.h; sourceTree = "<group>"; };
+		8F439BE523E498E200697553 /* io43u32x.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = io43u32x.h; sourceTree = "<group>"; };
+		8F439BE623E498E200697553 /* ioat94k.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ioat94k.h; sourceTree = "<group>"; };
+		8F439BE723E498E200697553 /* iom3250pa.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iom3250pa.h; sourceTree = "<group>"; };
+		8F439BE823E498E200697553 /* ioa6614q.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ioa6614q.h; sourceTree = "<group>"; };
+		8F439BE923E498E200697553 /* iom64.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iom64.h; sourceTree = "<group>"; };
+		8F439BEA23E498E200697553 /* iom88pb.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iom88pb.h; sourceTree = "<group>"; };
+		8F439BEB23E498E200697553 /* iom162.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iom162.h; sourceTree = "<group>"; };
+		8F439BEC23E498E200697553 /* io90pwm1.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = io90pwm1.h; sourceTree = "<group>"; };
+		8F439BED23E498E200697553 /* iox384c3.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iox384c3.h; sourceTree = "<group>"; };
+		8F439BEE23E498E200697553 /* iom16m1.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iom16m1.h; sourceTree = "<group>"; };
+		8F439BEF23E498E200697553 /* iox192c3.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iox192c3.h; sourceTree = "<group>"; };
+		8F439BF023E498E200697553 /* iom168.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iom168.h; sourceTree = "<group>"; };
+		8F439BF123E498E200697553 /* iom103.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iom103.h; sourceTree = "<group>"; };
+		8F439BF223E498E200697553 /* iox256a3u.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iox256a3u.h; sourceTree = "<group>"; };
+		8F439BF323E498E200697553 /* iox128a3u.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iox128a3u.h; sourceTree = "<group>"; };
+		8F439BF423E498E200697553 /* iotn84.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iotn84.h; sourceTree = "<group>"; };
+		8F439BF523E498E200697553 /* iocanxx.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iocanxx.h; sourceTree = "<group>"; };
+		8F439BF623E498E200697553 /* io4433.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = io4433.h; sourceTree = "<group>"; };
+		8F439BF723E498E200697553 /* iocan128.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iocan128.h; sourceTree = "<group>"; };
+		8F439BF823E498E200697553 /* iotn1634.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iotn1634.h; sourceTree = "<group>"; };
+		8F439BF923E498E200697553 /* iom3290pa.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iom3290pa.h; sourceTree = "<group>"; };
+		8F439BFA23E498E200697553 /* iom324pa.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iom324pa.h; sourceTree = "<group>"; };
+		8F439BFB23E498E200697553 /* iom48pb.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iom48pb.h; sourceTree = "<group>"; };
+		8F439BFC23E498E200697553 /* iom8535.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iom8535.h; sourceTree = "<group>"; };
+		8F439BFD23E498E200697553 /* iom325pa.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iom325pa.h; sourceTree = "<group>"; };
+		8F439BFE23E498E200697553 /* iom16hvbrevb.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iom16hvbrevb.h; sourceTree = "<group>"; };
+		8F439BFF23E498E200697553 /* iotn461.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iotn461.h; sourceTree = "<group>"; };
+		8F439C0023E498E200697553 /* iox128b1.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iox128b1.h; sourceTree = "<group>"; };
+		8F439C0123E498E200697553 /* iom256rfr2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iom256rfr2.h; sourceTree = "<group>"; };
+		8F439C0223E498E200697553 /* iom48a.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iom48a.h; sourceTree = "<group>"; };
+		8F439C0323E498E200697553 /* iom128.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iom128.h; sourceTree = "<group>"; };
+		8F439C0423E498E200697553 /* iox64a1.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iox64a1.h; sourceTree = "<group>"; };
+		8F439C0523E498E200697553 /* iom644a.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iom644a.h; sourceTree = "<group>"; };
+		8F439C0623E498E200697553 /* sim_tiny4313.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = sim_tiny4313.c; sourceTree = "<group>"; };
+		8F439C0723E498E200697553 /* sim_tinyx5.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = sim_tinyx5.h; sourceTree = "<group>"; };
+		8F439C0823E498E200697553 /* sim_mega64m1.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = sim_mega64m1.c; sourceTree = "<group>"; };
+		8F439C0923E498E200697553 /* sim_mega48.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = sim_mega48.c; sourceTree = "<group>"; };
+		8F439C0A23E498E200697553 /* sim_mega16m1.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = sim_mega16m1.c; sourceTree = "<group>"; };
+		8F439C0B23E498E200697553 /* sim_megax8.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = sim_megax8.h; sourceTree = "<group>"; };
+		8F439C0C23E498E200697553 /* sim_megax4.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = sim_megax4.c; sourceTree = "<group>"; };
+		8F439C0D23E498E200697553 /* sim_tiny45.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = sim_tiny45.c; sourceTree = "<group>"; };
+		8F439C0E23E498E200697553 /* sim_tiny24.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = sim_tiny24.c; sourceTree = "<group>"; };
+		8F439C0F23E498E200697553 /* sim_mega1280.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = sim_mega1280.c; sourceTree = "<group>"; };
+		8F439C1023E498E200697553 /* sim_core_declare.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = sim_core_declare.h; sourceTree = "<group>"; };
+		8F439C1123E498E200697553 /* sim_mega168.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = sim_mega168.c; sourceTree = "<group>"; };
+		8F439C1223E498E200697553 /* sim_mega32u4.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = sim_mega32u4.c; sourceTree = "<group>"; };
+		8F439C1323E498E200697553 /* sim_mega328.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = sim_mega328.c; sourceTree = "<group>"; };
+		8F439C1423E498E200697553 /* sim_megaxm1.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = sim_megaxm1.c; sourceTree = "<group>"; };
+		8F439C1523E498E200697553 /* sim_tinyx4.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = sim_tinyx4.c; sourceTree = "<group>"; };
+		8F439C1623E498E200697553 /* sim_mega2560.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = sim_mega2560.h; sourceTree = "<group>"; };
+		8F439C1723E498E200697553 /* sim_mega128.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = sim_mega128.c; sourceTree = "<group>"; };
+		8F439C1823E498E200697553 /* sim_tiny2313.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = sim_tiny2313.c; sourceTree = "<group>"; };
+		8F439C1923E498E200697553 /* sim_mega1284.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = sim_mega1284.c; sourceTree = "<group>"; };
+		8F439C1A23E498E200697553 /* sim_mega128rfa1.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = sim_mega128rfa1.c; sourceTree = "<group>"; };
+		8F439C1B23E498E200697553 /* sim_megax.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = sim_megax.c; sourceTree = "<group>"; };
+		8F439C1C23E498E200697553 /* sim_tiny25.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = sim_tiny25.c; sourceTree = "<group>"; };
+		8F439C1D23E498E200697553 /* sim_tiny44.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = sim_tiny44.c; sourceTree = "<group>"; };
+		8F439C1E23E498E200697553 /* sim_mega169.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = sim_mega169.c; sourceTree = "<group>"; };
+		8F439C1F23E498E200697553 /* sim_mega1281.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = sim_mega1281.c; sourceTree = "<group>"; };
+		8F439C2023E498E200697553 /* sim_mega128rfr2.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = sim_mega128rfr2.c; sourceTree = "<group>"; };
+		8F439C2123E498E200697553 /* sim_tinyx5.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = sim_tinyx5.c; sourceTree = "<group>"; };
+		8F439C2223E498E200697553 /* sim_mega88.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = sim_mega88.c; sourceTree = "<group>"; };
+		8F439C2323E498E200697553 /* sim_usb162.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = sim_usb162.c; sourceTree = "<group>"; };
+		8F439C2423E498E200697553 /* sim_mega32.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = sim_mega32.c; sourceTree = "<group>"; };
+		8F439C2523E498E200697553 /* sim_megax4.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = sim_megax4.h; sourceTree = "<group>"; };
+		8F439C2623E498E200697553 /* sim_mega324a.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = sim_mega324a.c; sourceTree = "<group>"; };
+		8F439C2723E498E200697553 /* sim_tiny85.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = sim_tiny85.c; sourceTree = "<group>"; };
+		8F439C2823E498E200697553 /* sim_megax8.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = sim_megax8.c; sourceTree = "<group>"; };
+		8F439C2923E498E200697553 /* sim_tiny13.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = sim_tiny13.c; sourceTree = "<group>"; };
+		8F439C2A23E498E200697553 /* sim_mega2560.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = sim_mega2560.c; sourceTree = "<group>"; };
+		8F439C2B23E498E200697553 /* sim_tinyx4.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = sim_tinyx4.h; sourceTree = "<group>"; };
+		8F439C2C23E498E200697553 /* sim_megaxm1.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = sim_megaxm1.h; sourceTree = "<group>"; };
+		8F439C2D23E498E200697553 /* sim_mega164.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = sim_mega164.c; sourceTree = "<group>"; };
+		8F439C2E23E498E200697553 /* sim_mega324.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = sim_mega324.c; sourceTree = "<group>"; };
+		8F6BDC6C23E79BB8008DEE6E /* sim_core_config.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = sim_core_config.h; sourceTree = "<group>"; };
+		8F6BDC6D23E79BB8008DEE6E /* sim_core_decl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = sim_core_decl.h; sourceTree = "<group>"; };
+		8F6BDC6F23E79C5C008DEE6E /* libelf.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libelf.a; path = ../../../usr/local/Cellar/libelf/0.8.13_1/lib/libelf.a; sourceTree = "<group>"; };
+		8F6BDC7423E88C4F008DEE6E /* uart_udp.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = uart_udp.c; sourceTree = "<group>"; };
+		8F6BDC7523E88C4F008DEE6E /* hd44780.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = hd44780.c; sourceTree = "<group>"; };
+		8F6BDC7623E88C4F008DEE6E /* vhci_usb.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = vhci_usb.c; sourceTree = "<group>"; };
+		8F6BDC7723E88C4F008DEE6E /* button.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = button.c; sourceTree = "<group>"; };
+		8F6BDC7823E88C4F008DEE6E /* ssd1306_virt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ssd1306_virt.h; sourceTree = "<group>"; };
+		8F6BDC7923E88C4F008DEE6E /* hd44780_glut.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = hd44780_glut.c; sourceTree = "<group>"; };
+		8F6BDC7A23E88C4F008DEE6E /* rotenc.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = rotenc.c; sourceTree = "<group>"; };
+		8F6BDC7B23E88C4F008DEE6E /* Makefile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
+		8F6BDC7C23E88C4F008DEE6E /* lcd_font.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lcd_font.h; sourceTree = "<group>"; };
+		8F6BDC7D23E88C4F008DEE6E /* ac_input.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ac_input.c; sourceTree = "<group>"; };
+		8F6BDC7E23E88C4F008DEE6E /* i2c_eeprom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = i2c_eeprom.h; sourceTree = "<group>"; };
+		8F6BDC7F23E88C4F008DEE6E /* ssd1306_glut.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ssd1306_glut.h; sourceTree = "<group>"; };
+		8F6BDC8023E88C4F008DEE6E /* uart_pty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = uart_pty.h; sourceTree = "<group>"; };
+		8F6BDC8123E88C4F008DEE6E /* hc595.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = hc595.c; sourceTree = "<group>"; };
+		8F6BDC8223E88C4F008DEE6E /* ds1338_virt.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ds1338_virt.c; sourceTree = "<group>"; };
+		8F6BDC8323E88C4F008DEE6E /* uart_udp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = uart_udp.h; sourceTree = "<group>"; };
+		8F6BDC8423E88C4F008DEE6E /* hd44780.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hd44780.h; sourceTree = "<group>"; };
+		8F6BDC8523E88C4F008DEE6E /* simavrparts.pc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = simavrparts.pc; sourceTree = "<group>"; };
+		8F6BDC8623E88C4F008DEE6E /* ssd1306_virt.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ssd1306_virt.c; sourceTree = "<group>"; };
+		8F6BDC8723E88C4F008DEE6E /* hd44780_glut.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hd44780_glut.h; sourceTree = "<group>"; };
+		8F6BDC8823E88C4F008DEE6E /* button.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = button.h; sourceTree = "<group>"; };
+		8F6BDC8923E88C4F008DEE6E /* vhci_usb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vhci_usb.h; sourceTree = "<group>"; };
+		8F6BDC8A23E88C4F008DEE6E /* rotenc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = rotenc.h; sourceTree = "<group>"; };
+		8F6BDC8B23E88C4F008DEE6E /* ds1338_virt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ds1338_virt.h; sourceTree = "<group>"; };
+		8F6BDC8C23E88C4F008DEE6E /* hc595.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hc595.h; sourceTree = "<group>"; };
+		8F6BDC8D23E88C4F008DEE6E /* ssd1306_glut.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ssd1306_glut.c; sourceTree = "<group>"; };
+		8F6BDC8E23E88C4F008DEE6E /* uart_pty.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = uart_pty.c; sourceTree = "<group>"; };
+		8F6BDC8F23E88C4F008DEE6E /* i2c_eeprom.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = i2c_eeprom.c; sourceTree = "<group>"; };
+		8F6BDC9023E88C4F008DEE6E /* ac_input.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ac_input.h; sourceTree = "<group>"; };
+		8F6BDC9223E88C4F008DEE6E /* twimaster.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = twimaster.c; sourceTree = "<group>"; };
+		8F6BDC9323E88C4F008DEE6E /* arduidiot_pins.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = arduidiot_pins.c; sourceTree = "<group>"; };
+		8F6BDC9423E88C4F008DEE6E /* avr_twi_master.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = avr_twi_master.h; sourceTree = "<group>"; };
+		8F6BDC9523E88C4F008DEE6E /* arduidiot_pins.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = arduidiot_pins.h; sourceTree = "<group>"; };
+		8F6BDC9623E88C4F008DEE6E /* twimaster.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = twimaster.h; sourceTree = "<group>"; };
+		8F6BDC9723E88C4F008DEE6E /* avr_twi_master.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = avr_twi_master.c; sourceTree = "<group>"; };
+		8FC37FE523E9BA610083678E /* ATmegaBOOT_168_atmega328.ihex */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ATmegaBOOT_168_atmega328.ihex; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -25,6 +461,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F6BDC7023E79DCC008DEE6E /* libelf.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -36,6 +473,7 @@
 			children = (
 				8F439AB423E44F5500697553 /* Simduino */,
 				8F439AB323E44F5500697553 /* Products */,
+				8F6BDC6E23E79C5B008DEE6E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -50,6 +488,8 @@
 		8F439AB423E44F5500697553 /* Simduino */ = {
 			isa = PBXGroup;
 			children = (
+				8FC37FE523E9BA610083678E /* ATmegaBOOT_168_atmega328.ihex */,
+				8F439AC723E4986900697553 /* simavr */,
 				8F439AB523E44F5500697553 /* SimduinoProtocol.h */,
 				8F439AB623E44F5500697553 /* Simduino.h */,
 				8F439AB723E44F5500697553 /* Simduino.m */,
@@ -57,6 +497,470 @@
 				8F439ABB23E44F5500697553 /* Info.plist */,
 			);
 			path = Simduino;
+			sourceTree = "<group>";
+		};
+		8F439AC723E4986900697553 /* simavr */ = {
+			isa = PBXGroup;
+			children = (
+				8F6BDC7323E88C4F008DEE6E /* parts */,
+				8F6BDC9123E88C4F008DEE6E /* shared */,
+				8F439AC923E498E200697553 /* simavr */,
+			);
+			name = simavr;
+			path = ../simavr;
+			sourceTree = "<group>";
+		};
+		8F439AC923E498E200697553 /* simavr */ = {
+			isa = PBXGroup;
+			children = (
+				8F6BDC6C23E79BB8008DEE6E /* sim_core_config.h */,
+				8F6BDC6D23E79BB8008DEE6E /* sim_core_decl.h */,
+				8F439ACA23E498E200697553 /* simavr-avr.pc */,
+				8F439ACB23E498E200697553 /* Makefile */,
+				8F439ACC23E498E200697553 /* .gitignore */,
+				8F439ACD23E498E200697553 /* simavr.pc */,
+				8F439ACE23E498E200697553 /* sim */,
+				8F439B0B23E498E200697553 /* cores */,
+			);
+			path = simavr;
+			sourceTree = "<group>";
+		};
+		8F439ACE23E498E200697553 /* sim */ = {
+			isa = PBXGroup;
+			children = (
+				8F439ACF23E498E200697553 /* avr_adc.c */,
+				8F439AD023E498E200697553 /* sim_time.h */,
+				8F439AD123E498E200697553 /* sim_avr_types.h */,
+				8F439AD223E498E200697553 /* avr_bitbang.c */,
+				8F439AD323E498E200697553 /* sim_gdb.h */,
+				8F439AD423E498E200697553 /* avr_lin.c */,
+				8F439AD523E498E200697553 /* sim_elf.c */,
+				8F439AD623E498E200697553 /* sim_interrupts.c */,
+				8F439AD723E498E200697553 /* sim_core.h */,
+				8F439AD823E498E200697553 /* sim_vcd_file.c */,
+				8F439AD923E498E200697553 /* avr_usb.h */,
+				8F439ADA23E498E200697553 /* avr */,
+				8F439ADC23E498E200697553 /* sim_io.c */,
+				8F439ADD23E498E200697553 /* avr_spi.h */,
+				8F439ADE23E498E200697553 /* avr_uart.c */,
+				8F439ADF23E498E200697553 /* avr_eeprom.c */,
+				8F439AE023E498E200697553 /* avr_extint.h */,
+				8F439AE123E498E200697553 /* sim_regbit.h */,
+				8F439AE223E498E200697553 /* sim_avr.c */,
+				8F439AE323E498E200697553 /* sim_irq.h */,
+				8F439AE423E498E200697553 /* sim_utils.h */,
+				8F439AE523E498E200697553 /* avr_timer.c */,
+				8F439AE623E498E200697553 /* sim_network.h */,
+				8F439AE723E498E200697553 /* sim_cycle_timers.h */,
+				8F439AE823E498E200697553 /* run_avr.c */,
+				8F439AE923E498E200697553 /* avr_ioport.h */,
+				8F439AEA23E498E200697553 /* avr_twi.c */,
+				8F439AEB23E498E200697553 /* sim_hex.h */,
+				8F439AEC23E498E200697553 /* avr_flash.c */,
+				8F439AED23E498E200697553 /* avr_acomp.h */,
+				8F439AEE23E498E200697553 /* avr_watchdog.h */,
+				8F439AEF23E498E200697553 /* sim_cmds.h */,
+				8F439AF023E498E200697553 /* avr_lin.h */,
+				8F439AF123E498E200697553 /* sim_core.c */,
+				8F439AF223E498E200697553 /* sim_vcd_file.h */,
+				8F439AF323E498E200697553 /* sim_interrupts.h */,
+				8F439AF423E498E200697553 /* sim_elf.h */,
+				8F439AF523E498E200697553 /* sim_gdb.c */,
+				8F439AF623E498E200697553 /* avr_bitbang.h */,
+				8F439AF723E498E200697553 /* avr_adc.h */,
+				8F439AF823E498E200697553 /* avr_extint.c */,
+				8F439AF923E498E200697553 /* avr_eeprom.h */,
+				8F439AFA23E498E200697553 /* avr_uart.h */,
+				8F439AFB23E498E200697553 /* avr_spi.c */,
+				8F439AFC23E498E200697553 /* sim_io.h */,
+				8F439AFD23E498E200697553 /* avr_usb.c */,
+				8F439AFE23E498E200697553 /* avr_timer.h */,
+				8F439AFF23E498E200697553 /* sim_cycle_timers.c */,
+				8F439B0023E498E200697553 /* sim_utils.c */,
+				8F439B0123E498E200697553 /* sim_irq.c */,
+				8F439B0223E498E200697553 /* fifo_declare.h */,
+				8F439B0323E498E200697553 /* sim_avr.h */,
+				8F439B0423E498E200697553 /* avr_watchdog.c */,
+				8F439B0523E498E200697553 /* sim_cmds.c */,
+				8F439B0623E498E200697553 /* avr_flash.h */,
+				8F439B0723E498E200697553 /* sim_hex.c */,
+				8F439B0823E498E200697553 /* avr_twi.h */,
+				8F439B0923E498E200697553 /* avr_ioport.c */,
+				8F439B0A23E498E200697553 /* avr_acomp.c */,
+			);
+			path = sim;
+			sourceTree = "<group>";
+		};
+		8F439ADA23E498E200697553 /* avr */ = {
+			isa = PBXGroup;
+			children = (
+				8F439ADB23E498E200697553 /* avr_mcu_section.h */,
+			);
+			path = avr;
+			sourceTree = "<group>";
+		};
+		8F439B0B23E498E200697553 /* cores */ = {
+			isa = PBXGroup;
+			children = (
+				8F439B0C23E498E200697553 /* sim_tiny2313a.c */,
+				8F439B0D23E498E200697553 /* sim_mega16.c */,
+				8F439B0E23E498E200697553 /* sim_mega644.c */,
+				8F439B0F23E498E200697553 /* sim_megax.h */,
+				8F439B1023E498E200697553 /* sim_tiny84.c */,
+				8F439B1123E498E200697553 /* sim_mega8.c */,
+				8F439B1223E498E200697553 /* avr */,
+				8F439C0623E498E200697553 /* sim_tiny4313.c */,
+				8F439C0723E498E200697553 /* sim_tinyx5.h */,
+				8F439C0823E498E200697553 /* sim_mega64m1.c */,
+				8F439C0923E498E200697553 /* sim_mega48.c */,
+				8F439C0A23E498E200697553 /* sim_mega16m1.c */,
+				8F439C0B23E498E200697553 /* sim_megax8.h */,
+				8F439C0C23E498E200697553 /* sim_megax4.c */,
+				8F439C0D23E498E200697553 /* sim_tiny45.c */,
+				8F439C0E23E498E200697553 /* sim_tiny24.c */,
+				8F439C0F23E498E200697553 /* sim_mega1280.c */,
+				8F439C1023E498E200697553 /* sim_core_declare.h */,
+				8F439C1123E498E200697553 /* sim_mega168.c */,
+				8F439C1223E498E200697553 /* sim_mega32u4.c */,
+				8F439C1323E498E200697553 /* sim_mega328.c */,
+				8F439C1423E498E200697553 /* sim_megaxm1.c */,
+				8F439C1523E498E200697553 /* sim_tinyx4.c */,
+				8F439C1623E498E200697553 /* sim_mega2560.h */,
+				8F439C1723E498E200697553 /* sim_mega128.c */,
+				8F439C1823E498E200697553 /* sim_tiny2313.c */,
+				8F439C1923E498E200697553 /* sim_mega1284.c */,
+				8F439C1A23E498E200697553 /* sim_mega128rfa1.c */,
+				8F439C1B23E498E200697553 /* sim_megax.c */,
+				8F439C1C23E498E200697553 /* sim_tiny25.c */,
+				8F439C1D23E498E200697553 /* sim_tiny44.c */,
+				8F439C1E23E498E200697553 /* sim_mega169.c */,
+				8F439C1F23E498E200697553 /* sim_mega1281.c */,
+				8F439C2023E498E200697553 /* sim_mega128rfr2.c */,
+				8F439C2123E498E200697553 /* sim_tinyx5.c */,
+				8F439C2223E498E200697553 /* sim_mega88.c */,
+				8F439C2323E498E200697553 /* sim_usb162.c */,
+				8F439C2423E498E200697553 /* sim_mega32.c */,
+				8F439C2523E498E200697553 /* sim_megax4.h */,
+				8F439C2623E498E200697553 /* sim_mega324a.c */,
+				8F439C2723E498E200697553 /* sim_tiny85.c */,
+				8F439C2823E498E200697553 /* sim_megax8.c */,
+				8F439C2923E498E200697553 /* sim_tiny13.c */,
+				8F439C2A23E498E200697553 /* sim_mega2560.c */,
+				8F439C2B23E498E200697553 /* sim_tinyx4.h */,
+				8F439C2C23E498E200697553 /* sim_megaxm1.h */,
+				8F439C2D23E498E200697553 /* sim_mega164.c */,
+				8F439C2E23E498E200697553 /* sim_mega324.c */,
+			);
+			path = cores;
+			sourceTree = "<group>";
+		};
+		8F439B1223E498E200697553 /* avr */ = {
+			isa = PBXGroup;
+			children = (
+				8F439B1323E498E200697553 /* iotn13.h */,
+				8F439B1423E498E200697553 /* iotnx61.h */,
+				8F439B1523E498E200697553 /* iom406.h */,
+				8F439B1623E498E200697553 /* iox64d4.h */,
+				8F439B1723E498E200697553 /* iom1284p.h */,
+				8F439B1823E498E200697553 /* iom168a.h */,
+				8F439B1923E498E200697553 /* iotn861.h */,
+				8F439B1A23E498E200697553 /* iom1281.h */,
+				8F439B1B23E498E200697553 /* ioa6612c.h */,
+				8F439B1C23E498E200697553 /* iom88a.h */,
+				8F439B1D23E498E200697553 /* io43u35x.h */,
+				8F439B1E23E498E200697553 /* iotn44a.h */,
+				8F439B1F23E498E200697553 /* ioa6289.h */,
+				8F439B2023E498E200697553 /* ioa5782.h */,
+				8F439B2123E498E200697553 /* iox192d3.h */,
+				8F439B2223E498E200697553 /* iox128a1.h */,
+				8F439B2323E498E200697553 /* iousb1287.h */,
+				8F439B2423E498E200697553 /* iox384d3.h */,
+				8F439B2523E498E200697553 /* iom32m1.h */,
+				8F439B2623E498E200697553 /* iox128a4u.h */,
+				8F439B2723E498E200697553 /* iox256a3b.h */,
+				8F439B2823E498E200697553 /* ioa6616c.h */,
+				8F439B2923E498E200697553 /* iox64b1.h */,
+				8F439B2A23E498E200697553 /* iox32c3.h */,
+				8F439B2B23E498E200697553 /* iom323.h */,
+				8F439B2C23E498E200697553 /* iox192a3u.h */,
+				8F439B2D23E498E200697553 /* iotn28.h */,
+				8F439B2E23E498E200697553 /* iotn22.h */,
+				8F439B2F23E498E200697553 /* iom329.h */,
+				8F439B3023E498E200697553 /* iom88.h */,
+				8F439B3123E498E200697553 /* iom649p.h */,
+				8F439B3223E498E200697553 /* iotn441.h */,
+				8F439B3323E498E200697553 /* iom169.h */,
+				8F439B3423E498E200697553 /* iom64rfr2.h */,
+				8F439B3523E498E200697553 /* iom8515.h */,
+				8F439B3623E498E200697553 /* iom16hvb.h */,
+				8F439B3723E498E200697553 /* iom163.h */,
+				8F439B3823E498E200697553 /* ioa6617c.h */,
+				8F439B3923E498E200697553 /* iotn24a.h */,
+				8F439B3A23E498E200697553 /* iousb82.h */,
+				8F439B3B23E498E200697553 /* iom6450.h */,
+				8F439B3C23E498E200697553 /* iom3290.h */,
+				8F439B3D23E498E200697553 /* iotn261a.h */,
+				8F439B3E23E498E200697553 /* iom128a.h */,
+				8F439B3F23E498E200697553 /* iotn9.h */,
+				8F439B4023E498E200697553 /* ioa5790n.h */,
+				8F439B4123E498E200697553 /* iotn85.h */,
+				8F439B4223E498E200697553 /* io90pwm161.h */,
+				8F439B4323E498E200697553 /* io90pwmx.h */,
+				8F439B4423E498E200697553 /* iox192a3.h */,
+				8F439B4523E498E200697553 /* iotn26.h */,
+				8F439B4623E498E200697553 /* ioa6613c.h */,
+				8F439B4723E498E200697553 /* iom16u4.h */,
+				8F439B4823E498E200697553 /* iox16a4u.h */,
+				8F439B4923E498E200697553 /* iox128a1u.h */,
+				8F439B4A23E498E200697553 /* ioa5272.h */,
+				8F439B4B23E498E200697553 /* iom8hva.h */,
+				8F439B4C23E498E200697553 /* iom32u6.h */,
+				8F439B4D23E498E200697553 /* iom645.h */,
+				8F439B4E23E498E200697553 /* iom2560.h */,
+				8F439B4F23E498E200697553 /* iox128c3.h */,
+				8F439B5023E498E200697553 /* iomx8.h */,
+				8F439B5123E498E200697553 /* iotn10.h */,
+				8F439B5223E498E200697553 /* iom32c1.h */,
+				8F439B5323E498E200697553 /* iom16hva2.h */,
+				8F439B5423E498E200697553 /* iom8a.h */,
+				8F439B5523E498E200697553 /* iox64d3.h */,
+				8F439B5623E498E200697553 /* iotn828.h */,
+				8F439B5723E498E200697553 /* iotnx5.h */,
+				8F439B5823E498E200697553 /* iox16a4.h */,
+				8F439B5923E498E200697553 /* iom32.h */,
+				8F439B5A23E498E200697553 /* iotn167.h */,
+				8F439B5B23E498E200697553 /* iom169p.h */,
+				8F439B5C23E498E200697553 /* iotn43u.h */,
+				8F439B5D23E498E200697553 /* iousb162.h */,
+				8F439B5E23E498E200697553 /* io2313.h */,
+				8F439B5F23E498E200697553 /* iom32u2.h */,
+				8F439B6023E498E200697553 /* iox256a3.h */,
+				8F439B6123E498E200697553 /* iotn2313a.h */,
+				8F439B6223E498E200697553 /* ioa5702m322.h */,
+				8F439B6323E498E200697553 /* iom16hva.h */,
+				8F439B6423E498E200697553 /* iom64a.h */,
+				8F439B6523E498E200697553 /* iotn461a.h */,
+				8F439B6623E498E200697553 /* iotn88.h */,
+				8F439B6723E498E200697553 /* iotn4.h */,
+				8F439B6823E498E200697553 /* io90scr100.h */,
+				8F439B6923E498E200697553 /* iom168p.h */,
+				8F439B6A23E498E200697553 /* sfr_defs.h */,
+				8F439B6B23E498E200697553 /* iox8e5.h */,
+				8F439B6C23E498E200697553 /* iotn40.h */,
+				8F439B6D23E498E200697553 /* iom1284rfr2.h */,
+				8F439B6E23E498E200697553 /* iom88p.h */,
+				8F439B6F23E498E200697553 /* iousbxx6_7.h */,
+				8F439B7023E498E200697553 /* iox32e5.h */,
+				8F439B7123E498E200697553 /* iox64a3u.h */,
+				8F439B7223E498E200697553 /* iox64a3.h */,
+				8F439B7323E498E200697553 /* iom2564rfr2.h */,
+				8F439B7423E498E200697553 /* ioa5795.h */,
+				8F439B7523E498E200697553 /* iotn25.h */,
+				8F439B7623E498E200697553 /* iox32c4.h */,
+				8F439B7723E498E200697553 /* iotn861a.h */,
+				8F439B7823E498E200697553 /* iox128b3.h */,
+				8F439B7923E498E200697553 /* iotn44.h */,
+				8F439B7A23E498E200697553 /* iox16d4.h */,
+				8F439B7B23E498E200697553 /* io4414.h */,
+				8F439B7C23E498E200697553 /* iom164pa.h */,
+				8F439B7D23E498E200697553 /* iom324.h */,
+				8F439B7E23E498E200697553 /* iom165pa.h */,
+				8F439B7F23E498E200697553 /* iom164.h */,
+				8F439B8023E498E200697553 /* iox256d3.h */,
+				8F439B8123E498E200697553 /* io2343.h */,
+				8F439B8223E498E200697553 /* iocan32.h */,
+				8F439B8323E498E200697553 /* io8535.h */,
+				8F439B8423E498E200697553 /* iousb647.h */,
+				8F439B8523E498E200697553 /* io90pwm316.h */,
+				8F439B8623E498E200697553 /* iomxx4.h */,
+				8F439B8723E498E200697553 /* iox64a4u.h */,
+				8F439B8823E498E200697553 /* ioa6285.h */,
+				8F439B8923E498E200697553 /* iom64hve2.h */,
+				8F439B8A23E498E200697553 /* iox16c4.h */,
+				8F439B8B23E498E200697553 /* iom644.h */,
+				8F439B8C23E498E200697553 /* iom2561.h */,
+				8F439B8D23E498E200697553 /* iomxx0_1.h */,
+				8F439B8E23E498E200697553 /* iox32d4.h */,
+				8F439B8F23E498E200697553 /* iom168pa.h */,
+				8F439B9023E498E200697553 /* iom169pa.h */,
+				8F439B9123E498E200697553 /* io2333.h */,
+				8F439B9223E498E200697553 /* iom128rfr2.h */,
+				8F439B9323E498E200697553 /* iotn11.h */,
+				8F439B9423E498E200697553 /* iox256c3.h */,
+				8F439B9523E498E200697553 /* iom3000.h */,
+				8F439B9623E498E200697553 /* io90pwm216.h */,
+				8F439B9723E498E200697553 /* iox64b3.h */,
+				8F439B9823E498E200697553 /* iotnx4.h */,
+				8F439B9923E498E200697553 /* iotn15.h */,
+				8F439B9A23E498E200697553 /* iox128a3.h */,
+				8F439B9B23E498E200697553 /* iom32a.h */,
+				8F439B9C23E498E200697553 /* io90pwm2b.h */,
+				8F439B9D23E498E200697553 /* iom640.h */,
+				8F439B9E23E498E200697553 /* iom328p.h */,
+				8F439B9F23E498E200697553 /* iom16a.h */,
+				8F439BA023E498E200697553 /* iom16.h */,
+				8F439BA123E498E200697553 /* iom64m1.h */,
+				8F439BA223E498E200697553 /* iom48p.h */,
+				8F439BA323E498E200697553 /* iom644p.h */,
+				8F439BA423E498E200697553 /* ioa664251.h */,
+				8F439BA523E498E200697553 /* iotn5.h */,
+				8F439BA623E498E200697553 /* iox64c3.h */,
+				8F439BA723E498E200697553 /* iom161.h */,
+				8F439BA823E498E200697553 /* iox64a1u.h */,
+				8F439BA923E498E200697553 /* iom32hvbrevb.h */,
+				8F439BAA23E498E200697553 /* iom48.h */,
+				8F439BAB23E498E200697553 /* iousbxx2.h */,
+				8F439BAC23E498E200697553 /* io90pwm81.h */,
+				8F439BAD23E498E200697553 /* iom88pa.h */,
+				8F439BAE23E498E200697553 /* io.h */,
+				8F439BAF23E498E200697553 /* iox32a4.h */,
+				8F439BB023E498E200697553 /* io4434.h */,
+				8F439BB123E498E200697553 /* io90pwm3b.h */,
+				8F439BB223E498E200697553 /* ioa5790.h */,
+				8F439BB323E498E200697553 /* iotn20.h */,
+				8F439BB423E498E200697553 /* iom8u2.h */,
+				8F439BB523E498E200697553 /* iom16u2.h */,
+				8F439BB623E498E200697553 /* io8515.h */,
+				8F439BB723E498E200697553 /* iom32hvb.h */,
+				8F439BB823E498E200697553 /* iom48pa.h */,
+				8F439BB923E498E200697553 /* iom325.h */,
+				8F439BBA23E498E200697553 /* iotn2313.h */,
+				8F439BBB23E498E200697553 /* iotn45.h */,
+				8F439BBC23E498E200697553 /* iom3250.h */,
+				8F439BBD23E498E200697553 /* iom6490.h */,
+				8F439BBE23E498E200697553 /* iotn24.h */,
+				8F439BBF23E498E200697553 /* iox128d3.h */,
+				8F439BC023E498E200697553 /* iom644rfr2.h */,
+				8F439BC123E498E200697553 /* io8534.h */,
+				8F439BC223E498E200697553 /* iousb646.h */,
+				8F439BC323E498E200697553 /* iotn87.h */,
+				8F439BC423E498E200697553 /* io2323.h */,
+				8F439BC523E498E200697553 /* iom128rfa1.h */,
+				8F439BC623E498E200697553 /* iom165.h */,
+				8F439BC723E498E200697553 /* iom165a.h */,
+				8F439BC823E498E200697553 /* iox32a4u.h */,
+				8F439BC923E498E200697553 /* iom64hve.h */,
+				8F439BCA23E498E200697553 /* iomxxhva.h */,
+				8F439BCB23E498E200697553 /* iotn12.h */,
+				8F439BCC23E498E200697553 /* iox256a3bu.h */,
+				8F439BCD23E498E200697553 /* io86r401.h */,
+				8F439BCE23E498E200697553 /* iom8.h */,
+				8F439BCF23E498E200697553 /* iom644pa.h */,
+				8F439BD023E498E200697553 /* ioa5505.h */,
+				8F439BD123E498E200697553 /* ioa5831.h */,
+				8F439BD223E498E200697553 /* iom1280.h */,
+				8F439BD323E498E200697553 /* ioa6286.h */,
+				8F439BD423E498E200697553 /* iom64c1.h */,
+				8F439BD523E498E200697553 /* iom32u4.h */,
+				8F439BD623E498E200697553 /* iocan64.h */,
+				8F439BD723E498E200697553 /* io76c711.h */,
+				8F439BD823E498E200697553 /* iox32d3.h */,
+				8F439BD923E498E200697553 /* iotn13a.h */,
+				8F439BDA23E498E200697553 /* iom649.h */,
+				8F439BDB23E498E200697553 /* iom1284.h */,
+				8F439BDC23E498E200697553 /* io1200.h */,
+				8F439BDD23E498E200697553 /* iotn841.h */,
+				8F439BDE23E498E200697553 /* iotn261.h */,
+				8F439BDF23E498E200697553 /* iousb1286.h */,
+				8F439BE023E498E200697553 /* iom165p.h */,
+				8F439BE123E498E200697553 /* iotn48.h */,
+				8F439BE223E498E200697553 /* iotn84a.h */,
+				8F439BE323E498E200697553 /* iotn4313.h */,
+				8F439BE423E498E200697553 /* iox128d4.h */,
+				8F439BE523E498E200697553 /* io43u32x.h */,
+				8F439BE623E498E200697553 /* ioat94k.h */,
+				8F439BE723E498E200697553 /* iom3250pa.h */,
+				8F439BE823E498E200697553 /* ioa6614q.h */,
+				8F439BE923E498E200697553 /* iom64.h */,
+				8F439BEA23E498E200697553 /* iom88pb.h */,
+				8F439BEB23E498E200697553 /* iom162.h */,
+				8F439BEC23E498E200697553 /* io90pwm1.h */,
+				8F439BED23E498E200697553 /* iox384c3.h */,
+				8F439BEE23E498E200697553 /* iom16m1.h */,
+				8F439BEF23E498E200697553 /* iox192c3.h */,
+				8F439BF023E498E200697553 /* iom168.h */,
+				8F439BF123E498E200697553 /* iom103.h */,
+				8F439BF223E498E200697553 /* iox256a3u.h */,
+				8F439BF323E498E200697553 /* iox128a3u.h */,
+				8F439BF423E498E200697553 /* iotn84.h */,
+				8F439BF523E498E200697553 /* iocanxx.h */,
+				8F439BF623E498E200697553 /* io4433.h */,
+				8F439BF723E498E200697553 /* iocan128.h */,
+				8F439BF823E498E200697553 /* iotn1634.h */,
+				8F439BF923E498E200697553 /* iom3290pa.h */,
+				8F439BFA23E498E200697553 /* iom324pa.h */,
+				8F439BFB23E498E200697553 /* iom48pb.h */,
+				8F439BFC23E498E200697553 /* iom8535.h */,
+				8F439BFD23E498E200697553 /* iom325pa.h */,
+				8F439BFE23E498E200697553 /* iom16hvbrevb.h */,
+				8F439BFF23E498E200697553 /* iotn461.h */,
+				8F439C0023E498E200697553 /* iox128b1.h */,
+				8F439C0123E498E200697553 /* iom256rfr2.h */,
+				8F439C0223E498E200697553 /* iom48a.h */,
+				8F439C0323E498E200697553 /* iom128.h */,
+				8F439C0423E498E200697553 /* iox64a1.h */,
+				8F439C0523E498E200697553 /* iom644a.h */,
+			);
+			path = avr;
+			sourceTree = "<group>";
+		};
+		8F6BDC6E23E79C5B008DEE6E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8F6BDC6F23E79C5C008DEE6E /* libelf.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8F6BDC7323E88C4F008DEE6E /* parts */ = {
+			isa = PBXGroup;
+			children = (
+				8F6BDC7423E88C4F008DEE6E /* uart_udp.c */,
+				8F6BDC7523E88C4F008DEE6E /* hd44780.c */,
+				8F6BDC7623E88C4F008DEE6E /* vhci_usb.c */,
+				8F6BDC7723E88C4F008DEE6E /* button.c */,
+				8F6BDC7823E88C4F008DEE6E /* ssd1306_virt.h */,
+				8F6BDC7923E88C4F008DEE6E /* hd44780_glut.c */,
+				8F6BDC7A23E88C4F008DEE6E /* rotenc.c */,
+				8F6BDC7B23E88C4F008DEE6E /* Makefile */,
+				8F6BDC7C23E88C4F008DEE6E /* lcd_font.h */,
+				8F6BDC7D23E88C4F008DEE6E /* ac_input.c */,
+				8F6BDC7E23E88C4F008DEE6E /* i2c_eeprom.h */,
+				8F6BDC7F23E88C4F008DEE6E /* ssd1306_glut.h */,
+				8F6BDC8023E88C4F008DEE6E /* uart_pty.h */,
+				8F6BDC8123E88C4F008DEE6E /* hc595.c */,
+				8F6BDC8223E88C4F008DEE6E /* ds1338_virt.c */,
+				8F6BDC8323E88C4F008DEE6E /* uart_udp.h */,
+				8F6BDC8423E88C4F008DEE6E /* hd44780.h */,
+				8F6BDC8523E88C4F008DEE6E /* simavrparts.pc */,
+				8F6BDC8623E88C4F008DEE6E /* ssd1306_virt.c */,
+				8F6BDC8723E88C4F008DEE6E /* hd44780_glut.h */,
+				8F6BDC8823E88C4F008DEE6E /* button.h */,
+				8F6BDC8923E88C4F008DEE6E /* vhci_usb.h */,
+				8F6BDC8A23E88C4F008DEE6E /* rotenc.h */,
+				8F6BDC8B23E88C4F008DEE6E /* ds1338_virt.h */,
+				8F6BDC8C23E88C4F008DEE6E /* hc595.h */,
+				8F6BDC8D23E88C4F008DEE6E /* ssd1306_glut.c */,
+				8F6BDC8E23E88C4F008DEE6E /* uart_pty.c */,
+				8F6BDC8F23E88C4F008DEE6E /* i2c_eeprom.c */,
+				8F6BDC9023E88C4F008DEE6E /* ac_input.h */,
+			);
+			name = parts;
+			path = examples/parts;
+			sourceTree = "<group>";
+		};
+		8F6BDC9123E88C4F008DEE6E /* shared */ = {
+			isa = PBXGroup;
+			children = (
+				8F6BDC9223E88C4F008DEE6E /* twimaster.c */,
+				8F6BDC9323E88C4F008DEE6E /* arduidiot_pins.c */,
+				8F6BDC9423E88C4F008DEE6E /* avr_twi_master.h */,
+				8F6BDC9523E88C4F008DEE6E /* arduidiot_pins.h */,
+				8F6BDC9623E88C4F008DEE6E /* twimaster.h */,
+				8F6BDC9723E88C4F008DEE6E /* avr_twi_master.c */,
+			);
+			name = shared;
+			path = examples/shared;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -116,6 +1020,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8FC37FE623E9BA610083678E /* ATmegaBOOT_168_atmega328.ihex in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -126,8 +1031,50 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8FBA32B323E5E3A800DBD58C /* sim_core.c in Sources */,
+				8F6BDCA323E88C4F008DEE6E /* ssd1306_virt.c in Sources */,
+				8FBA32A423E5E35000DBD58C /* sim_mega328.c in Sources */,
+				8FBA32BA23E5E3A800DBD58C /* sim_irq.c in Sources */,
+				8FBA32BD23E5E3A800DBD58C /* sim_hex.c in Sources */,
+				8FBA32AE23E5E3A800DBD58C /* sim_avr.c in Sources */,
+				8F6BDC9C23E88C4F008DEE6E /* hd44780_glut.c in Sources */,
+				8FBA32AD23E5E3A800DBD58C /* avr_eeprom.c in Sources */,
+				8FBA32BF23E5E3A800DBD58C /* avr_acomp.c in Sources */,
+				8FBA32B723E5E3A800DBD58C /* avr_usb.c in Sources */,
+				8FBA32A923E5E3A800DBD58C /* sim_interrupts.c in Sources */,
+				8FBA32A823E5E3A800DBD58C /* sim_elf.c in Sources */,
+				8FBA32B423E5E3A800DBD58C /* sim_gdb.c in Sources */,
+				8F6BDC9923E88C4F008DEE6E /* hd44780.c in Sources */,
+				8F6BDCA023E88C4F008DEE6E /* hc595.c in Sources */,
+				8FBA32B823E5E3A800DBD58C /* sim_cycle_timers.c in Sources */,
+				8F6BDCA123E88C4F008DEE6E /* ds1338_virt.c in Sources */,
+				8F6BDC9F23E88C4F008DEE6E /* ac_input.c in Sources */,
+				8FBA32B623E5E3A800DBD58C /* avr_spi.c in Sources */,
+				8FBA32AB23E5E3A800DBD58C /* sim_io.c in Sources */,
+				8FBA32B123E5E3A800DBD58C /* avr_twi.c in Sources */,
+				8F6BDC7223E79F87008DEE6E /* sim_megax8.c in Sources */,
+				8F6BDC9D23E88C4F008DEE6E /* rotenc.c in Sources */,
+				8FBA32BC23E5E3A800DBD58C /* sim_cmds.c in Sources */,
+				8FBA32BE23E5E3A800DBD58C /* avr_ioport.c in Sources */,
+				8F6BDCA823E88C4F008DEE6E /* arduidiot_pins.c in Sources */,
+				8FBA32B523E5E3A800DBD58C /* avr_extint.c in Sources */,
+				8FBA32A723E5E3A800DBD58C /* avr_lin.c in Sources */,
+				8FBA32A623E5E3A800DBD58C /* avr_bitbang.c in Sources */,
 				8F439ABA23E44F5500697553 /* main.m in Sources */,
+				8F6BDCA623E88C4F008DEE6E /* i2c_eeprom.c in Sources */,
+				8F6BDCA523E88C4F008DEE6E /* uart_pty.c in Sources */,
+				8F6BDCA423E88C4F008DEE6E /* ssd1306_glut.c in Sources */,
+				8FBA32A523E5E3A800DBD58C /* avr_adc.c in Sources */,
+				8FBA32AC23E5E3A800DBD58C /* avr_uart.c in Sources */,
+				8FBA32AF23E5E3A800DBD58C /* avr_timer.c in Sources */,
+				8F6BDC7123E79ECF008DEE6E /* sim_mega32u4.c in Sources */,
+				8FBA32B223E5E3A800DBD58C /* avr_flash.c in Sources */,
+				8FBA32B923E5E3A800DBD58C /* sim_utils.c in Sources */,
+				8FBA32AA23E5E3A800DBD58C /* sim_vcd_file.c in Sources */,
+				8F6BDC9B23E88C4F008DEE6E /* button.c in Sources */,
+				8FBA32BB23E5E3A800DBD58C /* avr_watchdog.c in Sources */,
 				8F439AB823E44F5500697553 /* Simduino.m in Sources */,
+				8F6BDC9823E88C4F008DEE6E /* uart_udp.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -250,7 +1197,16 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = SWDC5K54B7;
 				ENABLE_HARDENED_RUNTIME = YES;
+				HEADER_SEARCH_PATHS = (
+					/usr/local/include,
+					/usr/local/include/libelf,
+				);
 				INFOPLIST_FILE = Simduino/Info.plist;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/usr/local/Cellar/libelf/0.8.13_1/lib,
+				);
+				OTHER_LDFLAGS = "-lelf";
 				PRODUCT_BUNDLE_IDENTIFIER = com.petosoft.Simduino;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -264,7 +1220,16 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = SWDC5K54B7;
 				ENABLE_HARDENED_RUNTIME = YES;
+				HEADER_SEARCH_PATHS = (
+					/usr/local/include,
+					/usr/local/include/libelf,
+				);
 				INFOPLIST_FILE = Simduino/Info.plist;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/usr/local/Cellar/libelf/0.8.13_1/lib,
+				);
+				OTHER_LDFLAGS = "-lelf";
 				PRODUCT_BUNDLE_IDENTIFIER = com.petosoft.Simduino;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
