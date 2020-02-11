@@ -56,6 +56,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8F249C1D23F302AF00FD38F7 /* sim_core_decl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = sim_core_decl.h; sourceTree = "<group>"; };
+		8F249C1E23F302AF00FD38F7 /* sim_core_config.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = sim_core_config.h; sourceTree = "<group>"; };
 		8F439AB223E44F5500697553 /* Simduino.xpc */ = {isa = PBXFileReference; explicitFileType = "wrapper.xpc-service"; includeInIndex = 0; path = Simduino.xpc; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F439AB523E44F5500697553 /* SimduinoProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SimduinoProtocol.h; sourceTree = "<group>"; };
 		8F439AB623E44F5500697553 /* Simduino.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Simduino.h; sourceTree = "<group>"; };
@@ -488,6 +490,8 @@
 		8F439AB423E44F5500697553 /* Simduino */ = {
 			isa = PBXGroup;
 			children = (
+				8F249C1E23F302AF00FD38F7 /* sim_core_config.h */,
+				8F249C1D23F302AF00FD38F7 /* sim_core_decl.h */,
 				8FC37FE523E9BA610083678E /* ATmegaBOOT_168_atmega328.ihex */,
 				8F439AC723E4986900697553 /* simavr */,
 				8F439AB523E44F5500697553 /* SimduinoProtocol.h */,
