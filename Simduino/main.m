@@ -36,7 +36,18 @@
     // Next, set the object that the connection exports. All messages sent on the connection to this service will be sent to the exported object to handle. The connection retains the exported object.
     Simduino *exportedObject = [[Simduino alloc] initWithOperationQueue:simduinoQueue];
     newConnection.exportedObject = exportedObject;
-    
+
+    newConnection.remoteObjectInterface = [NSXPCInterface interfaceWithProtocol:@protocol(SimduinoHostProtocol)];
+    id<SimduinoHostProtocol> host = [newConnection remoteObjectProxyWithErrorHandler:^(NSError * _Nonnull error) {
+        NSLog(@"Failed to get host protocol: %@", [error localizedDescription]);
+    }];
+
+    if ([host conformsToProtocol:@protocol(SimduinoHostProtocol)] && [host respondsToSelector:@selector(LChanged:)]) {
+        exportedObject.simduinoHost = host;
+    } else {
+        NSLog(@"host does not conform to SimduinoHostProtocol");
+    }
+
     // Resuming the connection allows the system to deliver more incoming messages.
     [newConnection resume];
     

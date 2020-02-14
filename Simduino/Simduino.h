@@ -14,4 +14,6 @@
 
 - (instancetype)initWithOperationQueue:(NSOperationQueue*)queue NS_DESIGNATED_INITIALIZER;
 
+@property id<SimduinoHostProtocol> simduinoHost;
+
 @end
