@@ -131,6 +131,7 @@ void pin_changed_hook(struct avr_irq_t * irq, uint32_t value, void * param)
 
         if (restartedCallback) {
             // restart requested
+            NSLog(@"resetting avr...");
             avr_reset(avr);
             restartedCallback();
             restartedCallback = nil;
