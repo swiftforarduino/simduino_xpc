@@ -4,7 +4,7 @@
 //
 //  Created by Carl Peto on 31/01/2020.
 //  Copyright © 2020 Carl Peto. All rights reserved.
-//
+//  simavr forked into s4a repo with remote git@github.com:swiftforarduino/simavr.git
 
 #import <Foundation/Foundation.h>
 #import "ServiceDelegate.h"
