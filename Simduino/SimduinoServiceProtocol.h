@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 
 // The protocol that this service will vend as its API. This header file will also need to be visible to the process hosting the service.
-@protocol SimduinoProtocol
+@protocol SimduinoServiceProtocol
 
 // Replace the API of this protocol with an API appropriate to the service you are vending.
 //- (void)upperCaseString:(NSString * _Nonnull)aString withReply:(void (^ _Nonnull)(NSString * _Nonnull))reply;

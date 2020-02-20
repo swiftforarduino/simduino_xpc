@@ -25,6 +25,8 @@
 		8F6BDCA523E88C4F008DEE6E /* uart_pty.c in Sources */ = {isa = PBXBuildFile; fileRef = 8F6BDC8E23E88C4F008DEE6E /* uart_pty.c */; };
 		8F6BDCA623E88C4F008DEE6E /* i2c_eeprom.c in Sources */ = {isa = PBXBuildFile; fileRef = 8F6BDC8F23E88C4F008DEE6E /* i2c_eeprom.c */; };
 		8F6BDCA823E88C4F008DEE6E /* arduidiot_pins.c in Sources */ = {isa = PBXBuildFile; fileRef = 8F6BDC9323E88C4F008DEE6E /* arduidiot_pins.c */; };
+		8F993AFE23FE034400E1DB97 /* SimduinoService.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F993AFD23FE034400E1DB97 /* SimduinoService.m */; };
+		8F993B0123FE9F8300E1DB97 /* ServiceDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F993B0023FE9F8300E1DB97 /* ServiceDelegate.m */; };
 		8FBA32A423E5E35000DBD58C /* sim_mega328.c in Sources */ = {isa = PBXBuildFile; fileRef = 8F439C1323E498E200697553 /* sim_mega328.c */; };
 		8FBA32A523E5E3A800DBD58C /* avr_adc.c in Sources */ = {isa = PBXBuildFile; fileRef = 8F439ACF23E498E200697553 /* avr_adc.c */; };
 		8FBA32A623E5E3A800DBD58C /* avr_bitbang.c in Sources */ = {isa = PBXBuildFile; fileRef = 8F439AD223E498E200697553 /* avr_bitbang.c */; };
@@ -59,7 +61,7 @@
 		8F249C1D23F302AF00FD38F7 /* sim_core_decl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = sim_core_decl.h; sourceTree = "<group>"; };
 		8F249C1E23F302AF00FD38F7 /* sim_core_config.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = sim_core_config.h; sourceTree = "<group>"; };
 		8F439AB223E44F5500697553 /* Simduino.xpc */ = {isa = PBXFileReference; explicitFileType = "wrapper.xpc-service"; includeInIndex = 0; path = Simduino.xpc; sourceTree = BUILT_PRODUCTS_DIR; };
-		8F439AB523E44F5500697553 /* SimduinoProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SimduinoProtocol.h; sourceTree = "<group>"; };
+		8F439AB523E44F5500697553 /* SimduinoServiceProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SimduinoServiceProtocol.h; sourceTree = "<group>"; };
 		8F439AB623E44F5500697553 /* Simduino.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Simduino.h; sourceTree = "<group>"; };
 		8F439AB723E44F5500697553 /* Simduino.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Simduino.m; sourceTree = "<group>"; };
 		8F439AB923E44F5500697553 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -455,6 +457,10 @@
 		8F6BDC9523E88C4F008DEE6E /* arduidiot_pins.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = arduidiot_pins.h; sourceTree = "<group>"; };
 		8F6BDC9623E88C4F008DEE6E /* twimaster.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = twimaster.h; sourceTree = "<group>"; };
 		8F6BDC9723E88C4F008DEE6E /* avr_twi_master.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = avr_twi_master.c; sourceTree = "<group>"; };
+		8F993AFC23FE034400E1DB97 /* SimduinoService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SimduinoService.h; sourceTree = "<group>"; };
+		8F993AFD23FE034400E1DB97 /* SimduinoService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SimduinoService.m; sourceTree = "<group>"; };
+		8F993AFF23FE9F8300E1DB97 /* ServiceDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ServiceDelegate.h; sourceTree = "<group>"; };
+		8F993B0023FE9F8300E1DB97 /* ServiceDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ServiceDelegate.m; sourceTree = "<group>"; };
 		8FC37FE523E9BA610083678E /* ATmegaBOOT_168_atmega328.ihex */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ATmegaBOOT_168_atmega328.ihex; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -490,15 +496,16 @@
 		8F439AB423E44F5500697553 /* Simduino */ = {
 			isa = PBXGroup;
 			children = (
-				8F249C1E23F302AF00FD38F7 /* sim_core_config.h */,
-				8F249C1D23F302AF00FD38F7 /* sim_core_decl.h */,
-				8FC37FE523E9BA610083678E /* ATmegaBOOT_168_atmega328.ihex */,
-				8F439AC723E4986900697553 /* simavr */,
-				8F439AB523E44F5500697553 /* SimduinoProtocol.h */,
+				8F439AB923E44F5500697553 /* main.m */,
+				8F993AFF23FE9F8300E1DB97 /* ServiceDelegate.h */,
+				8F993B0023FE9F8300E1DB97 /* ServiceDelegate.m */,
 				8F439AB623E44F5500697553 /* Simduino.h */,
 				8F439AB723E44F5500697553 /* Simduino.m */,
-				8F439AB923E44F5500697553 /* main.m */,
-				8F439ABB23E44F5500697553 /* Info.plist */,
+				8F993AFC23FE034400E1DB97 /* SimduinoService.h */,
+				8F993AFD23FE034400E1DB97 /* SimduinoService.m */,
+				8F439AB523E44F5500697553 /* SimduinoServiceProtocol.h */,
+				8F439AC723E4986900697553 /* simavr */,
+				8F993B0223FE9FF600E1DB97 /* support */,
 			);
 			path = Simduino;
 			sourceTree = "<group>";
@@ -919,35 +926,35 @@
 		8F6BDC7323E88C4F008DEE6E /* parts */ = {
 			isa = PBXGroup;
 			children = (
-				8F6BDC7423E88C4F008DEE6E /* uart_udp.c */,
-				8F6BDC7523E88C4F008DEE6E /* hd44780.c */,
-				8F6BDC7623E88C4F008DEE6E /* vhci_usb.c */,
-				8F6BDC7723E88C4F008DEE6E /* button.c */,
-				8F6BDC7823E88C4F008DEE6E /* ssd1306_virt.h */,
-				8F6BDC7923E88C4F008DEE6E /* hd44780_glut.c */,
-				8F6BDC7A23E88C4F008DEE6E /* rotenc.c */,
-				8F6BDC7B23E88C4F008DEE6E /* Makefile */,
-				8F6BDC7C23E88C4F008DEE6E /* lcd_font.h */,
 				8F6BDC7D23E88C4F008DEE6E /* ac_input.c */,
-				8F6BDC7E23E88C4F008DEE6E /* i2c_eeprom.h */,
-				8F6BDC7F23E88C4F008DEE6E /* ssd1306_glut.h */,
-				8F6BDC8023E88C4F008DEE6E /* uart_pty.h */,
-				8F6BDC8123E88C4F008DEE6E /* hc595.c */,
-				8F6BDC8223E88C4F008DEE6E /* ds1338_virt.c */,
-				8F6BDC8323E88C4F008DEE6E /* uart_udp.h */,
-				8F6BDC8423E88C4F008DEE6E /* hd44780.h */,
-				8F6BDC8523E88C4F008DEE6E /* simavrparts.pc */,
-				8F6BDC8623E88C4F008DEE6E /* ssd1306_virt.c */,
-				8F6BDC8723E88C4F008DEE6E /* hd44780_glut.h */,
-				8F6BDC8823E88C4F008DEE6E /* button.h */,
-				8F6BDC8923E88C4F008DEE6E /* vhci_usb.h */,
-				8F6BDC8A23E88C4F008DEE6E /* rotenc.h */,
-				8F6BDC8B23E88C4F008DEE6E /* ds1338_virt.h */,
-				8F6BDC8C23E88C4F008DEE6E /* hc595.h */,
-				8F6BDC8D23E88C4F008DEE6E /* ssd1306_glut.c */,
-				8F6BDC8E23E88C4F008DEE6E /* uart_pty.c */,
-				8F6BDC8F23E88C4F008DEE6E /* i2c_eeprom.c */,
 				8F6BDC9023E88C4F008DEE6E /* ac_input.h */,
+				8F6BDC7723E88C4F008DEE6E /* button.c */,
+				8F6BDC8823E88C4F008DEE6E /* button.h */,
+				8F6BDC8223E88C4F008DEE6E /* ds1338_virt.c */,
+				8F6BDC8B23E88C4F008DEE6E /* ds1338_virt.h */,
+				8F6BDC8123E88C4F008DEE6E /* hc595.c */,
+				8F6BDC8C23E88C4F008DEE6E /* hc595.h */,
+				8F6BDC7923E88C4F008DEE6E /* hd44780_glut.c */,
+				8F6BDC8723E88C4F008DEE6E /* hd44780_glut.h */,
+				8F6BDC7523E88C4F008DEE6E /* hd44780.c */,
+				8F6BDC8423E88C4F008DEE6E /* hd44780.h */,
+				8F6BDC8F23E88C4F008DEE6E /* i2c_eeprom.c */,
+				8F6BDC7E23E88C4F008DEE6E /* i2c_eeprom.h */,
+				8F6BDC7C23E88C4F008DEE6E /* lcd_font.h */,
+				8F6BDC7B23E88C4F008DEE6E /* Makefile */,
+				8F6BDC7A23E88C4F008DEE6E /* rotenc.c */,
+				8F6BDC8A23E88C4F008DEE6E /* rotenc.h */,
+				8F6BDC8523E88C4F008DEE6E /* simavrparts.pc */,
+				8F6BDC8D23E88C4F008DEE6E /* ssd1306_glut.c */,
+				8F6BDC7F23E88C4F008DEE6E /* ssd1306_glut.h */,
+				8F6BDC8623E88C4F008DEE6E /* ssd1306_virt.c */,
+				8F6BDC7823E88C4F008DEE6E /* ssd1306_virt.h */,
+				8F6BDC8E23E88C4F008DEE6E /* uart_pty.c */,
+				8F6BDC8023E88C4F008DEE6E /* uart_pty.h */,
+				8F6BDC7423E88C4F008DEE6E /* uart_udp.c */,
+				8F6BDC8323E88C4F008DEE6E /* uart_udp.h */,
+				8F6BDC7623E88C4F008DEE6E /* vhci_usb.c */,
+				8F6BDC8923E88C4F008DEE6E /* vhci_usb.h */,
 			);
 			name = parts;
 			path = examples/parts;
@@ -965,6 +972,17 @@
 			);
 			name = shared;
 			path = examples/shared;
+			sourceTree = "<group>";
+		};
+		8F993B0223FE9FF600E1DB97 /* support */ = {
+			isa = PBXGroup;
+			children = (
+				8FC37FE523E9BA610083678E /* ATmegaBOOT_168_atmega328.ihex */,
+				8F439ABB23E44F5500697553 /* Info.plist */,
+				8F249C1E23F302AF00FD38F7 /* sim_core_config.h */,
+				8F249C1D23F302AF00FD38F7 /* sim_core_decl.h */,
+			);
+			name = support;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1041,11 +1059,13 @@
 				8FBA32BA23E5E3A800DBD58C /* sim_irq.c in Sources */,
 				8FBA32BD23E5E3A800DBD58C /* sim_hex.c in Sources */,
 				8FBA32AE23E5E3A800DBD58C /* sim_avr.c in Sources */,
+				8F993B0123FE9F8300E1DB97 /* ServiceDelegate.m in Sources */,
 				8F6BDC9C23E88C4F008DEE6E /* hd44780_glut.c in Sources */,
 				8FBA32AD23E5E3A800DBD58C /* avr_eeprom.c in Sources */,
 				8FBA32BF23E5E3A800DBD58C /* avr_acomp.c in Sources */,
 				8FBA32B723E5E3A800DBD58C /* avr_usb.c in Sources */,
 				8FBA32A923E5E3A800DBD58C /* sim_interrupts.c in Sources */,
+				8F993AFE23FE034400E1DB97 /* SimduinoService.m in Sources */,
 				8FBA32A823E5E3A800DBD58C /* sim_elf.c in Sources */,
 				8FBA32B423E5E3A800DBD58C /* sim_gdb.c in Sources */,
 				8F6BDC9923E88C4F008DEE6E /* hd44780.c in Sources */,
