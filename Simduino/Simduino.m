@@ -18,7 +18,6 @@
 
 @interface Simduino () {
     elf_firmware_t f;
-    uint32_t f_cpu;
     uart_pty_t uart_pty;
     avr_t * avr;
     uint8_t port_b_state;
@@ -30,6 +29,13 @@
 
 @implementation Simduino
 
+void pin_changed_hook(struct avr_irq_t * irq, uint32_t value, void * param)
+{
+    Simduino * const simduino = (__bridge Simduino * const)param;
+    simduino->port_b_state = (simduino->port_b_state & ~(1 << irq->irq)) | (value << irq->irq);
+    simduino.LState = (simduino->port_b_state & (1<<5)) ? YES : NO;
+}
+
 - (void)setLState:(BOOL)LState {
     @synchronized (self) {
         if (_LState != LState) {
@@ -39,54 +45,21 @@
     }
 }
 
-void pin_changed_hook(struct avr_irq_t * irq, uint32_t value, void * param)
-{
-    Simduino * const simduino = (__bridge Simduino * const)param;
-    simduino->port_b_state = (simduino->port_b_state & ~(1 << irq->irq)) | (value << irq->irq);
-    simduino.LState = (simduino->port_b_state & (1<<5)) ? YES : NO;
-}
-
 - (instancetype)init {
     self = [super init];
     if (self) {
-        f_cpu = 16000000;
         char * mmcu = "atmega328p";
         strcpy(f.mmcu, mmcu);
-        f.frequency = f_cpu;
+        f.frequency = 16000000;
 
         avr = avr_make_mcu_by_name(mmcu);
 
         if (!avr) {
             fprintf(stderr, "Error creating the AVR core\n");
-            exit(1);
+            return nil;
         }
-
-        NSString * ihexPath = [[NSBundle mainBundle] pathForResource:@"ATmegaBOOT_168_atmega328" ofType:@"ihex"];
-        char boot_path[1024];
-        strncpy(boot_path, [ihexPath cStringUsingEncoding:NSUTF8StringEncoding], 1024);
-        uint32_t boot_base, boot_size;
-        uint8_t * boot = read_ihex_file(boot_path, &boot_size, &boot_base);
-
-        if (!boot) {
-            fprintf(stderr, "Unable to load %s\n", boot_path);
-            exit(1);
-        }
-
-        printf("%s booloader 0x%05x: %d bytes\n", mmcu, boot_base, boot_size);
-        f.flash = boot;
-        f.flashsize = boot_size;
-        f.flashbase = boot_base;
-
 
         avr_init(avr);
-
-        avr_load_firmware(avr, &f);
-
-        if (f.flashbase) {
-            printf("Attempted to load a bootloader at %04x\n", f.flashbase);
-            avr->pc = f.flashbase;
-            avr->codeend = avr->flashend;
-        }
 
         avr_irq_register_notify(
                                 avr_io_getirq(avr, AVR_IOCTL_IOPORT_GETIRQ('B'), 5),
@@ -98,6 +71,49 @@ void pin_changed_hook(struct avr_irq_t * irq, uint32_t value, void * param)
     }
 
     return self;
+}
+
+- (BOOL)loadBootloader {
+    NSString * ihexPath = [[NSBundle mainBundle] pathForResource:@"ATmegaBOOT_168_atmega328" ofType:@"ihex"];
+    char boot_path[1024];
+    strncpy(boot_path, [ihexPath cStringUsingEncoding:NSUTF8StringEncoding], 1024);
+    uint32_t boot_base, boot_size;
+    uint8_t * boot = read_ihex_file(boot_path, &boot_size, &boot_base);
+
+    if (!boot) {
+        fprintf(stderr, "Unable to load %s\n", boot_path);
+        return false;
+    }
+
+    f.flash = boot;
+    f.flashsize = boot_size;
+    f.flashbase = boot_base;
+
+    return true;
+}
+
+- (BOOL)loadELFFile:(NSString*)filename {
+    char executable_path[1024];
+    strncpy(executable_path, [filename cStringUsingEncoding:NSUTF8StringEncoding], 1024);
+    if (elf_read_firmware(executable_path, &f) == -1) {
+        fprintf(stderr, "Unable to load firmware from file %s\n", executable_path);
+        return false;
+    } else {
+        return true;
+    }
+}
+
+- (BOOL)setup {
+    avr_load_firmware(avr, &f);
+
+    if (f.flashbase) {
+        printf("Attempted to load a bootloader at %04x\n", f.flashbase);
+        avr->pc = f.flashbase;
+        avr->codeend = avr->flashend;
+        return true;
+    } else {
+        return false;
+    }
 }
 
 - (void)dealloc {

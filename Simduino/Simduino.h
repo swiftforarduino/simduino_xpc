@@ -18,4 +18,8 @@
 @property (atomic) void (^restartedCallback)(void);
 @property (atomic) BOOL debug;
 
+- (BOOL)loadBootloader;
+- (BOOL)loadELFFile:(NSString*)filename;
+- (BOOL)setup;
+
 @end

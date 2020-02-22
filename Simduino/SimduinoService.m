@@ -28,14 +28,23 @@
 
 // create an NSOperation to run the simulator
 // should all be done in that
-- (void)startupSimduinoWithDebug:(BOOL)debugIn
-                       withReply:(void (^ _Nonnull)(NSString * _Nullable))ptyNameCallbackIn {
+- (void)startupSimduinoWithExecutable:(NSString * _Nullable)filename
+                                debug:(BOOL)debugIn
+                            withReply:(void (^ _Nonnull)(NSString * _Nullable))ptyNameCallbackIn {
 
     NSLog(@"calling simduino start");
     Simduino *simduino = [Simduino new];
     simduino.debug = debugIn;
     simduino.simduinoHost = self.simduinoHost;
     simduino.ptyNameCallback = ptyNameCallbackIn;
+
+    if (filename) {
+        [simduino loadELFFile:filename];
+    } else {
+        [simduino loadBootloader];
+    }
+
+    [simduino setup];
 
     _currentSimduino = simduino;
 
