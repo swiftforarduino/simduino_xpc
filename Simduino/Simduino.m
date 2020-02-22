@@ -61,6 +61,8 @@ void pin_changed_hook(struct avr_irq_t * irq, uint32_t value, void * param)
 
         avr_init(avr);
 
+        avr->log = LOG_ERROR;
+
         avr_irq_register_notify(
                                 avr_io_getirq(avr, AVR_IOCTL_IOPORT_GETIRQ('B'), 5),
                                 pin_changed_hook,
