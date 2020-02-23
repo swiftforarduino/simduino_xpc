@@ -16,6 +16,41 @@
 #import "uart_pty.h"
 #include "sim_gdb.h"
 
+// we may want to generalise this one day
+static void (*global_simduino_log_hook)(avr_t * avr, const int level, char *) = 0;
+
+#define LOG_SIZE 2000
+
+char logBuffer[LOG_SIZE];
+
+avr_logger_p _old_logger = 0;
+
+static void
+global_simduino_logger(
+        avr_t * avr,
+        const int level,
+        const char * format,
+        va_list ap)
+{
+    if (!avr || avr->log >= level) {
+        snprintf(logBuffer, LOG_SIZE, format, ap);
+        if (global_simduino_log_hook) {
+            global_simduino_log_hook(avr, level, logBuffer);
+        }
+        if (_old_logger) {
+            _old_logger(avr, level, format, ap);
+        }
+    }
+}
+
+static void setup_global_simduino_logger(avr_t * avr, void (*hook)(avr_t * avr, const int level, char *)) {
+    global_simduino_log_hook = hook;
+    if (!_old_logger) {
+        _old_logger = avr_global_logger_get();
+    }
+    avr_global_logger_set(global_simduino_logger);
+}
+
 @interface Simduino () {
     elf_firmware_t f;
     uart_pty_t uart_pty;
@@ -34,6 +69,22 @@ void pin_changed_hook(struct avr_irq_t * irq, uint32_t value, void * param)
     Simduino * const simduino = (__bridge Simduino * const)param;
     simduino->port_b_state = (simduino->port_b_state & ~(1 << irq->irq)) | (value << irq->irq);
     simduino.LState = (simduino->port_b_state & (1<<5)) ? YES : NO;
+}
+
+static Simduino * simduino_for_logging;
+void simduino_log(avr_t * avr, const int level, char * message) {
+    // we currently don't have a mechanism to tie an avr back to its Simduino
+    // the S4A UI only shows one simulator
+    // if anyone else is using this code and wants to fix this, please feel free to raise a PR, it would be welcome!
+    [simduino_for_logging simduinoLogMessage:message level:level];
+}
+
+- (void)simduinoLogMessage:(char *)message level:(const int)logLevel {
+    NSString *cookedMessage = [NSString stringWithCString:message encoding:NSASCIIStringEncoding];
+    NSInteger cookedLevel = logLevel;
+    if (cookedMessage) {
+        [_simduinoHost simduinoLogMessage:cookedMessage level:cookedLevel];
+    }
 }
 
 - (void)setLState:(BOOL)LState {
@@ -62,6 +113,8 @@ void pin_changed_hook(struct avr_irq_t * irq, uint32_t value, void * param)
         avr_init(avr);
 
         avr->log = LOG_ERROR;
+        setup_global_simduino_logger(avr, simduino_log);
+        simduino_for_logging = self;
 
         avr_irq_register_notify(
                                 avr_io_getirq(avr, AVR_IOCTL_IOPORT_GETIRQ('B'), 5),

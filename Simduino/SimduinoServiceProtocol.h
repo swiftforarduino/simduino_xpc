@@ -25,5 +25,6 @@
 @protocol SimduinoHostProtocol<NSObject>
 
 - (void)LChanged:(BOOL)newValue;
+- (void)simduinoLogMessage:(NSString * _Nonnull)message level:(NSInteger)logLevel;
 
 @end
