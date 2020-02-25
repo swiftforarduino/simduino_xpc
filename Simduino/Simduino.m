@@ -147,9 +147,10 @@ void simduino_log(avr_t * avr, const int level, char * message) {
     return true;
 }
 
+#define EXEC_PATH_BUFFER_SIZE 1024
 - (BOOL)loadELFFile:(NSString*)filename {
-    char executable_path[1024];
-    strncpy(executable_path, [filename cStringUsingEncoding:NSUTF8StringEncoding], 1024);
+    char executable_path[EXEC_PATH_BUFFER_SIZE];
+    strncpy(executable_path, [filename cStringUsingEncoding:NSUTF8StringEncoding], EXEC_PATH_BUFFER_SIZE);
     if (elf_read_firmware(executable_path, &f) == -1) {
         fprintf(stderr, "Unable to load firmware from file %s\n", executable_path);
         return false;
@@ -185,8 +186,12 @@ void simduino_log(avr_t * avr, const int level, char * message) {
     }
 
     if (self.debug) {
-        avr->gdb_port = 7979;
+        avr->gdb_port = SIMDUINO_GDB_PORT;
         avr_gdb_init(avr);
+        if (self.debug == debugAndWait) {
+            avr->state = cpu_Stopped;
+            state = cpu_Stopped;
+        }
     } else {
         avr_deinit_gdb(avr);
         avr->gdb_port = 0;

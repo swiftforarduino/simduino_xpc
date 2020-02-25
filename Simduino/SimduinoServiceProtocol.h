@@ -8,12 +8,20 @@
 
 #import <Foundation/Foundation.h>
 
+#define SIMDUINO_GDB_PORT 7979
+
+typedef NS_ENUM(NSUInteger, SimduinoDebugType) {
+    noDebug = 0,
+    debugNoWait = 1,
+    debugAndWait = 2
+};
+
 @protocol SimduinoServiceProtocol
 
 // start a simduino instance, either with a specific ELF file
 // or by default if that's not specified then run a bootloader
 - (void)startupSimduinoWithExecutable:(NSString * _Nullable)filename
-                                debug:(BOOL)debugIn
+                                debug:(SimduinoDebugType)debugIn
                             withReply:(void (^ _Nonnull)(NSString * _Nullable))ptyNameCallbackIn;
 
 

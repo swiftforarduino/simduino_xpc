@@ -7,8 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-
-@protocol SimduinoHostProtocol;
+#import "SimduinoServiceProtocol.h"
 
 @interface Simduino : NSOperation
 
@@ -16,7 +15,7 @@
 @property (atomic) void (^ptyNameCallback)(NSString *);
 @property (atomic) void (^ptyClosedCallback)(void);
 @property (atomic) void (^restartedCallback)(void);
-@property (atomic) BOOL debug;
+@property (atomic) SimduinoDebugType debug;
 
 - (BOOL)loadBootloader;
 - (BOOL)loadELFFile:(NSString*)filename;

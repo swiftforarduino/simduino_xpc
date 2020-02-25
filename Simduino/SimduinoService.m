@@ -29,7 +29,7 @@
 // create an NSOperation to run the simulator
 // should all be done in that
 - (void)startupSimduinoWithExecutable:(NSString * _Nullable)filename
-                                debug:(BOOL)debugIn
+                                debug:(SimduinoDebugType)debugIn
                             withReply:(void (^ _Nonnull)(NSString * _Nullable))ptyNameCallbackIn {
 
     NSLog(@"calling simduino start");
