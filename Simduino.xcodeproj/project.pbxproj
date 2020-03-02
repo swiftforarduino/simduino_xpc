@@ -420,7 +420,6 @@
 		8F439C2D23E498E200697553 /* sim_mega164.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = sim_mega164.c; sourceTree = "<group>"; };
 		8F439C2E23E498E200697553 /* sim_mega324.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = sim_mega324.c; sourceTree = "<group>"; };
 		8F6BDC6C23E79BB8008DEE6E /* sim_core_config.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = sim_core_config.h; sourceTree = "<group>"; };
-		8F6BDC6D23E79BB8008DEE6E /* sim_core_decl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = sim_core_decl.h; sourceTree = "<group>"; };
 		8F6BDC6F23E79C5C008DEE6E /* libelf.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libelf.a; path = ../../../usr/local/Cellar/libelf/0.8.13_1/lib/libelf.a; sourceTree = "<group>"; };
 		8F6BDC7423E88C4F008DEE6E /* uart_udp.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = uart_udp.c; sourceTree = "<group>"; };
 		8F6BDC7523E88C4F008DEE6E /* hd44780.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = hd44780.c; sourceTree = "<group>"; };
@@ -525,7 +524,6 @@
 			isa = PBXGroup;
 			children = (
 				8F6BDC6C23E79BB8008DEE6E /* sim_core_config.h */,
-				8F6BDC6D23E79BB8008DEE6E /* sim_core_decl.h */,
 				8F439ACA23E498E200697553 /* simavr-avr.pc */,
 				8F439ACB23E498E200697553 /* Makefile */,
 				8F439ACC23E498E200697553 /* .gitignore */,
