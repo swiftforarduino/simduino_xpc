@@ -58,7 +58,12 @@
 }
 
 - (void)restartSimduino:(void (^)(void))restartedCallbackIn {
-    NSLog(@"calling simduino reset");
-    _currentSimduino.restartedCallback = restartedCallbackIn;
+    if (_currentSimduino.inMainLoop) {
+        NSLog(@"calling simduino reset");
+        _currentSimduino.restartedCallback = restartedCallbackIn;
+    } else {
+        NSLog(@"simduino not running, currently starting or stopping, cannot reset");
+        restartedCallbackIn();
+    }
 }
 @end

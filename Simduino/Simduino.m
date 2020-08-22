@@ -197,6 +197,7 @@ void simduino_log(avr_t * avr, const int level, char * message) {
         avr->gdb_port = 0;
     }
 
+    self.inMainLoop = YES;
     while (!self.cancelled && state != cpu_Done && state != cpu_Crashed) {
         if (_restartedCallback) {
             // restart requested
@@ -207,6 +208,12 @@ void simduino_log(avr_t * avr, const int level, char * message) {
         }
 
         state = avr_run(avr); // might be a bit heavy on the CPU
+    }
+    self.inMainLoop = NO;
+    // prevent rare race condition where restarted callback is set outside the main loop
+    if (_restartedCallback) {
+        _restartedCallback();
+        _restartedCallback = nil;
     }
 
     uart_pty_stop(&uart_pty);

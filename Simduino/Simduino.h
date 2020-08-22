@@ -16,6 +16,7 @@
 @property (atomic) void (^ptyClosedCallback)(void);
 @property (atomic) void (^restartedCallback)(void);
 @property (atomic) SimduinoDebugType debug;
+@property (atomic) SimduinoDebugType inMainLoop;
 
 - (BOOL)loadBootloader;
 - (BOOL)loadELFFile:(NSString*)filename;
