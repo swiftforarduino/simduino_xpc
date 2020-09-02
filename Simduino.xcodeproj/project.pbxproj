@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		8F439AB823E44F5500697553 /* Simduino.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F439AB723E44F5500697553 /* Simduino.m */; };
 		8F439ABA23E44F5500697553 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F439AB923E44F5500697553 /* main.m */; };
-		8F6BDC7023E79DCC008DEE6E /* libelf.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F6BDC6F23E79C5C008DEE6E /* libelf.a */; };
 		8F6BDC7123E79ECF008DEE6E /* sim_mega32u4.c in Sources */ = {isa = PBXBuildFile; fileRef = 8F439C1223E498E200697553 /* sim_mega32u4.c */; };
 		8F6BDC7223E79F87008DEE6E /* sim_megax8.c in Sources */ = {isa = PBXBuildFile; fileRef = 8F439C2823E498E200697553 /* sim_megax8.c */; };
 		8F6BDC9823E88C4F008DEE6E /* uart_udp.c in Sources */ = {isa = PBXBuildFile; fileRef = 8F6BDC7423E88C4F008DEE6E /* uart_udp.c */; };
@@ -25,6 +24,7 @@
 		8F6BDCA523E88C4F008DEE6E /* uart_pty.c in Sources */ = {isa = PBXBuildFile; fileRef = 8F6BDC8E23E88C4F008DEE6E /* uart_pty.c */; };
 		8F6BDCA623E88C4F008DEE6E /* i2c_eeprom.c in Sources */ = {isa = PBXBuildFile; fileRef = 8F6BDC8F23E88C4F008DEE6E /* i2c_eeprom.c */; };
 		8F6BDCA823E88C4F008DEE6E /* arduidiot_pins.c in Sources */ = {isa = PBXBuildFile; fileRef = 8F6BDC9323E88C4F008DEE6E /* arduidiot_pins.c */; };
+		8F78BFEE24FFBA1100D1F7D2 /* libelf.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F78BFED24FFBA1100D1F7D2 /* libelf.a */; };
 		8F993AFE23FE034400E1DB97 /* SimduinoService.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F993AFD23FE034400E1DB97 /* SimduinoService.m */; };
 		8F993B0123FE9F8300E1DB97 /* ServiceDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F993B0023FE9F8300E1DB97 /* ServiceDelegate.m */; };
 		8FBA32A423E5E35000DBD58C /* sim_mega328.c in Sources */ = {isa = PBXBuildFile; fileRef = 8F439C1323E498E200697553 /* sim_mega328.c */; };
@@ -420,7 +420,6 @@
 		8F439C2D23E498E200697553 /* sim_mega164.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = sim_mega164.c; sourceTree = "<group>"; };
 		8F439C2E23E498E200697553 /* sim_mega324.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = sim_mega324.c; sourceTree = "<group>"; };
 		8F6BDC6C23E79BB8008DEE6E /* sim_core_config.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = sim_core_config.h; sourceTree = "<group>"; };
-		8F6BDC6F23E79C5C008DEE6E /* libelf.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libelf.a; path = ../../../usr/local/Cellar/libelf/0.8.13_1/lib/libelf.a; sourceTree = "<group>"; };
 		8F6BDC7423E88C4F008DEE6E /* uart_udp.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = uart_udp.c; sourceTree = "<group>"; };
 		8F6BDC7523E88C4F008DEE6E /* hd44780.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = hd44780.c; sourceTree = "<group>"; };
 		8F6BDC7623E88C4F008DEE6E /* vhci_usb.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = vhci_usb.c; sourceTree = "<group>"; };
@@ -456,6 +455,12 @@
 		8F6BDC9523E88C4F008DEE6E /* arduidiot_pins.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = arduidiot_pins.h; sourceTree = "<group>"; };
 		8F6BDC9623E88C4F008DEE6E /* twimaster.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = twimaster.h; sourceTree = "<group>"; };
 		8F6BDC9723E88C4F008DEE6E /* avr_twi_master.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = avr_twi_master.c; sourceTree = "<group>"; };
+		8F78BFED24FFBA1100D1F7D2 /* libelf.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libelf.a; sourceTree = "<group>"; };
+		8F78BFEF24FFBA2000D1F7D2 /* libelf.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = libelf.h; sourceTree = "<group>"; };
+		8F78BFF024FFBA2000D1F7D2 /* elf_repl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = elf_repl.h; sourceTree = "<group>"; };
+		8F78BFF124FFBA2000D1F7D2 /* nlist.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = nlist.h; sourceTree = "<group>"; };
+		8F78BFF224FFBA2000D1F7D2 /* gelf.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = gelf.h; sourceTree = "<group>"; };
+		8F78BFF324FFBA2000D1F7D2 /* sys_elf.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = sys_elf.h; sourceTree = "<group>"; };
 		8F993AFC23FE034400E1DB97 /* SimduinoService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SimduinoService.h; sourceTree = "<group>"; };
 		8F993AFD23FE034400E1DB97 /* SimduinoService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SimduinoService.m; sourceTree = "<group>"; };
 		8F993AFF23FE9F8300E1DB97 /* ServiceDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ServiceDelegate.h; sourceTree = "<group>"; };
@@ -468,7 +473,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8F6BDC7023E79DCC008DEE6E /* libelf.a in Frameworks */,
+				8F78BFEE24FFBA1100D1F7D2 /* libelf.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -495,6 +500,7 @@
 		8F439AB423E44F5500697553 /* Simduino */ = {
 			isa = PBXGroup;
 			children = (
+				8F78BFEC24FFB9F300D1F7D2 /* libelf */,
 				8F439AB923E44F5500697553 /* main.m */,
 				8F993AFF23FE9F8300E1DB97 /* ServiceDelegate.h */,
 				8F993B0023FE9F8300E1DB97 /* ServiceDelegate.m */,
@@ -916,7 +922,6 @@
 		8F6BDC6E23E79C5B008DEE6E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				8F6BDC6F23E79C5C008DEE6E /* libelf.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -970,6 +975,19 @@
 			);
 			name = shared;
 			path = examples/shared;
+			sourceTree = "<group>";
+		};
+		8F78BFEC24FFB9F300D1F7D2 /* libelf */ = {
+			isa = PBXGroup;
+			children = (
+				8F78BFF024FFBA2000D1F7D2 /* elf_repl.h */,
+				8F78BFF224FFBA2000D1F7D2 /* gelf.h */,
+				8F78BFEF24FFBA2000D1F7D2 /* libelf.h */,
+				8F78BFF124FFBA2000D1F7D2 /* nlist.h */,
+				8F78BFF324FFBA2000D1F7D2 /* sys_elf.h */,
+				8F78BFED24FFBA1100D1F7D2 /* libelf.a */,
+			);
+			path = libelf;
 			sourceTree = "<group>";
 		};
 		8F993B0223FE9FF600E1DB97 /* support */ = {
@@ -1219,6 +1237,10 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = SWDC5K54B7;
 				ENABLE_HARDENED_RUNTIME = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"__LIBELF_INTERNAL__=1",
+				);
 				HEADER_SEARCH_PATHS = (
 					/usr/local/include,
 					/usr/local/include/libelf,
@@ -1227,6 +1249,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					/usr/local/Cellar/libelf/0.8.13_1/lib,
+					"$(PROJECT_DIR)/Simduino/libelf",
 				);
 				OTHER_LDFLAGS = "-lelf";
 				PRODUCT_BUNDLE_IDENTIFIER = com.petosoft.Simduino;
@@ -1242,6 +1265,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = SWDC5K54B7;
 				ENABLE_HARDENED_RUNTIME = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = "__LIBELF_INTERNAL__=1";
 				HEADER_SEARCH_PATHS = (
 					/usr/local/include,
 					/usr/local/include/libelf,
@@ -1250,6 +1274,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					/usr/local/Cellar/libelf/0.8.13_1/lib,
+					"$(PROJECT_DIR)/Simduino/libelf",
 				);
 				OTHER_LDFLAGS = "-lelf";
 				PRODUCT_BUNDLE_IDENTIFIER = com.petosoft.Simduino;
