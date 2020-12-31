@@ -21,5 +21,6 @@
 - (BOOL)loadBootloader;
 - (BOOL)loadELFFile:(NSString*)filename;
 - (BOOL)setup;
+- (void)reloadWithELFFile:(NSString*)filename; // attempt a hot reload
 
 @end

@@ -32,23 +32,27 @@
                                 debug:(SimduinoDebugType)debugIn
                             withReply:(void (^ _Nonnull)(NSString * _Nullable))ptyNameCallbackIn {
 
-    NSLog(@"calling simduino start");
-    Simduino *simduino = [Simduino new];
-    simduino.debug = debugIn;
-    simduino.simduinoHost = self.simduinoHost;
-    simduino.ptyNameCallback = ptyNameCallbackIn;
-
-    if (filename) {
-        [simduino loadELFFile:filename];
+    if (_currentSimduino&&filename) {
+        [_currentSimduino reloadWithELFFile:filename];
     } else {
-        [simduino loadBootloader];
+        NSLog(@"calling simduino start");
+        Simduino *simduino = [Simduino new];
+        simduino.debug = debugIn;
+        simduino.simduinoHost = self.simduinoHost;
+        simduino.ptyNameCallback = ptyNameCallbackIn;
+
+        if (filename) {
+            [simduino loadELFFile:filename];
+        } else {
+            [simduino loadBootloader];
+        }
+
+        [simduino setup];
+
+        _currentSimduino = simduino;
+
+        [operationQueueForScheduling addOperation:simduino];
     }
-
-    [simduino setup];
-
-    _currentSimduino = simduino;
-
-    [operationQueueForScheduling addOperation:simduino];
 }
 
 - (void)shutdownSimduino:(void (^)(void))ptyClosedCallbackIn {

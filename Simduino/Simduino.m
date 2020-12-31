@@ -59,6 +59,7 @@ static void setup_global_simduino_logger(avr_t * avr, void (*hook)(avr_t * avr, 
 }
 
 @property (nonatomic) BOOL LState; // state of the simulated LED attached to pin 13
+@property (atomic) void (^reloadCallback)(void);
 
 @end
 
@@ -159,6 +160,21 @@ void simduino_log(avr_t * avr, const int level, char * message) {
     }
 }
 
+- (void)reloadWithELFFile:(NSString*)filename {
+    if (_reloadCallback) return; // no re-entrancy
+    __weak Simduino * weakSim = self;
+    _reloadCallback = ^{
+        // cleanup old machine
+        if (weakSim) {
+            Simduino * strongSim = weakSim;
+            avr_terminate(strongSim->avr);
+            [strongSim loadELFFile:filename];
+            [strongSim setup];
+            strongSim.reloadCallback = nil;
+        }
+    };
+}
+
 - (BOOL)setup {
     avr_load_firmware(avr, &f);
 
@@ -208,6 +224,11 @@ void simduino_log(avr_t * avr, const int level, char * message) {
         }
 
         state = avr_run(avr); // might be a bit heavy on the CPU
+
+        if (_reloadCallback) {
+            // hook to allow the engine to pause and reload
+            _reloadCallback();
+        }
     }
     self.inMainLoop = NO;
     // prevent rare race condition where restarted callback is set outside the main loop
