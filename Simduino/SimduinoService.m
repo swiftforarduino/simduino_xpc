@@ -26,33 +26,39 @@
     return self;
 }
 
+- (void)loadNewExecutable:(NSString * _Nullable)filename
+                withReply:(void (^ _Nonnull)(BOOL))callback {
+    if (!_currentSimduino) {
+        callback(NO);
+    } else {
+        [_currentSimduino reloadWithELFFile:filename];
+        callback(YES);
+    }
+}
+
 // create an NSOperation to run the simulator
 // should all be done in that
 - (void)startupSimduinoWithExecutable:(NSString * _Nullable)filename
                                 debug:(SimduinoDebugType)debugIn
                             withReply:(void (^ _Nonnull)(NSString * _Nullable))ptyNameCallbackIn {
 
-    if (_currentSimduino&&filename) {
-        [_currentSimduino reloadWithELFFile:filename];
+    NSLog(@"calling simduino start");
+    Simduino *simduino = [Simduino new];
+    simduino.debug = debugIn;
+    simduino.simduinoHost = self.simduinoHost;
+    simduino.ptyNameCallback = ptyNameCallbackIn;
+
+    if (filename) {
+        [simduino loadELFFile:filename];
     } else {
-        NSLog(@"calling simduino start");
-        Simduino *simduino = [Simduino new];
-        simduino.debug = debugIn;
-        simduino.simduinoHost = self.simduinoHost;
-        simduino.ptyNameCallback = ptyNameCallbackIn;
-
-        if (filename) {
-            [simduino loadELFFile:filename];
-        } else {
-            [simduino loadBootloader];
-        }
-
-        [simduino setup];
-
-        _currentSimduino = simduino;
-
-        [operationQueueForScheduling addOperation:simduino];
+        [simduino loadBootloader];
     }
+
+    [simduino setup];
+
+    _currentSimduino = simduino;
+
+    [operationQueueForScheduling addOperation:simduino];
 }
 
 - (void)shutdownSimduino:(void (^)(void))ptyClosedCallbackIn {

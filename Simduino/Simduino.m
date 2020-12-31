@@ -167,12 +167,12 @@ void simduino_log(avr_t * avr, const int level, char * message) {
         // cleanup old machine
         if (weakSim) {
             Simduino * strongSim = weakSim;
-            avr_terminate(strongSim->avr);
             [strongSim loadELFFile:filename];
             [strongSim setup];
-            strongSim.reloadCallback = nil;
+            strongSim.restartedCallback = ^{}; // do a reboot to run the new program
+            strongSim.reloadCallback = nil; // allow the simulator to continue/restart with the new
         }
-    };
+    }; // as soon as the _reloadCallback is set, the simulator should go into a pause to run it
 }
 
 - (BOOL)setup {

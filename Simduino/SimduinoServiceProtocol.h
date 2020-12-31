@@ -27,7 +27,10 @@ typedef NS_ENUM(NSUInteger, SimduinoDebugType) {
 
 - (void)shutdownSimduino:(void (^ _Nonnull)(void))ptyClosedCallbackIn;
 - (void)restartSimduino:(void (^ _Nonnull)(void))restartedCallbackIn;
-    
+
+- (void)loadNewExecutable:(NSString * _Nullable)filename
+                withReply:(void (^ _Nonnull)(BOOL))callback;
+
 @end
 
 @protocol SimduinoHostProtocol<NSObject>
