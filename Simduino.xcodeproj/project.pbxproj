@@ -465,6 +465,7 @@
 		8F993AFD23FE034400E1DB97 /* SimduinoService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SimduinoService.m; sourceTree = "<group>"; };
 		8F993AFF23FE9F8300E1DB97 /* ServiceDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ServiceDelegate.h; sourceTree = "<group>"; };
 		8F993B0023FE9F8300E1DB97 /* ServiceDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ServiceDelegate.m; sourceTree = "<group>"; };
+		8FBEAE1C25A5203E0033F4DB /* Simduino.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Simduino.entitlements; sourceTree = SOURCE_ROOT; };
 		8FC37FE523E9BA610083678E /* ATmegaBOOT_168_atmega328.ihex */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ATmegaBOOT_168_atmega328.ihex; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -500,6 +501,7 @@
 		8F439AB423E44F5500697553 /* Simduino */ = {
 			isa = PBXGroup;
 			children = (
+				8FBEAE1C25A5203E0033F4DB /* Simduino.entitlements */,
 				8F78BFEC24FFB9F300D1F7D2 /* libelf */,
 				8F439AB923E44F5500697553 /* main.m */,
 				8F993AFF23FE9F8300E1DB97 /* ServiceDelegate.h */,
@@ -1237,6 +1239,7 @@
 		8F439ABF23E44F5500697553 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = Simduino.entitlements;
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -1266,6 +1269,7 @@
 		8F439AC023E44F5500697553 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = Simduino.entitlements;
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
