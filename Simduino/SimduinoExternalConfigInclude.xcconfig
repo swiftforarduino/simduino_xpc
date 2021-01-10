@@ -1,0 +1,4 @@
+// include any user defined config
+// this is used to add code signing entitlements
+// such as sandbox requirements
+#include? "../SimduinoSigning.xcconfig"
