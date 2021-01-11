@@ -8,6 +8,7 @@
 
 #import "SimduinoService.h"
 #import "Simduino.h"
+#import "uart_pty.h"
 
 @interface SimduinoService () {
     __weak NSOperationQueue * operationQueueForScheduling;
@@ -75,5 +76,10 @@
         NSLog(@"simduino not running, currently starting or stopping, cannot reset");
         restartedCallbackIn();
     }
+}
+- (void)defineContainerDirectory:(NSString*)containerDirectory
+                       withReply:(void (^ _Nonnull)(void))callback; {
+    containerLocation = [containerDirectory cStringUsingEncoding:NSUTF8StringEncoding];
+    callback();
 }
 @end

@@ -196,7 +196,7 @@ void simduino_log(avr_t * avr, const int level, char * message) {
     int state = cpu_Running; // default for while loop
 
     if (_ptyNameCallback) {
-        NSString * ptyName = [NSString stringWithCString:uart_pty.pty.slavename encoding:NSUTF8StringEncoding];
+        NSString * ptyName = [NSString stringWithCString:uart_pty.pty.linkname encoding:NSUTF8StringEncoding];
         _ptyNameCallback(ptyName);
         _ptyNameCallback = nil;
     }

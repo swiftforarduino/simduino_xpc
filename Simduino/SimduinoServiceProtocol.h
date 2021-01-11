@@ -31,6 +31,9 @@ typedef NS_ENUM(NSUInteger, SimduinoDebugType) {
 - (void)loadNewExecutable:(NSString * _Nullable)filename
                 withReply:(void (^ _Nonnull)(BOOL))callback;
 
+- (void)defineContainerDirectory:(NSString*_Nonnull)containerDirectory
+                       withReply:(void (^ _Nonnull)(void))callback;
+
 @end
 
 @protocol SimduinoHostProtocol<NSObject>
