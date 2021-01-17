@@ -467,6 +467,7 @@
 		8F993B0023FE9F8300E1DB97 /* ServiceDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ServiceDelegate.m; sourceTree = "<group>"; };
 		8FC37FE523E9BA610083678E /* ATmegaBOOT_168_atmega328.ihex */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ATmegaBOOT_168_atmega328.ihex; sourceTree = "<group>"; };
 		8FD6991D25AAFE2F003EAB4D /* SimduinoExternalConfigInclude.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = SimduinoExternalConfigInclude.xcconfig; sourceTree = "<group>"; };
+		8FE79B5925B4675600C7E40C /* SimduinoExternalConfigIncludeAppStore.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = SimduinoExternalConfigIncludeAppStore.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -505,14 +506,15 @@
 				8F439AB923E44F5500697553 /* main.m */,
 				8F993AFF23FE9F8300E1DB97 /* ServiceDelegate.h */,
 				8F993B0023FE9F8300E1DB97 /* ServiceDelegate.m */,
+				8F439AC723E4986900697553 /* simavr */,
 				8F439AB623E44F5500697553 /* Simduino.h */,
 				8F439AB723E44F5500697553 /* Simduino.m */,
+				8FD6991D25AAFE2F003EAB4D /* SimduinoExternalConfigInclude.xcconfig */,
+				8FE79B5925B4675600C7E40C /* SimduinoExternalConfigIncludeAppStore.xcconfig */,
 				8F993AFC23FE034400E1DB97 /* SimduinoService.h */,
 				8F993AFD23FE034400E1DB97 /* SimduinoService.m */,
 				8F439AB523E44F5500697553 /* SimduinoServiceProtocol.h */,
-				8F439AC723E4986900697553 /* simavr */,
 				8F993B0223FE9FF600E1DB97 /* support */,
-				8FD6991D25AAFE2F003EAB4D /* SimduinoExternalConfigInclude.xcconfig */,
 			);
 			path = Simduino;
 			sourceTree = "<group>";
@@ -1240,7 +1242,6 @@
 		};
 		8F439ABF23E44F5500697553 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8FD6991D25AAFE2F003EAB4D /* SimduinoExternalConfigInclude.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
@@ -1270,7 +1271,6 @@
 		};
 		8F439AC023E44F5500697553 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8FD6991D25AAFE2F003EAB4D /* SimduinoExternalConfigInclude.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
@@ -1295,6 +1295,176 @@
 			};
 			name = Release;
 		};
+		8FE79B5525B4672300C7E40C /* DebugAppStore */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8FE79B5925B4675600C7E40C /* SimduinoExternalConfigIncludeAppStore.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				EXCLUDED_ARCHS = arm64;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = DebugAppStore;
+		};
+		8FE79B5625B4672300C7E40C /* DebugAppStore */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = SWDC5K54B7;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"__LIBELF_INTERNAL__=1",
+				);
+				HEADER_SEARCH_PATHS = (
+					/usr/local/include,
+					/usr/local/include/libelf,
+				);
+				INFOPLIST_FILE = Simduino/Info.plist;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/usr/local/Cellar/libelf/0.8.13_1/lib,
+					"$(PROJECT_DIR)/Simduino/libelf",
+				);
+				OTHER_LDFLAGS = "-lelf";
+				PRODUCT_BUNDLE_IDENTIFIER = com.petosoft.Simduino;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = DebugAppStore;
+		};
+		8FE79B5725B4672A00C7E40C /* ReleaseAppStore */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8FE79B5925B4675600C7E40C /* SimduinoExternalConfigIncludeAppStore.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				EXCLUDED_ARCHS = arm64;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+			};
+			name = ReleaseAppStore;
+		};
+		8FE79B5825B4672A00C7E40C /* ReleaseAppStore */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = SWDC5K54B7;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = "__LIBELF_INTERNAL__=1";
+				HEADER_SEARCH_PATHS = (
+					/usr/local/include,
+					/usr/local/include/libelf,
+				);
+				INFOPLIST_FILE = Simduino/Info.plist;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/usr/local/Cellar/libelf/0.8.13_1/lib,
+					"$(PROJECT_DIR)/Simduino/libelf",
+				);
+				OTHER_LDFLAGS = "-lelf";
+				PRODUCT_BUNDLE_IDENTIFIER = com.petosoft.Simduino;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = ReleaseAppStore;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1302,7 +1472,9 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8F439ABC23E44F5500697553 /* Debug */,
+				8FE79B5525B4672300C7E40C /* DebugAppStore */,
 				8F439ABD23E44F5500697553 /* Release */,
+				8FE79B5725B4672A00C7E40C /* ReleaseAppStore */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1311,7 +1483,9 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8F439ABF23E44F5500697553 /* Debug */,
+				8FE79B5625B4672300C7E40C /* DebugAppStore */,
 				8F439AC023E44F5500697553 /* Release */,
+				8FE79B5825B4672A00C7E40C /* ReleaseAppStore */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
