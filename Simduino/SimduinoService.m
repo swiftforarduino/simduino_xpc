@@ -37,11 +37,20 @@
     }
 }
 
+- (void)openSimulatedUARTWithReply:(void (^ _Nonnull)(NSFileHandle* _Nullable slaveFileHandle))openCallbackIn {
+    openCallbackIn([_currentSimduino openSimulatedUART]);
+}
+
+- (void)closeSimulatedUARTWithReply:(void (^ _Nonnull)(BOOL success))closeCallbackIn {
+    closeCallbackIn([_currentSimduino closeSimulatedUART]);
+}
+
+
 // create an NSOperation to run the simulator
 // should all be done in that
 - (void)startupSimduinoWithExecutable:(NSString * _Nullable)filename
                                 debug:(SimduinoDebugType)debugIn
-                            withReply:(void (^ _Nonnull)(NSString * _Nullable))ptyNameCallbackIn {
+                            withReply:(void (^ _Nonnull)(NSString * _Nullable, NSFileHandle* _Nullable slaveFileHandle))ptyNameCallbackIn {
 
     NSLog(@"calling simduino start");
     Simduino *simduino = [Simduino new];

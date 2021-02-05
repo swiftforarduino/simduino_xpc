@@ -2,3 +2,4 @@
 // this is used to add code signing entitlements
 // such as sandbox requirements
 #include? "../SimduinoSigningAppStore.xcconfig"
+GCC_PREPROCESSOR_DEFINITIONS=$(inherited) OPEN_PTY_SLAVE_ON_CREATE=1

@@ -1255,7 +1255,10 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = SWDC5K54B7;
 				ENABLE_HARDENED_RUNTIME = YES;
-				GCC_PREPROCESSOR_DEFINITIONS = "__LIBELF_INTERNAL__=1";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"__LIBELF_INTERNAL__=1",
+					"$(inherited)",
+				);
 				HEADER_SEARCH_PATHS = (
 					/usr/local/include,
 					/usr/local/include/libelf,
@@ -1425,7 +1428,10 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = SWDC5K54B7;
 				ENABLE_HARDENED_RUNTIME = YES;
-				GCC_PREPROCESSOR_DEFINITIONS = "__LIBELF_INTERNAL__=1";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"__LIBELF_INTERNAL__=1",
+					"$(inherited)",
+				);
 				HEADER_SEARCH_PATHS = (
 					/usr/local/include,
 					/usr/local/include/libelf,

@@ -60,6 +60,7 @@ static void setup_global_simduino_logger(avr_t * avr, void (*hook)(avr_t * avr, 
 
 @property (nonatomic) BOOL LState; // state of the simulated LED attached to pin 13
 @property (atomic) void (^reloadCallback)(void);
+@property int openedSlaveFileHandle;
 
 @end
 
@@ -192,12 +193,34 @@ void simduino_log(avr_t * avr, const int level, char * message) {
     printf("ENDING SIMDUINO");
 }
 
+- (NSFileHandle*)openSimulatedUART {
+    int fh = open(uart_pty.pty.linkname, O_RDWR | O_NOCTTY | O_EXLOCK | O_NONBLOCK);
+    if (fh > -1) {
+        self.openedSlaveFileHandle = fh;
+        return [[NSFileHandle alloc] initWithFileDescriptor:fh];
+    } else {
+        return nil;
+    }
+}
+
+- (BOOL)closeSimulatedUART {
+    if (self.openedSlaveFileHandle > 0) {
+        return close(self.openedSlaveFileHandle) == 0;
+    } else {
+        return NO;
+    }
+}
+
 - (void)main {
     int state = cpu_Running; // default for while loop
 
     if (_ptyNameCallback) {
         NSString * ptyName = [NSString stringWithCString:uart_pty.pty.linkname encoding:NSUTF8StringEncoding];
-        _ptyNameCallback(ptyName);
+        NSFileHandle * openedUART = nil;
+#ifdef OPEN_PTY_SLAVE_ON_CREATE
+        openedUART = [self openSimulatedUART];
+#endif
+        _ptyNameCallback(ptyName, openedUART);
         _ptyNameCallback = nil;
     }
 

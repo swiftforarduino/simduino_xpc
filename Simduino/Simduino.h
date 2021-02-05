@@ -12,7 +12,7 @@
 @interface Simduino : NSOperation
 
 @property (nonatomic) id<SimduinoHostProtocol> simduinoHost;
-@property (atomic) void (^ptyNameCallback)(NSString *);
+@property (atomic) void (^ptyNameCallback)(NSString *, NSFileHandle* slaveFileHandle);
 @property (atomic) void (^ptyClosedCallback)(void);
 @property (atomic) void (^restartedCallback)(void);
 @property (atomic) SimduinoDebugType debug;
@@ -22,5 +22,7 @@
 - (BOOL)loadELFFile:(NSString*)filename;
 - (BOOL)setup;
 - (void)reloadWithELFFile:(NSString*)filename; // attempt a hot reload
+- (NSFileHandle*)openSimulatedUART;
+- (BOOL)closeSimulatedUART;
 
 @end
