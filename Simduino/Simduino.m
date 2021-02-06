@@ -194,19 +194,30 @@ void simduino_log(avr_t * avr, const int level, char * message) {
 }
 
 - (NSFileHandle*)openSimulatedUART {
-    int fh = open(uart_pty.pty.linkname, O_RDWR | O_NOCTTY | O_EXLOCK | O_NONBLOCK);
+    if (self.openedSlaveFileHandle > 0) {
+        // already open
+        NSLog(@"returning already open file descriptor: %d",self.openedSlaveFileHandle);
+        return [[NSFileHandle alloc] initWithFileDescriptor:self.openedSlaveFileHandle];
+    }
+
+    int fh = open(uart_pty.pty.linkfullfilename, O_RDWR | O_NOCTTY | O_EXLOCK | O_NONBLOCK);
     if (fh > -1) {
         self.openedSlaveFileHandle = fh;
+        NSLog(@"opened new file descriptor: %d",self.openedSlaveFileHandle);
         return [[NSFileHandle alloc] initWithFileDescriptor:fh];
     } else {
+        perror("failed to open my slave");
         return nil;
     }
 }
 
 - (BOOL)closeSimulatedUART {
     if (self.openedSlaveFileHandle > 0) {
-        return close(self.openedSlaveFileHandle) == 0;
+        BOOL closed = close(self.openedSlaveFileHandle) == 0;
+        self.openedSlaveFileHandle = 0;
+        return closed;
     } else {
+        self.openedSlaveFileHandle = 0;
         return NO;
     }
 }
