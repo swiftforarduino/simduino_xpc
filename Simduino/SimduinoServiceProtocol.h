@@ -22,7 +22,7 @@ typedef NS_ENUM(NSUInteger, SimduinoDebugType) {
 // or by default if that's not specified then run a bootloader
 - (void)startupSimduinoWithExecutable:(NSString * _Nullable)filename
                                 debug:(SimduinoDebugType)debugIn
-                            withReply:(void (^ _Nonnull)(NSString * _Nullable, NSFileHandle* _Nullable slaveFileHandle))ptyNameCallbackIn;
+                            withReply:(void (^ _Nonnull)(NSString * _Nullable))ptyNameCallbackIn;
 
 - (void)openSimulatedUARTWithReply:(void (^ _Nonnull)(NSFileHandle* _Nullable slaveFileHandle))openCallbackIn;
 - (void)closeSimulatedUARTWithReply:(void (^ _Nonnull)(BOOL success))closeCallbackIn;

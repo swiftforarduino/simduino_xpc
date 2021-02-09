@@ -200,7 +200,7 @@ void simduino_log(avr_t * avr, const int level, char * message) {
         return [[NSFileHandle alloc] initWithFileDescriptor:self.openedSlaveFileHandle];
     }
 
-    int fh = open(uart_pty.pty.linkfullfilename, O_RDWR | O_NOCTTY | O_EXLOCK | O_NONBLOCK);
+    int fh = open(uart_pty.pty.slavename, O_RDWR | O_NOCTTY | O_EXLOCK | O_NONBLOCK);
     if (fh > -1) {
         self.openedSlaveFileHandle = fh;
         NSLog(@"opened new file descriptor: %d",self.openedSlaveFileHandle);
@@ -226,12 +226,8 @@ void simduino_log(avr_t * avr, const int level, char * message) {
     int state = cpu_Running; // default for while loop
 
     if (_ptyNameCallback) {
-        NSString * ptyName = [NSString stringWithCString:uart_pty.pty.linkname encoding:NSUTF8StringEncoding];
-        NSFileHandle * openedUART = nil;
-#ifdef OPEN_PTY_SLAVE_ON_CREATE
-        openedUART = [self openSimulatedUART];
-#endif
-        _ptyNameCallback(ptyName, openedUART);
+        NSString * ptyName = [NSString stringWithCString:uart_pty.pty.slavename encoding:NSUTF8StringEncoding];
+        _ptyNameCallback(ptyName);
         _ptyNameCallback = nil;
     }
 
