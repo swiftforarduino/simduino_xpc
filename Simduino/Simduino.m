@@ -150,7 +150,7 @@ void simduino_log(avr_t * avr, const int level, char * message) {
 }
 
 #define EXEC_PATH_BUFFER_SIZE 1024
-- (BOOL)loadELFFile:(NSString*)filename {
+- (BOOL)loadELFFile:(NSString  * _Nonnull)filename {
     char executable_path[EXEC_PATH_BUFFER_SIZE];
     strncpy(executable_path, [filename cStringUsingEncoding:NSUTF8StringEncoding], EXEC_PATH_BUFFER_SIZE);
     if (elf_read_firmware(executable_path, &f) == -1) {
@@ -161,7 +161,7 @@ void simduino_log(avr_t * avr, const int level, char * message) {
     }
 }
 
-- (void)reloadWithELFFile:(NSString*)filename {
+- (void)reloadWithELFFile:(NSString * _Nonnull)filename {
     if (_reloadCallback) return; // no re-entrancy
     __weak Simduino * weakSim = self;
     _reloadCallback = ^{
@@ -225,10 +225,9 @@ void simduino_log(avr_t * avr, const int level, char * message) {
 - (void)main {
     int state = cpu_Running; // default for while loop
 
-    if (_ptyNameCallback) {
-        NSString * ptyName = [NSString stringWithCString:uart_pty.pty.slavename encoding:NSUTF8StringEncoding];
-        _ptyNameCallback(ptyName);
-        _ptyNameCallback = nil;
+    if (_startCallbackIn) {
+        _startCallbackIn();
+        _startCallbackIn = nil;
     }
 
     if (self.debug) {

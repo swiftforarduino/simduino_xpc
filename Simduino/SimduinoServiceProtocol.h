@@ -18,11 +18,25 @@ typedef NS_ENUM(NSUInteger, SimduinoDebugType) {
 
 @protocol SimduinoServiceProtocol
 
+// significant change to function...
+// when you start the simduino, it does NOT open the slave tty
+// and it does not even tell you what device the slave tty is on
+// you never know and you never need to know
+// ...in order to open or close the slave tty, you call
+// openSimulatedUARTWithReply and closeSimulatedUARTWithReply
+// open will pass you back an NSFileHandle that you can monitor with a dispatch source
+// usually attached on the main run loop/thread
+// to close, simply call closeSimulatedUARTWithReply, simduino remembers the fd to close
+// simduino is solely responsible for opening and closing the slave tty
+// this enhances security for the whole system
+// if you need to know the slave tty device name (for example to open it in minicom)
+// look in the logs
+
 // start a simduino instance, either with a specific ELF file
 // or by default if that's not specified then run a bootloader
 - (void)startupSimduinoWithExecutable:(NSString * _Nullable)filename
                                 debug:(SimduinoDebugType)debugIn
-                            withReply:(void (^ _Nonnull)(NSString * _Nullable))ptyNameCallbackIn;
+                            withReply:(void (^ _Nonnull)(void))startCallbackIn;
 
 - (void)openSimulatedUARTWithReply:(void (^ _Nonnull)(NSFileHandle* _Nullable slaveFileHandle))openCallbackIn;
 - (void)closeSimulatedUARTWithReply:(void (^ _Nonnull)(BOOL success))closeCallbackIn;

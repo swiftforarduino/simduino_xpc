@@ -38,25 +38,26 @@
 }
 
 - (void)openSimulatedUARTWithReply:(void (^ _Nonnull)(NSFileHandle* _Nullable slaveFileHandle))openCallbackIn {
-    openCallbackIn([_currentSimduino openSimulatedUART]);
+    dispatch_async(dispatch_get_main_queue(), ^{
+        openCallbackIn([self->_currentSimduino openSimulatedUART]);
+    });
 }
 
 - (void)closeSimulatedUARTWithReply:(void (^ _Nonnull)(BOOL success))closeCallbackIn {
     closeCallbackIn([_currentSimduino closeSimulatedUART]);
 }
 
-
 // create an NSOperation to run the simulator
 // should all be done in that
 - (void)startupSimduinoWithExecutable:(NSString * _Nullable)filename
                                 debug:(SimduinoDebugType)debugIn
-                            withReply:(void (^ _Nonnull)(NSString * _Nullable))ptyNameCallbackIn {
+                            withReply:(void (^ _Nonnull)(void))startCallbackIn {
 
     NSLog(@"calling simduino start");
     Simduino *simduino = [Simduino new];
     simduino.debug = debugIn;
     simduino.simduinoHost = self.simduinoHost;
-    simduino.ptyNameCallback = ptyNameCallbackIn;
+    simduino.startCallbackIn = startCallbackIn;
 
     if (filename) {
         [simduino loadELFFile:filename];
