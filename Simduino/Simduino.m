@@ -89,6 +89,13 @@ void simduino_log(avr_t * avr, const int level, char * message) {
     }
 }
 
+- (void)simduinoSerialOutput:(char *)output {
+    NSString *cookedMessage = [NSString stringWithCString:output encoding:NSASCIIStringEncoding];
+    if (cookedMessage) {
+        [_simduinoHost simduinoSerialOutput:cookedMessage];
+    }
+}
+
 - (void)setLState:(BOOL)LState {
     @synchronized (self) {
         if (_LState != LState) {
