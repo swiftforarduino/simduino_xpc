@@ -60,7 +60,7 @@ static void setup_global_simduino_logger(avr_t * avr, void (*hook)(avr_t * avr, 
 
 @property (nonatomic) BOOL LState; // state of the simulated LED attached to pin 13
 @property (atomic) void (^reloadCallback)(void);
-@property int openedSlaveFileHandle;
+@property NSFileHandle * openedSlaveFileHandle;
 
 @end
 
@@ -201,17 +201,20 @@ void simduino_log(avr_t * avr, const int level, char * message) {
 }
 
 - (NSFileHandle*)openSimulatedUART {
-    if (self.openedSlaveFileHandle > 0) {
+    if (self.openedSlaveFileHandle) {
         // already open
-        NSLog(@"returning already open file descriptor: %d",self.openedSlaveFileHandle);
-        return [[NSFileHandle alloc] initWithFileDescriptor:self.openedSlaveFileHandle];
+        NSLog(@"returning already open file descriptor: %@",self.openedSlaveFileHandle);
+        return self.openedSlaveFileHandle;
     }
 
-    int fh = open(uart_pty.pty.slavename, O_RDWR | O_NOCTTY | O_EXLOCK | O_NONBLOCK);
-    if (fh > -1) {
+    NSFileHandle * fh =
+    [NSFileHandle fileHandleForUpdatingAtPath:[NSString stringWithCString:uart_pty.pty.slavename
+                                                                 encoding:NSUTF8StringEncoding]];
+
+    if (fh) {
         self.openedSlaveFileHandle = fh;
-        NSLog(@"opened new file descriptor: %d",self.openedSlaveFileHandle);
-        return [[NSFileHandle alloc] initWithFileDescriptor:fh];
+        NSLog(@"opened new file descriptor: %@",self.openedSlaveFileHandle);
+        return fh;
     } else {
         perror("failed to open my slave");
         return nil;
@@ -219,12 +222,11 @@ void simduino_log(avr_t * avr, const int level, char * message) {
 }
 
 - (BOOL)closeSimulatedUART {
-    if (self.openedSlaveFileHandle > 0) {
-        BOOL closed = close(self.openedSlaveFileHandle) == 0;
-        self.openedSlaveFileHandle = 0;
-        return closed;
+    if (self.openedSlaveFileHandle) {
+        [self.openedSlaveFileHandle closeFile];
+        self.openedSlaveFileHandle = nil;
+        return YES;
     } else {
-        self.openedSlaveFileHandle = 0;
         return NO;
     }
 }

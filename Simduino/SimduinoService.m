@@ -13,6 +13,7 @@
 @interface SimduinoService () {
     __weak NSOperationQueue * operationQueueForScheduling;
     __weak Simduino * _currentSimduino;
+    BOOL _startingOrStopping;
 }
 
 @end
@@ -38,13 +39,19 @@
 }
 
 - (void)openSimulatedUARTWithReply:(void (^ _Nonnull)(NSFileHandle* _Nullable slaveFileHandle))openCallbackIn {
-    dispatch_async(dispatch_get_main_queue(), ^{
-        openCallbackIn([self->_currentSimduino openSimulatedUART]);
-    });
+    openCallbackIn(nil);
+    printf("*** temporarily disable all serial access\n");
+//    dispatch_async(dispatch_get_main_queue(), ^{
+//        openCallbackIn([self->_currentSimduino openSimulatedUART]);
+//    });
 }
 
 - (void)closeSimulatedUARTWithReply:(void (^ _Nonnull)(BOOL success))closeCallbackIn {
-    closeCallbackIn([_currentSimduino closeSimulatedUART]);
+    printf("*** temporarily disable all serial access\n");
+    closeCallbackIn(true);
+//    dispatch_async(dispatch_get_main_queue(), ^{
+//        closeCallbackIn([self->_currentSimduino closeSimulatedUART]);
+//    });
 }
 
 // create an NSOperation to run the simulator
@@ -53,7 +60,16 @@
                                 debug:(SimduinoDebugType)debugIn
                             withReply:(void (^ _Nonnull)(void))startCallbackIn {
 
-    NSLog(@"calling simduino start");
+    if ([self isSimduinoRunning]) {
+        // already running, return immediately
+        startCallbackIn();
+        printf("simduino already running... short circuit\n");
+        return;
+    }
+
+    _startingOrStopping = YES;
+
+    printf("calling simduino start %p, _startingOrStopping: %d\n",self,_startingOrStopping);
     Simduino *simduino = [Simduino new];
     simduino.debug = debugIn;
     simduino.simduinoHost = self.simduinoHost;
@@ -70,26 +86,41 @@
     _currentSimduino = simduino;
 
     [operationQueueForScheduling addOperation:simduino];
+
+    _startingOrStopping = NO;
+}
+
+- (void)simduinoIsRunningWithReply:(void (^ _Nonnull)(BOOL running))isRunningCallbackIn {
+    isRunningCallbackIn([self isSimduinoRunning]);
+}
+
+- (BOOL)isSimduinoRunning {
+    return (BOOL)_currentSimduino || _startingOrStopping;
 }
 
 - (void)shutdownSimduino:(void (^)(void))ptyClosedCallbackIn {
-    NSLog(@"calling simduino stop");
+    _startingOrStopping = YES;
+    printf("calling simduino stop\n"); /// note: printf works: NSLOG DOES NOT WORK!!!
     _currentSimduino.ptyClosedCallback = ptyClosedCallbackIn;
     [_currentSimduino cancel];
+    _currentSimduino = nil;
+    _startingOrStopping = NO;
 }
 
 - (void)restartSimduino:(void (^)(void))restartedCallbackIn {
     if (_currentSimduino.inMainLoop) {
-        NSLog(@"calling simduino reset");
+        printf("calling simduino reset\n");
         _currentSimduino.restartedCallback = restartedCallbackIn;
     } else {
-        NSLog(@"simduino not running, currently starting or stopping, cannot reset");
+        printf("simduino not running, currently starting or stopping, cannot reset\n");
         restartedCallbackIn();
     }
 }
+
 - (void)defineContainerDirectory:(NSString*)containerDirectory
                        withReply:(void (^ _Nonnull)(void))callback; {
     containerLocation = [containerDirectory cStringUsingEncoding:NSUTF8StringEncoding];
     callback();
 }
+
 @end
