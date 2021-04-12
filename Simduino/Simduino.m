@@ -274,6 +274,8 @@ void simduino_log(avr_t * avr, const int level, char * message) {
         _ptyClosedCallback();
         _ptyClosedCallback = nil;
     }
+
+    [_simduinoHost simduinoDidStop];
 }
 
 @end
