@@ -153,7 +153,7 @@ void simduino_log(avr_t * avr, const int level, char * message) {
 }
 
 #define EXEC_PATH_BUFFER_SIZE 1024
-- (BOOL)loadELFFile:(NSString*)filename {
+- (BOOL)loadELFFile:(NSString  * _Nonnull)filename {
     char executable_path[EXEC_PATH_BUFFER_SIZE];
     strncpy(executable_path, [filename cStringUsingEncoding:NSUTF8StringEncoding], EXEC_PATH_BUFFER_SIZE);
     if (elf_read_firmware(executable_path, &f) == -1) {
@@ -164,7 +164,7 @@ void simduino_log(avr_t * avr, const int level, char * message) {
     }
 }
 
-- (void)reloadWithELFFile:(NSString*)filename {
+- (void)reloadWithELFFile:(NSString * _Nonnull)filename {
     if (_reloadCallback) return; // no re-entrancy
     __weak Simduino * weakSim = self;
     _reloadCallback = ^{
@@ -206,21 +206,13 @@ void simduino_log(avr_t * avr, const int level, char * message) {
 - (BOOL)openSimulatedUARTTap {
     if (self.tapSlaveFileHandle) {
         // already open
-        NSLog(@"file handle already open: %d",self.tapSlaveFileHandle);
+        NSLog(@"file handle already open: %@",self.tapSlaveFileHandle);
         return NO;
     }
 
     self.tapSlaveFileHandle = [NSFileHandle fileHandleForUpdatingAtPath:[NSString stringWithFormat:@"/dev/%s",uart_pty.tap.slavename]];
-//    int fh = open(uart_pty.tap.slavename, O_RDWR | O_NOCTTY | O_EXLOCK | O_NONBLOCK);
     if (self.tapSlaveFileHandle) {
         printf("file handle created");
-//        self.openedSlaveFileHandle = fh;
-//        NSLog(@"opened new file descriptor: %d",self.openedSlaveFileHandle);
-//        self.tapSlaveFileHandle = [[NSFileHandle alloc] initWithFileDescriptor:fh];
-
-        // make the run loop
-//        NSLog(@"runloop: %@",[NSRunLoop currentRunLoop]);
-
         __weak Simduino * _weakSelf = self;
 
         self.dataAvailableObserver = [[NSNotificationCenter defaultCenter] addObserverForName:NSFileHandleDataAvailableNotification
@@ -284,10 +276,9 @@ void simduino_log(avr_t * avr, const int level, char * message) {
 - (void)main {
     int state = cpu_Running; // default for while loop
 
-    if (_ptyNameCallback) {
-        NSString * ptyName = [NSString stringWithCString:uart_pty.pty.slavename encoding:NSUTF8StringEncoding];
-        _ptyNameCallback(ptyName);
-        _ptyNameCallback = nil;
+    if (_startCallbackIn) {
+        _startCallbackIn();
+        _startCallbackIn = nil;
     }
 
     if (self.debug) {

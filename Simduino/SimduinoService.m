@@ -53,13 +53,13 @@
 // should all be done in that
 - (void)startupSimduinoWithExecutable:(NSString * _Nullable)filename
                                 debug:(SimduinoDebugType)debugIn
-                            withReply:(void (^ _Nonnull)(NSString * _Nullable))ptyNameCallbackIn {
+                            withReply:(void (^ _Nonnull)(void))startCallbackIn {
 
     NSLog(@"calling simduino start");
     Simduino *simduino = [Simduino new];
     simduino.debug = debugIn;
     simduino.simduinoHost = self.simduinoHost;
-    simduino.ptyNameCallback = ptyNameCallbackIn;
+    simduino.startCallbackIn = startCallbackIn;
 
     if (filename) {
         [simduino loadELFFile:filename];
