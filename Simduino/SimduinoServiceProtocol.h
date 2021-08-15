@@ -24,7 +24,7 @@ typedef NS_ENUM(NSUInteger, SimduinoDebugType) {
                                 debug:(SimduinoDebugType)debugIn
                             withReply:(void (^ _Nonnull)(NSString * _Nullable))ptyNameCallbackIn;
 
-- (void)openSimulatedUARTWithReply:(void (^ _Nonnull)(NSFileHandle* _Nullable slaveFileHandle))openCallbackIn;
+- (void)openSimulatedUARTWithReply:(void (^ _Nonnull)(BOOL success))openCallbackIn;
 - (void)closeSimulatedUARTWithReply:(void (^ _Nonnull)(BOOL success))closeCallbackIn;
 
 - (void)shutdownSimduino:(void (^ _Nonnull)(void))ptyClosedCallbackIn;
@@ -33,8 +33,10 @@ typedef NS_ENUM(NSUInteger, SimduinoDebugType) {
 - (void)loadNewExecutable:(NSString * _Nullable)filename
                 withReply:(void (^ _Nonnull)(BOOL))callback;
 
-- (void)defineContainerDirectory:(NSString*_Nonnull)containerDirectory
+- (void)defineContainerDirectory:(NSString * _Nonnull)containerDirectory
                        withReply:(void (^ _Nonnull)(void))callback;
+
+- (void)writeTapSlaveData:(NSData * _Nonnull)data withReply:(void (^ _Nonnull)(BOOL success))callback;
 
 @end
 
@@ -43,5 +45,6 @@ typedef NS_ENUM(NSUInteger, SimduinoDebugType) {
 - (void)LChanged:(BOOL)newValue;
 - (void)simduinoLogMessage:(NSString * _Nonnull)message level:(NSInteger)logLevel;
 - (void)simduinoDidStop;
+- (void)tapSlaveDataReceived:(NSData * _Nonnull)data;
 
 @end

@@ -22,7 +22,8 @@
 - (BOOL)loadELFFile:(NSString*)filename;
 - (BOOL)setup;
 - (void)reloadWithELFFile:(NSString*)filename; // attempt a hot reload
-- (NSFileHandle*)openSimulatedUART;
-- (BOOL)closeSimulatedUART;
+- (BOOL)openSimulatedUARTTap;
+- (BOOL)closeSimulatedUARTTap;
+- (BOOL)writeTapSlaveData:(NSData * _Nonnull)data;
 
 @end

@@ -60,7 +60,9 @@ static void setup_global_simduino_logger(avr_t * avr, void (*hook)(avr_t * avr, 
 
 @property (nonatomic) BOOL LState; // state of the simulated LED attached to pin 13
 @property (atomic) void (^reloadCallback)(void);
-@property int openedSlaveFileHandle;
+//@property int openedSlaveFileHandle; // fh fo tap
+@property NSFileHandle * tapSlaveFileHandle;
+@property id dataAvailableObserver;
 
 @end
 
@@ -123,6 +125,7 @@ void simduino_log(avr_t * avr, const int level, char * message) {
                                 pin_changed_hook,
                                 (__bridge void *)self);
 
+        setenv("SIMAVR_UART_TAP", "1", 1);
         uart_pty_init(avr, &uart_pty);
         uart_pty_connect(&uart_pty, '0');
     }
@@ -191,33 +194,89 @@ void simduino_log(avr_t * avr, const int level, char * message) {
 
 - (void)dealloc {
     printf("ENDING SIMDUINO");
+    [self closeSimulatedUARTTap];
 }
 
-- (NSFileHandle*)openSimulatedUART {
-    if (self.openedSlaveFileHandle > 0) {
+- (void)dataAvailableFromTapSlaveTTY {
+    [_simduinoHost tapSlaveDataReceived:[self.tapSlaveFileHandle availableData]];
+}
+
+// open the slave side of the tap pty/tty pair and listen for data
+// send read data back using the xpc socket and allow writing via an xpc method too
+- (BOOL)openSimulatedUARTTap {
+    if (self.tapSlaveFileHandle) {
         // already open
-        NSLog(@"returning already open file descriptor: %d",self.openedSlaveFileHandle);
-        return [[NSFileHandle alloc] initWithFileDescriptor:self.openedSlaveFileHandle];
+        NSLog(@"file handle already open: %d",self.tapSlaveFileHandle);
+        return NO;
     }
 
-    int fh = open(uart_pty.pty.slavename, O_RDWR | O_NOCTTY | O_EXLOCK | O_NONBLOCK);
-    if (fh > -1) {
-        self.openedSlaveFileHandle = fh;
-        NSLog(@"opened new file descriptor: %d",self.openedSlaveFileHandle);
-        return [[NSFileHandle alloc] initWithFileDescriptor:fh];
+    self.tapSlaveFileHandle = [NSFileHandle fileHandleForUpdatingAtPath:[NSString stringWithFormat:@"/dev/%s",uart_pty.tap.slavename]];
+//    int fh = open(uart_pty.tap.slavename, O_RDWR | O_NOCTTY | O_EXLOCK | O_NONBLOCK);
+    if (self.tapSlaveFileHandle) {
+        printf("file handle created");
+//        self.openedSlaveFileHandle = fh;
+//        NSLog(@"opened new file descriptor: %d",self.openedSlaveFileHandle);
+//        self.tapSlaveFileHandle = [[NSFileHandle alloc] initWithFileDescriptor:fh];
+
+        // make the run loop
+//        NSLog(@"runloop: %@",[NSRunLoop currentRunLoop]);
+
+        __weak Simduino * _weakSelf = self;
+
+        self.dataAvailableObserver = [[NSNotificationCenter defaultCenter] addObserverForName:NSFileHandleDataAvailableNotification
+                                                          object:self.tapSlaveFileHandle
+                                                           queue:NSOperationQueue.mainQueue
+                                                      usingBlock:^(NSNotification * _Nonnull note) {
+
+            [_weakSelf dataAvailableFromTapSlaveTTY];
+            [_weakSelf.tapSlaveFileHandle waitForDataInBackgroundAndNotify];
+        }];
+
+
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self.tapSlaveFileHandle waitForDataInBackgroundAndNotify];
+        });
+
+        return YES;
     } else {
         perror("failed to open my slave");
-        return nil;
+        return NO;
     }
 }
 
-- (BOOL)closeSimulatedUART {
+- (BOOL)closeSimulatedUARTTap {
     if (self.openedSlaveFileHandle > 0) {
+        if (self.dataAvailableObserver) {
+            [[NSNotificationCenter defaultCenter] removeObserver:self.dataAvailableObserver];
+        }
+
+        if (self.tapSlaveFileHandle) {
+            NSError * closeError = nil;
+            if (@available(macOS 10.15, *)) {
+                if ([self.tapSlaveFileHandle closeAndReturnError:&closeError]) {
+                    self.openedSlaveFileHandle = 0;
+                    return YES;
+                } else {
+                    NSLog(@"problem closing file handle: %@",[closeError localizedDescription]);
+                }
+            }
+        }
+
         BOOL closed = close(self.openedSlaveFileHandle) == 0;
+
         self.openedSlaveFileHandle = 0;
         return closed;
     } else {
         self.openedSlaveFileHandle = 0;
+        return NO;
+    }
+}
+
+- (BOOL)writeTapSlaveData:(NSData * _Nonnull)data {
+    NSError * writeError = nil;
+    if (@available(macOS 10.15, *)) {
+        return [self.tapSlaveFileHandle writeData:data error:&writeError];
+    } else {
         return NO;
     }
 }

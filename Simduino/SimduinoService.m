@@ -37,14 +37,17 @@
     }
 }
 
-- (void)openSimulatedUARTWithReply:(void (^ _Nonnull)(NSFileHandle* _Nullable slaveFileHandle))openCallbackIn {
-    openCallbackIn([_currentSimduino openSimulatedUART]);
+- (void)openSimulatedUARTWithReply:(void (^ _Nonnull)(BOOL success))openCallbackIn {
+    openCallbackIn([_currentSimduino openSimulatedUARTTap]);
 }
 
 - (void)closeSimulatedUARTWithReply:(void (^ _Nonnull)(BOOL success))closeCallbackIn {
-    closeCallbackIn([_currentSimduino closeSimulatedUART]);
+    closeCallbackIn([_currentSimduino closeSimulatedUARTTap]);
 }
 
+- (void)writeTapSlaveData:(NSData * _Nonnull)data withReply:(void (^ _Nonnull)(BOOL success))callback {
+    callback([_currentSimduino writeTapSlaveData:data]);
+}
 
 // create an NSOperation to run the simulator
 // should all be done in that
