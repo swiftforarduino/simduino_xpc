@@ -237,29 +237,26 @@ void simduino_log(avr_t * avr, const int level, char * message) {
 }
 
 - (BOOL)closeSimulatedUARTTap {
-    if (self.openedSlaveFileHandle > 0) {
+    if (self.tapSlaveFileHandle) {
         if (self.dataAvailableObserver) {
             [[NSNotificationCenter defaultCenter] removeObserver:self.dataAvailableObserver];
         }
 
-        if (self.tapSlaveFileHandle) {
-            NSError * closeError = nil;
-            if (@available(macOS 10.15, *)) {
-                if ([self.tapSlaveFileHandle closeAndReturnError:&closeError]) {
-                    self.openedSlaveFileHandle = 0;
-                    return YES;
-                } else {
-                    NSLog(@"problem closing file handle: %@",[closeError localizedDescription]);
-                }
+        NSError * closeError = nil;
+        if (@available(macOS 10.15, *)) {
+            if ([self.tapSlaveFileHandle closeAndReturnError:&closeError]) {
+                self.tapSlaveFileHandle = nil;
+                return YES;
+            } else {
+                NSLog(@"problem closing file handle: %@",[closeError localizedDescription]);
+                return NO;
             }
+        } else {
+            [self.tapSlaveFileHandle closeFile];
+            return YES;
         }
-
-        BOOL closed = close(self.openedSlaveFileHandle) == 0;
-
-        self.openedSlaveFileHandle = 0;
-        return closed;
     } else {
-        self.openedSlaveFileHandle = 0;
+        self.tapSlaveFileHandle = 0;
         return NO;
     }
 }
