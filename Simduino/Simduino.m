@@ -210,7 +210,7 @@ void simduino_log(avr_t * avr, const int level, char * message) {
         return NO;
     }
 
-    self.tapSlaveFileHandle = [NSFileHandle fileHandleForUpdatingAtPath:[NSString stringWithFormat:@"/dev/%s",uart_pty.tap.slavename]];
+    self.tapSlaveFileHandle = [NSFileHandle fileHandleForUpdatingAtPath:[NSString stringWithFormat:@"%s",uart_pty.tap.slavename]];
     if (self.tapSlaveFileHandle) {
         printf("file handle created");
         __weak Simduino * _weakSelf = self;
