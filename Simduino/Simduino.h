@@ -11,11 +11,11 @@
 
 @interface Simduino : NSOperation
 
-@property (nonatomic) id<SimduinoHostProtocol> _Nullable simduinoHost;
+@property (nonatomic, readonly) id<SimduinoHostProtocol> _Nullable simduinoHost;
 @property (atomic) void (^ _Nullable startCallbackIn)(void);
 @property (atomic) void (^ _Nullable ptyClosedCallback)(void);
 @property (atomic) void (^ _Nullable restartedCallback)(void);
-@property (atomic) SimduinoDebugType debug;
+@property (atomic, readonly) SimduinoDebugType debug;
 @property (atomic) SimduinoDebugType inMainLoop;
 
 - (BOOL)loadBootloader;
@@ -25,5 +25,11 @@
 - (BOOL)openSimulatedUARTTap;
 - (BOOL)closeSimulatedUARTTap;
 - (BOOL)writeTapSlaveData:(NSData * _Nonnull)data;
+
+- (instancetype _Nullable)initWithMcu:(NSString * _Nonnull)mcu
+                            frequency:(float)frequency
+                             unoStyle:(BOOL)unoStyle
+                         simduinoHost:(id<SimduinoHostProtocol> _Nullable)simduinoHost
+                                debug:(BOOL)debug;
 
 @end

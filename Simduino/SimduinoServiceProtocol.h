@@ -35,6 +35,9 @@ typedef NS_ENUM(NSUInteger, SimduinoDebugType) {
 // start a simduino instance, either with a specific ELF file
 // or by default if that's not specified then run a bootloader
 - (void)startupSimduinoWithExecutable:(NSString * _Nullable)filename
+                                  mcu:(NSString * _Nullable)mcu
+                         cpuFrequency:(float)cpuFrequency
+                             unoStyle:(BOOL)unoStyle
                                 debug:(SimduinoDebugType)debugIn
                             withReply:(void (^ _Nonnull)(void))startCallbackIn;
 

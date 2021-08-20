@@ -52,13 +52,19 @@
 // create an NSOperation to run the simulator
 // should all be done in that
 - (void)startupSimduinoWithExecutable:(NSString * _Nullable)filename
+                                  mcu:(NSString * _Nullable)mcu
+                         cpuFrequency:(float)cpuFrequency
+                             unoStyle:(BOOL)unoStyle
                                 debug:(SimduinoDebugType)debugIn
                             withReply:(void (^ _Nonnull)(void))startCallbackIn {
 
-    NSLog(@"calling simduino start");
-    Simduino *simduino = [Simduino new];
-    simduino.debug = debugIn;
-    simduino.simduinoHost = self.simduinoHost;
+    NSLog(@"creating simduino");
+    Simduino *simduino = [[Simduino alloc] initWithMcu:mcu
+                                             frequency:cpuFrequency
+                                              unoStyle:unoStyle
+                                          simduinoHost:self.simduinoHost
+                                                 debug:debugIn];
+
     simduino.startCallbackIn = startCallbackIn;
 
     if (filename) {

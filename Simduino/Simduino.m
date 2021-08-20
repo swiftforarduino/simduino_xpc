@@ -33,7 +33,7 @@ global_simduino_logger(
         va_list ap)
 {
     if (!avr || avr->log >= level) {
-        snprintf(logBuffer, LOG_SIZE, format, ap);
+        vsnprintf(logBuffer, LOG_SIZE, format, ap);
         if (global_simduino_log_hook) {
             global_simduino_log_hook(avr, level, logBuffer);
         }
@@ -62,6 +62,8 @@ static void setup_global_simduino_logger(avr_t * avr, void (*hook)(avr_t * avr, 
 @property (atomic) void (^reloadCallback)(void);
 @property NSFileHandle * tapSlaveFileHandle;
 @property id dataAvailableObserver;
+@property (nonatomic, readwrite) id<SimduinoHostProtocol> _Nullable simduinoHost;
+@property (atomic, readwrite) SimduinoDebugType debug;
 
 @end
 
@@ -99,12 +101,18 @@ void simduino_log(avr_t * avr, const int level, char * message) {
     }
 }
 
-- (instancetype)init {
+- (instancetype)initWithMcu:(NSString * _Nonnull)mcu
+                  frequency:(float)frequency
+                   unoStyle:(BOOL)unoStyle
+               simduinoHost:(id<SimduinoHostProtocol> _Nullable)simduinoHost
+                      debug:(BOOL)debug {
     self = [super init];
     if (self) {
-        char * mmcu = "atmega328p";
+        self.simduinoHost = simduinoHost;
+        self.debug = debug;
+        const char * mmcu = [mcu cStringUsingEncoding:NSUTF8StringEncoding];
         strcpy(f.mmcu, mmcu);
-        f.frequency = 16000000;
+        f.frequency = frequency;
 
         avr = avr_make_mcu_by_name(mmcu);
 
@@ -119,13 +127,18 @@ void simduino_log(avr_t * avr, const int level, char * message) {
         setup_global_simduino_logger(avr, simduino_log);
         simduino_for_logging = self;
 
-        avr_irq_register_notify(
-                                avr_io_getirq(avr, AVR_IOCTL_IOPORT_GETIRQ('B'), 5),
-                                pin_changed_hook,
-                                (__bridge void *)self);
+        if (unoStyle) {
+            avr_irq_register_notify(
+                                    avr_io_getirq(avr, AVR_IOCTL_IOPORT_GETIRQ('B'), 5),
+                                    pin_changed_hook,
+                                    (__bridge void *)self);
 
-        uart_pty_init(avr, &uart_pty);
-        uart_pty_connect(&uart_pty, '0');
+            uart_pty_init(avr, &uart_pty);
+            uart_pty_connect(&uart_pty, '0');
+            char logMsg[50];
+            snprintf(logMsg, 50, "Created virtual UART: %s\n", uart_pty.pty.slavename);
+            simduino_log(NULL, LOG_DEBUG, logMsg);
+        }
     }
 
     return self;
@@ -191,7 +204,7 @@ void simduino_log(avr_t * avr, const int level, char * message) {
 }
 
 - (void)dealloc {
-    printf("ENDING SIMDUINO");
+    NSLog(@"ENDING SIMDUINO");
     [self closeSimulatedUARTTap];
 }
 
@@ -210,7 +223,6 @@ void simduino_log(avr_t * avr, const int level, char * message) {
 
     self.tapSlaveFileHandle = [NSFileHandle fileHandleForUpdatingAtPath:[NSString stringWithFormat:@"%s",uart_pty.pty.slavename]];
     if (self.tapSlaveFileHandle) {
-        printf("file handle created");
         __weak Simduino * _weakSelf = self;
 
         self.dataAvailableObserver = [[NSNotificationCenter defaultCenter] addObserverForName:NSFileHandleDataAvailableNotification
