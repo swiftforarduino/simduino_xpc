@@ -60,7 +60,6 @@ static void setup_global_simduino_logger(avr_t * avr, void (*hook)(avr_t * avr, 
 
 @property (nonatomic) BOOL LState; // state of the simulated LED attached to pin 13
 @property (atomic) void (^reloadCallback)(void);
-//@property int openedSlaveFileHandle; // fh fo tap
 @property NSFileHandle * tapSlaveFileHandle;
 @property id dataAvailableObserver;
 
@@ -125,7 +124,6 @@ void simduino_log(avr_t * avr, const int level, char * message) {
                                 pin_changed_hook,
                                 (__bridge void *)self);
 
-        setenv("SIMAVR_UART_TAP", "1", 1);
         uart_pty_init(avr, &uart_pty);
         uart_pty_connect(&uart_pty, '0');
     }
@@ -210,7 +208,7 @@ void simduino_log(avr_t * avr, const int level, char * message) {
         return NO;
     }
 
-    self.tapSlaveFileHandle = [NSFileHandle fileHandleForUpdatingAtPath:[NSString stringWithFormat:@"%s",uart_pty.tap.slavename]];
+    self.tapSlaveFileHandle = [NSFileHandle fileHandleForUpdatingAtPath:[NSString stringWithFormat:@"%s",uart_pty.pty.slavename]];
     if (self.tapSlaveFileHandle) {
         printf("file handle created");
         __weak Simduino * _weakSelf = self;
