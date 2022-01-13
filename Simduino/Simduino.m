@@ -308,6 +308,12 @@ void simduino_log(avr_t * avr, const int level, char * message) {
             avr_reset(avr);
             _restartedCallback();
             _restartedCallback = nil;
+
+            // make sure gdb is reinitialised after restart
+            if (self.debug == debugAndWait) {
+                avr->state = cpu_Stopped;
+                state = cpu_Stopped;
+            }
         }
 
         state = avr_run(avr); // might be a bit heavy on the CPU
