@@ -145,7 +145,7 @@ void simduino_log(avr_t * avr, const int level, char * message) {
 }
 
 - (BOOL)loadBootloader {
-    NSString * ihexPath = [[NSBundle mainBundle] pathForResource:@"ATmegaBOOT_168_atmega328" ofType:@"ihex"];
+    NSString * ihexPath = [[NSBundle mainBundle] pathForResource:@"optiboot_atmega328" ofType:@"hex"];
     char boot_path[1024];
     strncpy(boot_path, [ihexPath cStringUsingEncoding:NSUTF8StringEncoding], 1024);
     uint32_t boot_base, boot_size;
