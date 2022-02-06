@@ -37,9 +37,9 @@ global_simduino_logger(
         if (global_simduino_log_hook) {
             global_simduino_log_hook(avr, level, logBuffer);
         }
-        if (_old_logger) {
-            _old_logger(avr, level, format, ap);
-        }
+//        if (_old_logger) {
+//            _old_logger(avr, level, format, ap);
+//        }
     }
 }
 
