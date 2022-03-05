@@ -19,6 +19,11 @@
 
 @implementation SimduinoService
 
+- (instancetype)init {
+    NSAssert(false, @"do not use this");
+    return [self initWithOperationQueue:nil];
+}
+
 - (instancetype)initWithOperationQueue:(NSOperationQueue*)queue {
     self = [super init];
     if (self) {

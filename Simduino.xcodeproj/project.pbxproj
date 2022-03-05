@@ -1234,6 +1234,7 @@
 					"$(inherited)",
 					"__LIBELF_INTERNAL__=1",
 				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = NO;
 				HEADER_SEARCH_PATHS = (
 					/usr/local/include,
 					/usr/local/include/libelf,
@@ -1244,6 +1245,7 @@
 					/usr/local/Cellar/libelf/0.8.13_1/lib,
 					"$(PROJECT_DIR)/Simduino/libelf",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				OTHER_LDFLAGS = "-lelf";
 				PRODUCT_BUNDLE_IDENTIFIER = com.petosoft.Simduino;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1263,6 +1265,7 @@
 					"__LIBELF_INTERNAL__=1",
 					"$(inherited)",
 				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = NO;
 				HEADER_SEARCH_PATHS = (
 					/usr/local/include,
 					/usr/local/include/libelf,
@@ -1273,6 +1276,7 @@
 					/usr/local/Cellar/libelf/0.8.13_1/lib,
 					"$(PROJECT_DIR)/Simduino/libelf",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				OTHER_LDFLAGS = "-lelf";
 				PRODUCT_BUNDLE_IDENTIFIER = com.petosoft.Simduino;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1353,6 +1357,7 @@
 					"$(inherited)",
 					"__LIBELF_INTERNAL__=1",
 				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = NO;
 				HEADER_SEARCH_PATHS = (
 					/usr/local/include,
 					/usr/local/include/libelf,
@@ -1363,6 +1368,7 @@
 					/usr/local/Cellar/libelf/0.8.13_1/lib,
 					"$(PROJECT_DIR)/Simduino/libelf",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				OTHER_LDFLAGS = "-lelf";
 				PRODUCT_BUNDLE_IDENTIFIER = com.petosoft.Simduino;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1436,6 +1442,7 @@
 					"__LIBELF_INTERNAL__=1",
 					"$(inherited)",
 				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = NO;
 				HEADER_SEARCH_PATHS = (
 					/usr/local/include,
 					/usr/local/include/libelf,
@@ -1446,6 +1453,7 @@
 					/usr/local/Cellar/libelf/0.8.13_1/lib,
 					"$(PROJECT_DIR)/Simduino/libelf",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				OTHER_LDFLAGS = "-lelf";
 				PRODUCT_BUNDLE_IDENTIFIER = com.petosoft.Simduino;
 				PRODUCT_NAME = "$(TARGET_NAME)";
