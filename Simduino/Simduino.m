@@ -63,7 +63,7 @@ static void setup_global_simduino_logger(avr_t * avr, void (*hook)(avr_t * avr, 
 @property NSFileHandle * tapSlaveFileHandle;
 @property id dataAvailableObserver;
 @property (nonatomic, readwrite) id<SimduinoHostProtocol> _Nullable simduinoHost;
-@property (atomic, readwrite) SimduinoDebugType debug;
+@property (nonatomic, readwrite) SimduinoDebugType debug;
 
 @end
 
@@ -105,11 +105,10 @@ void simduino_log(avr_t * avr, const int level, char * message) {
                   frequency:(float)frequency
                    unoStyle:(BOOL)unoStyle
                simduinoHost:(id<SimduinoHostProtocol> _Nullable)simduinoHost
-                      debug:(BOOL)debug {
+                      debug:(SimduinoDebugType)debug {
     self = [super init];
     if (self) {
         self.simduinoHost = simduinoHost;
-        self.debug = debug;
         const char * mmcu = [mcu cStringUsingEncoding:NSUTF8StringEncoding];
         strcpy(f.mmcu, mmcu);
         f.frequency = frequency;
@@ -126,6 +125,8 @@ void simduino_log(avr_t * avr, const int level, char * message) {
         avr->log = LOG_ERROR;
         setup_global_simduino_logger(avr, simduino_log);
         simduino_for_logging = self;
+
+        self.debug = debug;
 
         if (unoStyle) {
             avr_irq_register_notify(
@@ -145,7 +146,7 @@ void simduino_log(avr_t * avr, const int level, char * message) {
 }
 
 - (BOOL)loadBootloader {
-    NSString * ihexPath = [[NSBundle mainBundle] pathForResource:@"optiboot_atmega328" ofType:@"hex"];
+    NSString * ihexPath = [[NSBundle mainBundle] pathForResource:@"ATmegaBOOT_168_atmega328" ofType:@"ihex"];
     char boot_path[1024];
     strncpy(boot_path, [ihexPath cStringUsingEncoding:NSUTF8StringEncoding], 1024);
     uint32_t boot_base, boot_size;
@@ -194,7 +195,7 @@ void simduino_log(avr_t * avr, const int level, char * message) {
     avr_load_firmware(avr, &f);
 
     if (f.flashbase) {
-        printf("Attempted to load a bootloader at %04x\n", f.flashbase);
+        printf("Attempted to load firmware at %04x\n", f.flashbase);
         avr->pc = f.flashbase;
         avr->codeend = avr->flashend;
         return true;
@@ -259,14 +260,16 @@ void simduino_log(avr_t * avr, const int level, char * message) {
                 return YES;
             } else {
                 NSLog(@"problem closing file handle: %@",[closeError localizedDescription]);
+                self.tapSlaveFileHandle = nil;
                 return NO;
             }
         } else {
             [self.tapSlaveFileHandle closeFile];
+            self.tapSlaveFileHandle = nil;
             return YES;
         }
     } else {
-        self.tapSlaveFileHandle = 0;
+        self.tapSlaveFileHandle = nil;
         return NO;
     }
 }
@@ -280,6 +283,20 @@ void simduino_log(avr_t * avr, const int level, char * message) {
     }
 }
 
+- (void)setDebug:(SimduinoDebugType)debugIn {
+    if (_debug != debugIn) {
+        _debug = debugIn;
+
+        if (debugIn) {
+            avr->gdb_port = SIMDUINO_GDB_PORT;
+            avr_gdb_init(avr);
+        } else {
+            avr_deinit_gdb(avr);
+            avr->gdb_port = 0;
+        }
+    }
+}
+
 - (void)main {
     int state = cpu_Running; // default for while loop
 
@@ -288,16 +305,9 @@ void simduino_log(avr_t * avr, const int level, char * message) {
         _startCallbackIn = nil;
     }
 
-    if (self.debug) {
-        avr->gdb_port = SIMDUINO_GDB_PORT;
-        avr_gdb_init(avr);
-        if (self.debug == debugAndWait) {
-            avr->state = cpu_Stopped;
-            state = cpu_Stopped;
-        }
-    } else {
-        avr_deinit_gdb(avr);
-        avr->gdb_port = 0;
+    if (self.debug == debugAndWait) {
+        avr->state = cpu_Stopped;
+        state = cpu_Stopped;
     }
 
     self.inMainLoop = YES;
@@ -323,7 +333,9 @@ void simduino_log(avr_t * avr, const int level, char * message) {
             _reloadCallback();
         }
     }
+
     self.inMainLoop = NO;
+
     // prevent rare race condition where restarted callback is set outside the main loop
     if (_restartedCallback) {
         _restartedCallback();

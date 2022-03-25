@@ -15,7 +15,7 @@
 @property (atomic) void (^ _Nullable startCallbackIn)(void);
 @property (atomic) void (^ _Nullable ptyClosedCallback)(void);
 @property (atomic) void (^ _Nullable restartedCallback)(void);
-@property (atomic, readonly) SimduinoDebugType debug;
+@property (nonatomic, readonly) SimduinoDebugType debug;
 @property (atomic) SimduinoDebugType inMainLoop;
 
 - (BOOL)loadBootloader;
@@ -30,6 +30,6 @@
                             frequency:(float)frequency
                              unoStyle:(BOOL)unoStyle
                          simduinoHost:(id<SimduinoHostProtocol> _Nullable)simduinoHost
-                                debug:(BOOL)debug;
+                                debug:(SimduinoDebugType)debug;
 
 @end
