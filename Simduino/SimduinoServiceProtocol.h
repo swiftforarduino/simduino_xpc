@@ -16,7 +16,7 @@ typedef NS_ENUM(NSUInteger, SimduinoDebugType) {
     debugAndWait = 2
 };
 
-@protocol SimduinoServiceProtocol
+@protocol SimduinoServiceProtocol<NSObject>
 
 // significant change to function...
 // when you start the simduino, it does NOT open the slave tty
