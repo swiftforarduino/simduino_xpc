@@ -7,13 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8F18AB0B281760A6000068B7 /* uart_pty.c in Sources */ = {isa = PBXBuildFile; fileRef = 8F18AB0328175F9B000068B7 /* uart_pty.c */; };
+		8F18AB0C281760AF000068B7 /* arduidiot_pins.c in Sources */ = {isa = PBXBuildFile; fileRef = 8F18AAB728175F9B000068B7 /* arduidiot_pins.c */; };
 		8F439AB823E44F5500697553 /* Simduino.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F439AB723E44F5500697553 /* Simduino.m */; };
 		8F439ABA23E44F5500697553 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F439AB923E44F5500697553 /* main.m */; };
 		8F517FCE27A3F5B40002A284 /* optiboot_atmega328.hex in Resources */ = {isa = PBXBuildFile; fileRef = 8F517FCD27A3F5B40002A284 /* optiboot_atmega328.hex */; };
 		8F6BDC7123E79ECF008DEE6E /* sim_mega32u4.c in Sources */ = {isa = PBXBuildFile; fileRef = 8F439C1223E498E200697553 /* sim_mega32u4.c */; };
 		8F6BDC7223E79F87008DEE6E /* sim_megax8.c in Sources */ = {isa = PBXBuildFile; fileRef = 8F439C2823E498E200697553 /* sim_megax8.c */; };
-		8F6BDCA523E88C4F008DEE6E /* uart_pty.c in Sources */ = {isa = PBXBuildFile; fileRef = 8F6BDC8E23E88C4F008DEE6E /* uart_pty.c */; };
-		8F6BDCA823E88C4F008DEE6E /* arduidiot_pins.c in Sources */ = {isa = PBXBuildFile; fileRef = 8F6BDC9323E88C4F008DEE6E /* arduidiot_pins.c */; };
 		8F78BFEE24FFBA1100D1F7D2 /* libelf.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F78BFED24FFBA1100D1F7D2 /* libelf.a */; };
 		8F993AFE23FE034400E1DB97 /* SimduinoService.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F993AFD23FE034400E1DB97 /* SimduinoService.m */; };
 		8F993B0123FE9F8300E1DB97 /* ServiceDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F993B0023FE9F8300E1DB97 /* ServiceDelegate.m */; };
@@ -48,6 +48,147 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8F18AA9B28175F9B000068B7 /* Makefile.opengl */ = {isa = PBXFileReference; lastKnownFileType = text; path = Makefile.opengl; sourceTree = "<group>"; };
+		8F18AA9D28175F9B000068B7 /* simusb.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = simusb.c; sourceTree = "<group>"; };
+		8F18AA9E28175F9B000068B7 /* at90usb162_cdc_loopback.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = at90usb162_cdc_loopback.h; sourceTree = "<group>"; };
+		8F18AA9F28175F9B000068B7 /* Makefile */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
+		8F18AAA028175F9B000068B7 /* README */ = {isa = PBXFileReference; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
+		8F18AAA128175F9B000068B7 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		8F18AAA228175F9B000068B7 /* at90usb162_cdc_loopback.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = at90usb162_cdc_loopback.c; sourceTree = "<group>"; };
+		8F18AAA428175F9B000068B7 /* Makefile */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
+		8F18AAA528175F9B000068B7 /* atmega32_rotenc_test.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = atmega32_rotenc_test.c; sourceTree = "<group>"; };
+		8F18AAA628175F9B000068B7 /* README */ = {isa = PBXFileReference; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
+		8F18AAA728175F9B000068B7 /* rotenc_test.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = rotenc_test.c; sourceTree = "<group>"; };
+		8F18AAA828175F9B000068B7 /* Makefile */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
+		8F18AAAA28175F9B000068B7 /* Makefile */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
+		8F18AAAB28175F9B000068B7 /* timer_64led.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = timer_64led.c; sourceTree = "<group>"; };
+		8F18AAAC28175F9B000068B7 /* atmega168_timer_64led.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = atmega168_timer_64led.c; sourceTree = "<group>"; };
+		8F18AAAD28175F9B000068B7 /* README */ = {isa = PBXFileReference; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
+		8F18AAAE28175F9B000068B7 /* timer_led64_real.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = timer_led64_real.jpg; sourceTree = "<group>"; };
+		8F18AAAF28175F9B000068B7 /* atmega168_timer_64led.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = atmega168_timer_64led.h; sourceTree = "<group>"; };
+		8F18AAB128175F9B000068B7 /* atmega48_ledramp.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = atmega48_ledramp.c; sourceTree = "<group>"; };
+		8F18AAB228175F9B000068B7 /* ledramp.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = ledramp.c; sourceTree = "<group>"; };
+		8F18AAB328175F9B000068B7 /* Makefile */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
+		8F18AAB428175F9B000068B7 /* README */ = {isa = PBXFileReference; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
+		8F18AAB628175F9B000068B7 /* twimaster.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = twimaster.c; sourceTree = "<group>"; };
+		8F18AAB728175F9B000068B7 /* arduidiot_pins.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = arduidiot_pins.c; sourceTree = "<group>"; };
+		8F18AAB828175F9B000068B7 /* avr_twi_master.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = avr_twi_master.h; sourceTree = "<group>"; };
+		8F18AAB928175F9B000068B7 /* arduidiot_pins.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = arduidiot_pins.h; sourceTree = "<group>"; };
+		8F18AABA28175F9B000068B7 /* twimaster.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = twimaster.h; sourceTree = "<group>"; };
+		8F18AABB28175F9B000068B7 /* avr_twi_master.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = avr_twi_master.c; sourceTree = "<group>"; };
+		8F18AABD28175F9B000068B7 /* Makefile */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
+		8F18AABF28175F9B000068B7 /* hcd-0001-SPIN_LOCK_UNLOCKED-has-been-depreciated.patch */ = {isa = PBXFileReference; lastKnownFileType = text; path = "hcd-0001-SPIN_LOCK_UNLOCKED-has-been-depreciated.patch"; sourceTree = "<group>"; };
+		8F18AAC028175F9B000068B7 /* vhci-0001-Comment-out-function-that-doesn-t-compile.patch */ = {isa = PBXFileReference; lastKnownFileType = text; path = "vhci-0001-Comment-out-function-that-doesn-t-compile.patch"; sourceTree = "<group>"; };
+		8F18AAC128175F9B000068B7 /* hcd-0002-need-transaction-translator.patch */ = {isa = PBXFileReference; lastKnownFileType = text; path = "hcd-0002-need-transaction-translator.patch"; sourceTree = "<group>"; };
+		8F18AAC228175F9B000068B7 /* vhci-0002-need-unistd-for-usleep.patch */ = {isa = PBXFileReference; lastKnownFileType = text; path = "vhci-0002-need-unistd-for-usleep.patch"; sourceTree = "<group>"; };
+		8F18AAC328175F9B000068B7 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		8F18AAC528175F9B000068B7 /* atmega328p_dummy_blinky.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = atmega328p_dummy_blinky.c; sourceTree = "<group>"; };
+		8F18AAC628175F9B000068B7 /* Makefile */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
+		8F18AAC728175F9B000068B7 /* simduino.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = simduino.c; sourceTree = "<group>"; };
+		8F18AAC828175F9B000068B7 /* README */ = {isa = PBXFileReference; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
+		8F18AAC928175F9B000068B7 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		8F18AACA28175F9B000068B7 /* ATmegaBOOT_168_atmega328.ihex */ = {isa = PBXFileReference; lastKnownFileType = text; path = ATmegaBOOT_168_atmega328.ihex; sourceTree = "<group>"; };
+		8F18AACC28175F9B000068B7 /* avr_hd44780.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = avr_hd44780.h; sourceTree = "<group>"; };
+		8F18AACD28175F9B000068B7 /* avr_hd44780_conf.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = avr_hd44780_conf.h; sourceTree = "<group>"; };
+		8F18AACE28175F9B000068B7 /* atmega48_charlcd.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = atmega48_charlcd.c; sourceTree = "<group>"; };
+		8F18AACF28175F9B000068B7 /* Makefile */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
+		8F18AAD028175F9B000068B7 /* charlcd.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = charlcd.c; sourceTree = "<group>"; };
+		8F18AAD128175F9B000068B7 /* README */ = {isa = PBXFileReference; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
+		8F18AAD228175F9B000068B7 /* avr_hd44780.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = avr_hd44780.c; sourceTree = "<group>"; };
+		8F18AAD428175F9B000068B7 /* blu.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = blu.tiff; sourceTree = "<group>"; };
+		8F18AAD528175F9B000068B7 /* processblu.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = processblu.py; sourceTree = "<group>"; };
+		8F18AAD628175F9B000068B7 /* font.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = font.tiff; sourceTree = "<group>"; };
+		8F18AAD828175F9B000068B7 /* ssd1306demo.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = ssd1306demo.c; sourceTree = "<group>"; };
+		8F18AAD928175F9B000068B7 /* ssd1306.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = ssd1306.c; sourceTree = "<group>"; };
+		8F18AADA28175F9B000068B7 /* atmega32_ssd1306.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = atmega32_ssd1306.c; sourceTree = "<group>"; };
+		8F18AADB28175F9B000068B7 /* images.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = images.c; sourceTree = "<group>"; };
+		8F18AADC28175F9B000068B7 /* Makefile */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
+		8F18AADD28175F9B000068B7 /* README */ = {isa = PBXFileReference; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
+		8F18AADE28175F9B000068B7 /* ssd1306.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ssd1306.h; sourceTree = "<group>"; };
+		8F18AADF28175F9B000068B7 /* images.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = images.h; sourceTree = "<group>"; };
+		8F18AAE128175F9B000068B7 /* twimaster.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = twimaster.c; sourceTree = "<group>"; };
+		8F18AAE228175F9B000068B7 /* Makefile */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
+		8F18AAE328175F9B000068B7 /* ds1338.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ds1338.h; sourceTree = "<group>"; };
+		8F18AAE428175F9B000068B7 /* atmega32_ds1338.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = atmega32_ds1338.c; sourceTree = "<group>"; };
+		8F18AAE528175F9B000068B7 /* ds1338demo.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = ds1338demo.c; sourceTree = "<group>"; };
+		8F18AAE628175F9B000068B7 /* i2cmaster.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = i2cmaster.h; sourceTree = "<group>"; };
+		8F18AAE728175F9B000068B7 /* ds1338.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = ds1338.c; sourceTree = "<group>"; };
+		8F18AAE928175F9B000068B7 /* uart_udp.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = uart_udp.c; sourceTree = "<group>"; };
+		8F18AAEA28175F9B000068B7 /* hd44780.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = hd44780.c; sourceTree = "<group>"; };
+		8F18AAEB28175F9B000068B7 /* vhci_usb.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = vhci_usb.c; sourceTree = "<group>"; };
+		8F18AAEC28175F9B000068B7 /* button.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = button.c; sourceTree = "<group>"; };
+		8F18AAED28175F9B000068B7 /* ssd1306_virt.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ssd1306_virt.h; sourceTree = "<group>"; };
+		8F18AAEE28175F9B000068B7 /* hd44780_glut.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = hd44780_glut.c; sourceTree = "<group>"; };
+		8F18AAEF28175F9B000068B7 /* rotenc.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = rotenc.c; sourceTree = "<group>"; };
+		8F18AAF028175F9B000068B7 /* Makefile */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
+		8F18AAF128175F9B000068B7 /* lcd_font.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = lcd_font.h; sourceTree = "<group>"; };
+		8F18AAF228175F9B000068B7 /* ac_input.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = ac_input.c; sourceTree = "<group>"; };
+		8F18AAF328175F9B000068B7 /* i2c_eeprom.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = i2c_eeprom.h; sourceTree = "<group>"; };
+		8F18AAF428175F9B000068B7 /* ssd1306_glut.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ssd1306_glut.h; sourceTree = "<group>"; };
+		8F18AAF528175F9B000068B7 /* uart_pty.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = uart_pty.h; sourceTree = "<group>"; };
+		8F18AAF628175F9B000068B7 /* hc595.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = hc595.c; sourceTree = "<group>"; };
+		8F18AAF728175F9B000068B7 /* ds1338_virt.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = ds1338_virt.c; sourceTree = "<group>"; };
+		8F18AAF828175F9B000068B7 /* uart_udp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = uart_udp.h; sourceTree = "<group>"; };
+		8F18AAF928175F9B000068B7 /* hd44780.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = hd44780.h; sourceTree = "<group>"; };
+		8F18AAFA28175F9B000068B7 /* simavrparts.pc */ = {isa = PBXFileReference; lastKnownFileType = text; path = simavrparts.pc; sourceTree = "<group>"; };
+		8F18AAFB28175F9B000068B7 /* ssd1306_virt.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = ssd1306_virt.c; sourceTree = "<group>"; };
+		8F18AAFC28175F9B000068B7 /* hd44780_glut.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = hd44780_glut.h; sourceTree = "<group>"; };
+		8F18AAFD28175F9B000068B7 /* button.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = button.h; sourceTree = "<group>"; };
+		8F18AAFE28175F9B000068B7 /* vhci_usb.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = vhci_usb.h; sourceTree = "<group>"; };
+		8F18AAFF28175F9B000068B7 /* rotenc.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = rotenc.h; sourceTree = "<group>"; };
+		8F18AB0028175F9B000068B7 /* ds1338_virt.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ds1338_virt.h; sourceTree = "<group>"; };
+		8F18AB0128175F9B000068B7 /* hc595.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = hc595.h; sourceTree = "<group>"; };
+		8F18AB0228175F9B000068B7 /* ssd1306_glut.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = ssd1306_glut.c; sourceTree = "<group>"; };
+		8F18AB0328175F9B000068B7 /* uart_pty.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = uart_pty.c; sourceTree = "<group>"; };
+		8F18AB0428175F9B000068B7 /* i2c_eeprom.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = i2c_eeprom.c; sourceTree = "<group>"; };
+		8F18AB0528175F9B000068B7 /* ac_input.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ac_input.h; sourceTree = "<group>"; };
+		8F18AB0728175F9B000068B7 /* atmega1280_i2ctest.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = atmega1280_i2ctest.c; sourceTree = "<group>"; };
+		8F18AB0828175F9B000068B7 /* Makefile */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
+		8F18AB0928175F9B000068B7 /* README */ = {isa = PBXFileReference; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
+		8F18AB0A28175F9B000068B7 /* i2ctest.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = i2ctest.c; sourceTree = "<group>"; };
+		8F18AB0D281760DD000068B7 /* Makefile */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
+		8F18AB0F28176137000068B7 /* atmega88_example.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = atmega88_example.c; sourceTree = "<group>"; };
+		8F18AB1028176137000068B7 /* test_atmega48_disabled_timer.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = test_atmega48_disabled_timer.c; sourceTree = "<group>"; };
+		8F18AB1128176137000068B7 /* atmega2560_uart_echo.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = atmega2560_uart_echo.c; sourceTree = "<group>"; };
+		8F18AB1228176137000068B7 /* attiny85_crash_gdb.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = attiny85_crash_gdb.c; sourceTree = "<group>"; };
+		8F18AB1328176137000068B7 /* test_atmega88_ac_test.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = test_atmega88_ac_test.c; sourceTree = "<group>"; };
+		8F18AB1428176137000068B7 /* atmega88_uart_echo.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = atmega88_uart_echo.c; sourceTree = "<group>"; };
+		8F18AB1528176137000068B7 /* tests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = tests.h; sourceTree = "<group>"; };
+		8F18AB1628176137000068B7 /* test_atmega2560_uart_echo.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = test_atmega2560_uart_echo.c; sourceTree = "<group>"; };
+		8F18AB1728176137000068B7 /* Makefile */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
+		8F18AB1828176137000068B7 /* test_atmega48_watchdog_test.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = test_atmega48_watchdog_test.c; sourceTree = "<group>"; };
+		8F18AB1928176137000068B7 /* atmega644_adc_test.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = atmega644_adc_test.c; sourceTree = "<group>"; };
+		8F18AB1A28176137000068B7 /* atmega48_enabled_timer.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = atmega48_enabled_timer.c; sourceTree = "<group>"; };
+		8F18AB1B28176137000068B7 /* atmega88_timer16.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = atmega88_timer16.c; sourceTree = "<group>"; };
+		8F18AB1C28176137000068B7 /* test_atmega48_enabled_timer.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = test_atmega48_enabled_timer.c; sourceTree = "<group>"; };
+		8F18AB1D28176137000068B7 /* atmega88_ac_test.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = atmega88_ac_test.c; sourceTree = "<group>"; };
+		8F18AB1E28176137000068B7 /* atmega48_watchdog_test.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = atmega48_watchdog_test.c; sourceTree = "<group>"; };
+		8F18AB1F28176137000068B7 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		8F18AB2028176137000068B7 /* tests.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = tests.c; sourceTree = "<group>"; };
+		8F18AB2128176137000068B7 /* test_atmega88_example.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = test_atmega88_example.c; sourceTree = "<group>"; };
+		8F18AB2228176137000068B7 /* atmega48_disabled_timer.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = atmega48_disabled_timer.c; sourceTree = "<group>"; };
+		8F18AB2328176137000068B7 /* test_atmega88_uart_echo.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = test_atmega88_uart_echo.c; sourceTree = "<group>"; };
+		8F18AB2428176137000068B7 /* test_atmega88_timer16.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = test_atmega88_timer16.c; sourceTree = "<group>"; };
+		8F18AB2528176137000068B7 /* test_atmega644_adc_test.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = test_atmega644_adc_test.c; sourceTree = "<group>"; };
+		8F18AB2628176137000068B7 /* atmega88_coroutine.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = atmega88_coroutine.c; sourceTree = "<group>"; };
+		8F18AB2828176149000068B7 /* simavr_callgraph.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = simavr_callgraph.pdf; sourceTree = "<group>"; };
+		8F18AB2928176149000068B7 /* Makefile */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
+		8F18AB2B28176149000068B7 /* ledramp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ledramp.png; sourceTree = "<group>"; };
+		8F18AB2C28176149000068B7 /* hd44780-wave.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "hd44780-wave.png"; sourceTree = "<group>"; };
+		8F18AB2D28176149000068B7 /* timer64.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = timer64.png; sourceTree = "<group>"; };
+		8F18AB2E28176149000068B7 /* gtkwave1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gtkwave1.png; sourceTree = "<group>"; };
+		8F18AB2F28176149000068B7 /* hd44780.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hd44780.png; sourceTree = "<group>"; };
+		8F18AB3128176149000068B7 /* setupguide.tex */ = {isa = PBXFileReference; lastKnownFileType = text; path = setupguide.tex; sourceTree = "<group>"; };
+		8F18AB3328176149000068B7 /* gtkwave.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gtkwave.png; sourceTree = "<group>"; };
+		8F18AB3428176149000068B7 /* Makefile */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
+		8F18AB3528176149000068B7 /* acronyms.tex */ = {isa = PBXFileReference; lastKnownFileType = text; path = acronyms.tex; sourceTree = "<group>"; };
+		8F18AB3628176149000068B7 /* introduction.tex */ = {isa = PBXFileReference; lastKnownFileType = text; path = introduction.tex; sourceTree = "<group>"; };
+		8F18AB3728176149000068B7 /* manual.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = manual.pdf; sourceTree = "<group>"; };
+		8F18AB3828176149000068B7 /* simavr.tex */ = {isa = PBXFileReference; lastKnownFileType = text; path = simavr.tex; sourceTree = "<group>"; };
+		8F18AB3928176149000068B7 /* manual.tex */ = {isa = PBXFileReference; lastKnownFileType = text; path = manual.tex; sourceTree = "<group>"; };
+		8F18AB3A28176149000068B7 /* Doxyfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Doxyfile; sourceTree = "<group>"; };
+		8F18AB3B28176149000068B7 /* tags_to_dot.rb */ = {isa = PBXFileReference; lastKnownFileType = text.script.ruby; path = tags_to_dot.rb; sourceTree = "<group>"; };
+		8F18AB3C281764D4000068B7 /* Makefile.common */ = {isa = PBXFileReference; lastKnownFileType = text; path = Makefile.common; sourceTree = "<group>"; };
 		8F249C1D23F302AF00FD38F7 /* sim_core_decl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = sim_core_decl.h; sourceTree = "<group>"; };
 		8F249C1E23F302AF00FD38F7 /* sim_core_config.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = sim_core_config.h; sourceTree = "<group>"; };
 		8F439AB223E44F5500697553 /* Simduino.xpc */ = {isa = PBXFileReference; explicitFileType = "wrapper.xpc-service"; includeInIndex = 0; path = Simduino.xpc; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -411,41 +552,6 @@
 		8F439C2E23E498E200697553 /* sim_mega324.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = sim_mega324.c; sourceTree = "<group>"; };
 		8F517FCD27A3F5B40002A284 /* optiboot_atmega328.hex */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = optiboot_atmega328.hex; sourceTree = "<group>"; };
 		8F6BDC6C23E79BB8008DEE6E /* sim_core_config.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = sim_core_config.h; sourceTree = "<group>"; };
-		8F6BDC7423E88C4F008DEE6E /* uart_udp.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = uart_udp.c; sourceTree = "<group>"; };
-		8F6BDC7523E88C4F008DEE6E /* hd44780.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = hd44780.c; sourceTree = "<group>"; };
-		8F6BDC7623E88C4F008DEE6E /* vhci_usb.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = vhci_usb.c; sourceTree = "<group>"; };
-		8F6BDC7723E88C4F008DEE6E /* button.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = button.c; sourceTree = "<group>"; };
-		8F6BDC7823E88C4F008DEE6E /* ssd1306_virt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ssd1306_virt.h; sourceTree = "<group>"; };
-		8F6BDC7923E88C4F008DEE6E /* hd44780_glut.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = hd44780_glut.c; sourceTree = "<group>"; };
-		8F6BDC7A23E88C4F008DEE6E /* rotenc.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = rotenc.c; sourceTree = "<group>"; };
-		8F6BDC7B23E88C4F008DEE6E /* Makefile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
-		8F6BDC7C23E88C4F008DEE6E /* lcd_font.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lcd_font.h; sourceTree = "<group>"; };
-		8F6BDC7D23E88C4F008DEE6E /* ac_input.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ac_input.c; sourceTree = "<group>"; };
-		8F6BDC7E23E88C4F008DEE6E /* i2c_eeprom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = i2c_eeprom.h; sourceTree = "<group>"; };
-		8F6BDC7F23E88C4F008DEE6E /* ssd1306_glut.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ssd1306_glut.h; sourceTree = "<group>"; };
-		8F6BDC8023E88C4F008DEE6E /* uart_pty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = uart_pty.h; sourceTree = "<group>"; };
-		8F6BDC8123E88C4F008DEE6E /* hc595.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = hc595.c; sourceTree = "<group>"; };
-		8F6BDC8223E88C4F008DEE6E /* ds1338_virt.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ds1338_virt.c; sourceTree = "<group>"; };
-		8F6BDC8323E88C4F008DEE6E /* uart_udp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = uart_udp.h; sourceTree = "<group>"; };
-		8F6BDC8423E88C4F008DEE6E /* hd44780.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hd44780.h; sourceTree = "<group>"; };
-		8F6BDC8523E88C4F008DEE6E /* simavrparts.pc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = simavrparts.pc; sourceTree = "<group>"; };
-		8F6BDC8623E88C4F008DEE6E /* ssd1306_virt.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ssd1306_virt.c; sourceTree = "<group>"; };
-		8F6BDC8723E88C4F008DEE6E /* hd44780_glut.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hd44780_glut.h; sourceTree = "<group>"; };
-		8F6BDC8823E88C4F008DEE6E /* button.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = button.h; sourceTree = "<group>"; };
-		8F6BDC8923E88C4F008DEE6E /* vhci_usb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vhci_usb.h; sourceTree = "<group>"; };
-		8F6BDC8A23E88C4F008DEE6E /* rotenc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = rotenc.h; sourceTree = "<group>"; };
-		8F6BDC8B23E88C4F008DEE6E /* ds1338_virt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ds1338_virt.h; sourceTree = "<group>"; };
-		8F6BDC8C23E88C4F008DEE6E /* hc595.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hc595.h; sourceTree = "<group>"; };
-		8F6BDC8D23E88C4F008DEE6E /* ssd1306_glut.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ssd1306_glut.c; sourceTree = "<group>"; };
-		8F6BDC8E23E88C4F008DEE6E /* uart_pty.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = uart_pty.c; sourceTree = "<group>"; };
-		8F6BDC8F23E88C4F008DEE6E /* i2c_eeprom.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = i2c_eeprom.c; sourceTree = "<group>"; };
-		8F6BDC9023E88C4F008DEE6E /* ac_input.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ac_input.h; sourceTree = "<group>"; };
-		8F6BDC9223E88C4F008DEE6E /* twimaster.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = twimaster.c; sourceTree = "<group>"; };
-		8F6BDC9323E88C4F008DEE6E /* arduidiot_pins.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = arduidiot_pins.c; sourceTree = "<group>"; };
-		8F6BDC9423E88C4F008DEE6E /* avr_twi_master.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = avr_twi_master.h; sourceTree = "<group>"; };
-		8F6BDC9523E88C4F008DEE6E /* arduidiot_pins.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = arduidiot_pins.h; sourceTree = "<group>"; };
-		8F6BDC9623E88C4F008DEE6E /* twimaster.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = twimaster.h; sourceTree = "<group>"; };
-		8F6BDC9723E88C4F008DEE6E /* avr_twi_master.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = avr_twi_master.c; sourceTree = "<group>"; };
 		8F78BFED24FFBA1100D1F7D2 /* libelf.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libelf.a; sourceTree = "<group>"; };
 		8F78BFEF24FFBA2000D1F7D2 /* libelf.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = libelf.h; sourceTree = "<group>"; };
 		8F78BFF024FFBA2000D1F7D2 /* elf_repl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = elf_repl.h; sourceTree = "<group>"; };
@@ -473,6 +579,302 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8F18AA9A28175F9B000068B7 /* examples */ = {
+			isa = PBXGroup;
+			children = (
+				8F18AA9B28175F9B000068B7 /* Makefile.opengl */,
+				8F18AA9C28175F9B000068B7 /* extra_board_usb */,
+				8F18AAA328175F9B000068B7 /* board_rotenc */,
+				8F18AAA828175F9B000068B7 /* Makefile */,
+				8F18AAA928175F9B000068B7 /* board_timer_64led */,
+				8F18AAB028175F9B000068B7 /* board_ledramp */,
+				8F18AAB528175F9B000068B7 /* shared */,
+				8F18AABC28175F9B000068B7 /* vhci */,
+				8F18AAC428175F9B000068B7 /* board_simduino */,
+				8F18AACB28175F9B000068B7 /* board_hd44780 */,
+				8F18AAD728175F9B000068B7 /* board_ssd1306 */,
+				8F18AAE028175F9B000068B7 /* board_ds1338 */,
+				8F18AAE828175F9B000068B7 /* parts */,
+				8F18AB0628175F9B000068B7 /* board_i2ctest */,
+			);
+			path = examples;
+			sourceTree = "<group>";
+		};
+		8F18AA9C28175F9B000068B7 /* extra_board_usb */ = {
+			isa = PBXGroup;
+			children = (
+				8F18AA9D28175F9B000068B7 /* simusb.c */,
+				8F18AA9E28175F9B000068B7 /* at90usb162_cdc_loopback.h */,
+				8F18AA9F28175F9B000068B7 /* Makefile */,
+				8F18AAA028175F9B000068B7 /* README */,
+				8F18AAA128175F9B000068B7 /* .gitignore */,
+				8F18AAA228175F9B000068B7 /* at90usb162_cdc_loopback.c */,
+			);
+			path = extra_board_usb;
+			sourceTree = "<group>";
+		};
+		8F18AAA328175F9B000068B7 /* board_rotenc */ = {
+			isa = PBXGroup;
+			children = (
+				8F18AAA428175F9B000068B7 /* Makefile */,
+				8F18AAA528175F9B000068B7 /* atmega32_rotenc_test.c */,
+				8F18AAA628175F9B000068B7 /* README */,
+				8F18AAA728175F9B000068B7 /* rotenc_test.c */,
+			);
+			path = board_rotenc;
+			sourceTree = "<group>";
+		};
+		8F18AAA928175F9B000068B7 /* board_timer_64led */ = {
+			isa = PBXGroup;
+			children = (
+				8F18AAAA28175F9B000068B7 /* Makefile */,
+				8F18AAAB28175F9B000068B7 /* timer_64led.c */,
+				8F18AAAC28175F9B000068B7 /* atmega168_timer_64led.c */,
+				8F18AAAD28175F9B000068B7 /* README */,
+				8F18AAAE28175F9B000068B7 /* timer_led64_real.jpg */,
+				8F18AAAF28175F9B000068B7 /* atmega168_timer_64led.h */,
+			);
+			path = board_timer_64led;
+			sourceTree = "<group>";
+		};
+		8F18AAB028175F9B000068B7 /* board_ledramp */ = {
+			isa = PBXGroup;
+			children = (
+				8F18AAB128175F9B000068B7 /* atmega48_ledramp.c */,
+				8F18AAB228175F9B000068B7 /* ledramp.c */,
+				8F18AAB328175F9B000068B7 /* Makefile */,
+				8F18AAB428175F9B000068B7 /* README */,
+			);
+			path = board_ledramp;
+			sourceTree = "<group>";
+		};
+		8F18AAB528175F9B000068B7 /* shared */ = {
+			isa = PBXGroup;
+			children = (
+				8F18AAB628175F9B000068B7 /* twimaster.c */,
+				8F18AAB728175F9B000068B7 /* arduidiot_pins.c */,
+				8F18AAB828175F9B000068B7 /* avr_twi_master.h */,
+				8F18AAB928175F9B000068B7 /* arduidiot_pins.h */,
+				8F18AABA28175F9B000068B7 /* twimaster.h */,
+				8F18AABB28175F9B000068B7 /* avr_twi_master.c */,
+			);
+			path = shared;
+			sourceTree = "<group>";
+		};
+		8F18AABC28175F9B000068B7 /* vhci */ = {
+			isa = PBXGroup;
+			children = (
+				8F18AABD28175F9B000068B7 /* Makefile */,
+				8F18AABE28175F9B000068B7 /* patches */,
+				8F18AAC328175F9B000068B7 /* .gitignore */,
+			);
+			path = vhci;
+			sourceTree = "<group>";
+		};
+		8F18AABE28175F9B000068B7 /* patches */ = {
+			isa = PBXGroup;
+			children = (
+				8F18AABF28175F9B000068B7 /* hcd-0001-SPIN_LOCK_UNLOCKED-has-been-depreciated.patch */,
+				8F18AAC028175F9B000068B7 /* vhci-0001-Comment-out-function-that-doesn-t-compile.patch */,
+				8F18AAC128175F9B000068B7 /* hcd-0002-need-transaction-translator.patch */,
+				8F18AAC228175F9B000068B7 /* vhci-0002-need-unistd-for-usleep.patch */,
+			);
+			path = patches;
+			sourceTree = "<group>";
+		};
+		8F18AAC428175F9B000068B7 /* board_simduino */ = {
+			isa = PBXGroup;
+			children = (
+				8F18AAC528175F9B000068B7 /* atmega328p_dummy_blinky.c */,
+				8F18AAC628175F9B000068B7 /* Makefile */,
+				8F18AAC728175F9B000068B7 /* simduino.c */,
+				8F18AAC828175F9B000068B7 /* README */,
+				8F18AAC928175F9B000068B7 /* .gitignore */,
+				8F18AACA28175F9B000068B7 /* ATmegaBOOT_168_atmega328.ihex */,
+			);
+			path = board_simduino;
+			sourceTree = "<group>";
+		};
+		8F18AACB28175F9B000068B7 /* board_hd44780 */ = {
+			isa = PBXGroup;
+			children = (
+				8F18AACC28175F9B000068B7 /* avr_hd44780.h */,
+				8F18AACD28175F9B000068B7 /* avr_hd44780_conf.h */,
+				8F18AACE28175F9B000068B7 /* atmega48_charlcd.c */,
+				8F18AACF28175F9B000068B7 /* Makefile */,
+				8F18AAD028175F9B000068B7 /* charlcd.c */,
+				8F18AAD128175F9B000068B7 /* README */,
+				8F18AAD228175F9B000068B7 /* avr_hd44780.c */,
+				8F18AAD328175F9B000068B7 /* data */,
+			);
+			path = board_hd44780;
+			sourceTree = "<group>";
+		};
+		8F18AAD328175F9B000068B7 /* data */ = {
+			isa = PBXGroup;
+			children = (
+				8F18AAD428175F9B000068B7 /* blu.tiff */,
+				8F18AAD528175F9B000068B7 /* processblu.py */,
+				8F18AAD628175F9B000068B7 /* font.tiff */,
+			);
+			path = data;
+			sourceTree = "<group>";
+		};
+		8F18AAD728175F9B000068B7 /* board_ssd1306 */ = {
+			isa = PBXGroup;
+			children = (
+				8F18AAD828175F9B000068B7 /* ssd1306demo.c */,
+				8F18AAD928175F9B000068B7 /* ssd1306.c */,
+				8F18AADA28175F9B000068B7 /* atmega32_ssd1306.c */,
+				8F18AADB28175F9B000068B7 /* images.c */,
+				8F18AADC28175F9B000068B7 /* Makefile */,
+				8F18AADD28175F9B000068B7 /* README */,
+				8F18AADE28175F9B000068B7 /* ssd1306.h */,
+				8F18AADF28175F9B000068B7 /* images.h */,
+			);
+			path = board_ssd1306;
+			sourceTree = "<group>";
+		};
+		8F18AAE028175F9B000068B7 /* board_ds1338 */ = {
+			isa = PBXGroup;
+			children = (
+				8F18AAE128175F9B000068B7 /* twimaster.c */,
+				8F18AAE228175F9B000068B7 /* Makefile */,
+				8F18AAE328175F9B000068B7 /* ds1338.h */,
+				8F18AAE428175F9B000068B7 /* atmega32_ds1338.c */,
+				8F18AAE528175F9B000068B7 /* ds1338demo.c */,
+				8F18AAE628175F9B000068B7 /* i2cmaster.h */,
+				8F18AAE728175F9B000068B7 /* ds1338.c */,
+			);
+			path = board_ds1338;
+			sourceTree = "<group>";
+		};
+		8F18AAE828175F9B000068B7 /* parts */ = {
+			isa = PBXGroup;
+			children = (
+				8F18AAE928175F9B000068B7 /* uart_udp.c */,
+				8F18AAEA28175F9B000068B7 /* hd44780.c */,
+				8F18AAEB28175F9B000068B7 /* vhci_usb.c */,
+				8F18AAEC28175F9B000068B7 /* button.c */,
+				8F18AAED28175F9B000068B7 /* ssd1306_virt.h */,
+				8F18AAEE28175F9B000068B7 /* hd44780_glut.c */,
+				8F18AAEF28175F9B000068B7 /* rotenc.c */,
+				8F18AAF028175F9B000068B7 /* Makefile */,
+				8F18AAF128175F9B000068B7 /* lcd_font.h */,
+				8F18AAF228175F9B000068B7 /* ac_input.c */,
+				8F18AAF328175F9B000068B7 /* i2c_eeprom.h */,
+				8F18AAF428175F9B000068B7 /* ssd1306_glut.h */,
+				8F18AAF528175F9B000068B7 /* uart_pty.h */,
+				8F18AAF628175F9B000068B7 /* hc595.c */,
+				8F18AAF728175F9B000068B7 /* ds1338_virt.c */,
+				8F18AAF828175F9B000068B7 /* uart_udp.h */,
+				8F18AAF928175F9B000068B7 /* hd44780.h */,
+				8F18AAFA28175F9B000068B7 /* simavrparts.pc */,
+				8F18AAFB28175F9B000068B7 /* ssd1306_virt.c */,
+				8F18AAFC28175F9B000068B7 /* hd44780_glut.h */,
+				8F18AAFD28175F9B000068B7 /* button.h */,
+				8F18AAFE28175F9B000068B7 /* vhci_usb.h */,
+				8F18AAFF28175F9B000068B7 /* rotenc.h */,
+				8F18AB0028175F9B000068B7 /* ds1338_virt.h */,
+				8F18AB0128175F9B000068B7 /* hc595.h */,
+				8F18AB0228175F9B000068B7 /* ssd1306_glut.c */,
+				8F18AB0328175F9B000068B7 /* uart_pty.c */,
+				8F18AB0428175F9B000068B7 /* i2c_eeprom.c */,
+				8F18AB0528175F9B000068B7 /* ac_input.h */,
+			);
+			path = parts;
+			sourceTree = "<group>";
+		};
+		8F18AB0628175F9B000068B7 /* board_i2ctest */ = {
+			isa = PBXGroup;
+			children = (
+				8F18AB0728175F9B000068B7 /* atmega1280_i2ctest.c */,
+				8F18AB0828175F9B000068B7 /* Makefile */,
+				8F18AB0928175F9B000068B7 /* README */,
+				8F18AB0A28175F9B000068B7 /* i2ctest.c */,
+			);
+			path = board_i2ctest;
+			sourceTree = "<group>";
+		};
+		8F18AB0E28176137000068B7 /* tests */ = {
+			isa = PBXGroup;
+			children = (
+				8F18AB0F28176137000068B7 /* atmega88_example.c */,
+				8F18AB1028176137000068B7 /* test_atmega48_disabled_timer.c */,
+				8F18AB1128176137000068B7 /* atmega2560_uart_echo.c */,
+				8F18AB1228176137000068B7 /* attiny85_crash_gdb.c */,
+				8F18AB1328176137000068B7 /* test_atmega88_ac_test.c */,
+				8F18AB1428176137000068B7 /* atmega88_uart_echo.c */,
+				8F18AB1528176137000068B7 /* tests.h */,
+				8F18AB1628176137000068B7 /* test_atmega2560_uart_echo.c */,
+				8F18AB1728176137000068B7 /* Makefile */,
+				8F18AB1828176137000068B7 /* test_atmega48_watchdog_test.c */,
+				8F18AB1928176137000068B7 /* atmega644_adc_test.c */,
+				8F18AB1A28176137000068B7 /* atmega48_enabled_timer.c */,
+				8F18AB1B28176137000068B7 /* atmega88_timer16.c */,
+				8F18AB1C28176137000068B7 /* test_atmega48_enabled_timer.c */,
+				8F18AB1D28176137000068B7 /* atmega88_ac_test.c */,
+				8F18AB1E28176137000068B7 /* atmega48_watchdog_test.c */,
+				8F18AB1F28176137000068B7 /* .gitignore */,
+				8F18AB2028176137000068B7 /* tests.c */,
+				8F18AB2128176137000068B7 /* test_atmega88_example.c */,
+				8F18AB2228176137000068B7 /* atmega48_disabled_timer.c */,
+				8F18AB2328176137000068B7 /* test_atmega88_uart_echo.c */,
+				8F18AB2428176137000068B7 /* test_atmega88_timer16.c */,
+				8F18AB2528176137000068B7 /* test_atmega644_adc_test.c */,
+				8F18AB2628176137000068B7 /* atmega88_coroutine.c */,
+			);
+			path = tests;
+			sourceTree = "<group>";
+		};
+		8F18AB2728176149000068B7 /* doc */ = {
+			isa = PBXGroup;
+			children = (
+				8F18AB2828176149000068B7 /* simavr_callgraph.pdf */,
+				8F18AB2928176149000068B7 /* Makefile */,
+				8F18AB2A28176149000068B7 /* img */,
+				8F18AB3028176149000068B7 /* manual */,
+				8F18AB3A28176149000068B7 /* Doxyfile */,
+				8F18AB3B28176149000068B7 /* tags_to_dot.rb */,
+			);
+			path = doc;
+			sourceTree = "<group>";
+		};
+		8F18AB2A28176149000068B7 /* img */ = {
+			isa = PBXGroup;
+			children = (
+				8F18AB2B28176149000068B7 /* ledramp.png */,
+				8F18AB2C28176149000068B7 /* hd44780-wave.png */,
+				8F18AB2D28176149000068B7 /* timer64.png */,
+				8F18AB2E28176149000068B7 /* gtkwave1.png */,
+				8F18AB2F28176149000068B7 /* hd44780.png */,
+			);
+			path = img;
+			sourceTree = "<group>";
+		};
+		8F18AB3028176149000068B7 /* manual */ = {
+			isa = PBXGroup;
+			children = (
+				8F18AB3128176149000068B7 /* setupguide.tex */,
+				8F18AB3228176149000068B7 /* images */,
+				8F18AB3428176149000068B7 /* Makefile */,
+				8F18AB3528176149000068B7 /* acronyms.tex */,
+				8F18AB3628176149000068B7 /* introduction.tex */,
+				8F18AB3728176149000068B7 /* manual.pdf */,
+				8F18AB3828176149000068B7 /* simavr.tex */,
+				8F18AB3928176149000068B7 /* manual.tex */,
+			);
+			path = manual;
+			sourceTree = "<group>";
+		};
+		8F18AB3228176149000068B7 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				8F18AB3328176149000068B7 /* gtkwave.png */,
+			);
+			path = images;
+			sourceTree = "<group>";
+		};
 		8F439AA923E44F5500697553 = {
 			isa = PBXGroup;
 			children = (
@@ -513,8 +915,11 @@
 		8F439AC723E4986900697553 /* simavr */ = {
 			isa = PBXGroup;
 			children = (
-				8F6BDC7323E88C4F008DEE6E /* parts */,
-				8F6BDC9123E88C4F008DEE6E /* shared */,
+				8F18AB3C281764D4000068B7 /* Makefile.common */,
+				8F18AB2728176149000068B7 /* doc */,
+				8F18AB0E28176137000068B7 /* tests */,
+				8F18AB0D281760DD000068B7 /* Makefile */,
+				8F18AA9A28175F9B000068B7 /* examples */,
 				8F439AC923E498E200697553 /* simavr */,
 			);
 			name = simavr;
@@ -921,57 +1326,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		8F6BDC7323E88C4F008DEE6E /* parts */ = {
-			isa = PBXGroup;
-			children = (
-				8F6BDC7D23E88C4F008DEE6E /* ac_input.c */,
-				8F6BDC9023E88C4F008DEE6E /* ac_input.h */,
-				8F6BDC7723E88C4F008DEE6E /* button.c */,
-				8F6BDC8823E88C4F008DEE6E /* button.h */,
-				8F6BDC8223E88C4F008DEE6E /* ds1338_virt.c */,
-				8F6BDC8B23E88C4F008DEE6E /* ds1338_virt.h */,
-				8F6BDC8123E88C4F008DEE6E /* hc595.c */,
-				8F6BDC8C23E88C4F008DEE6E /* hc595.h */,
-				8F6BDC7923E88C4F008DEE6E /* hd44780_glut.c */,
-				8F6BDC8723E88C4F008DEE6E /* hd44780_glut.h */,
-				8F6BDC7523E88C4F008DEE6E /* hd44780.c */,
-				8F6BDC8423E88C4F008DEE6E /* hd44780.h */,
-				8F6BDC8F23E88C4F008DEE6E /* i2c_eeprom.c */,
-				8F6BDC7E23E88C4F008DEE6E /* i2c_eeprom.h */,
-				8F6BDC7C23E88C4F008DEE6E /* lcd_font.h */,
-				8F6BDC7B23E88C4F008DEE6E /* Makefile */,
-				8F6BDC7A23E88C4F008DEE6E /* rotenc.c */,
-				8F6BDC8A23E88C4F008DEE6E /* rotenc.h */,
-				8F6BDC8523E88C4F008DEE6E /* simavrparts.pc */,
-				8F6BDC8D23E88C4F008DEE6E /* ssd1306_glut.c */,
-				8F6BDC7F23E88C4F008DEE6E /* ssd1306_glut.h */,
-				8F6BDC8623E88C4F008DEE6E /* ssd1306_virt.c */,
-				8F6BDC7823E88C4F008DEE6E /* ssd1306_virt.h */,
-				8F6BDC8E23E88C4F008DEE6E /* uart_pty.c */,
-				8F6BDC8023E88C4F008DEE6E /* uart_pty.h */,
-				8F6BDC7423E88C4F008DEE6E /* uart_udp.c */,
-				8F6BDC8323E88C4F008DEE6E /* uart_udp.h */,
-				8F6BDC7623E88C4F008DEE6E /* vhci_usb.c */,
-				8F6BDC8923E88C4F008DEE6E /* vhci_usb.h */,
-			);
-			name = parts;
-			path = examples/parts;
-			sourceTree = "<group>";
-		};
-		8F6BDC9123E88C4F008DEE6E /* shared */ = {
-			isa = PBXGroup;
-			children = (
-				8F6BDC9223E88C4F008DEE6E /* twimaster.c */,
-				8F6BDC9323E88C4F008DEE6E /* arduidiot_pins.c */,
-				8F6BDC9423E88C4F008DEE6E /* avr_twi_master.h */,
-				8F6BDC9523E88C4F008DEE6E /* arduidiot_pins.h */,
-				8F6BDC9623E88C4F008DEE6E /* twimaster.h */,
-				8F6BDC9723E88C4F008DEE6E /* avr_twi_master.c */,
-			);
-			name = shared;
-			path = examples/shared;
-			sourceTree = "<group>";
-		};
 		8F78BFEC24FFB9F300D1F7D2 /* libelf */ = {
 			isa = PBXGroup;
 			children = (
@@ -1086,12 +1440,11 @@
 				8F6BDC7223E79F87008DEE6E /* sim_megax8.c in Sources */,
 				8FBA32BC23E5E3A800DBD58C /* sim_cmds.c in Sources */,
 				8FBA32BE23E5E3A800DBD58C /* avr_ioport.c in Sources */,
-				8F6BDCA823E88C4F008DEE6E /* arduidiot_pins.c in Sources */,
+				8F18AB0C281760AF000068B7 /* arduidiot_pins.c in Sources */,
 				8FBA32B523E5E3A800DBD58C /* avr_extint.c in Sources */,
 				8FBA32A723E5E3A800DBD58C /* avr_lin.c in Sources */,
 				8FBA32A623E5E3A800DBD58C /* avr_bitbang.c in Sources */,
 				8F439ABA23E44F5500697553 /* main.m in Sources */,
-				8F6BDCA523E88C4F008DEE6E /* uart_pty.c in Sources */,
 				8FBA32A523E5E3A800DBD58C /* avr_adc.c in Sources */,
 				8FBA32AC23E5E3A800DBD58C /* avr_uart.c in Sources */,
 				8FBA32AF23E5E3A800DBD58C /* avr_timer.c in Sources */,
@@ -1101,6 +1454,7 @@
 				8FBA32AA23E5E3A800DBD58C /* sim_vcd_file.c in Sources */,
 				8FBA32BB23E5E3A800DBD58C /* avr_watchdog.c in Sources */,
 				8F439AB823E44F5500697553 /* Simduino.m in Sources */,
+				8F18AB0B281760A6000068B7 /* uart_pty.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
